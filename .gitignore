@@ -1,0 +1,8 @@
+# Ambiente Python
+.venv
+
+# Variáveis de ambiente
+.env
+.env.local
+
+DEPLOY_RENDER.md

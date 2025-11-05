@@ -1,0 +1,58 @@
+================================================================================
+RELATÓRIO DE DECISÕES DA IA
+================================================================================
+
+Sessão: 20251104_150743
+Início: 2025-11-04T15:07:43.504992
+Fim: 2025-11-04T15:13:47.284183
+Total de decisões: 584
+
+--------------------------------------------------------------------------------
+TIPOS DE DECISÕES
+--------------------------------------------------------------------------------
+  rule: 229 decisões
+  ai: 355 decisões
+
+--------------------------------------------------------------------------------
+CLASSIFICAÇÕES (584 transações)
+--------------------------------------------------------------------------------
+
+Métodos usados:
+  - rule: 229 transações
+  - ai: 355 transações
+
+Exemplos de classificações:
+
+1. Transação ID -1
+   Entrada: PIX - ENVIADO - 01/09 10:59 BODY STATION ACADEMIA
+   Decisão: (-) Transferencia Entre Contas
+   Método: rule
+   Raciocínio: Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)...
+
+2. Transação ID -1
+   Entrada: BB RENDE FÁCIL - RENDE FACIL
+   Decisão: Resgate Aplicação Financeira
+   Método: rule
+   Raciocínio: Regra: Rende Fácil detectado + origem CAR = Resgate...
+
+3. Transação ID -1
+   Entrada: PIX - ENVIADO - 02/09 11:35 BODY STATION ACADEMIA
+   Decisão: (-) Transferencia Entre Contas
+   Método: rule
+   Raciocínio: Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)...
+
+4. Transação ID -1
+   Entrada: BB RENDE FÁCIL - RENDE FACIL
+   Decisão: Resgate Aplicação Financeira
+   Método: rule
+   Raciocínio: Regra: Rende Fácil detectado + origem CAR = Resgate...
+
+5. Transação ID -1
+   Entrada: BB RENDE FÁCIL - RENDE FACIL
+   Decisão: 0.006 - Aplicação Financeira
+   Método: rule
+   Raciocínio: Regra: Rende Fácil detectado + origem CAP = Aplicação...
+
+================================================================================
+FIM DO RELATÓRIO
+================================================================================

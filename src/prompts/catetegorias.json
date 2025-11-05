@@ -1,0 +1,550 @@
+{
+  "grupos": [
+    {
+      "codigo": "0",
+      "descricao": "Transferências",
+      "subcontas": [
+        {
+          "codigo": "0.001",
+          "descricao": "Saldo Inicial"
+        },
+        {
+          "codigo": "0.002",
+          "descricao": "(-) Transferencia Entre Contas"
+        },
+        {
+          "codigo": "0.003",
+          "descricao": "(+) Transferencia Entre Contas"
+        },
+        {
+          "codigo": "0.004",
+          "descricao": "Pagamento Indevido"
+        },
+        {
+          "codigo": "0.005",
+          "descricao": "Devolução de Pagamento Indevido"
+        },
+        {
+          "codigo": "0.006",
+          "descricao": "Aplicação Financeira"
+        },
+        {
+          "codigo": "0.007",
+          "descricao": "Resgate Aplicação Financeira"
+        }
+      ]
+    },
+    {
+      "codigo": "1",
+      "descricao": "Receitas",
+      "subcontas": [
+        {
+          "codigo": "1.001",
+          "descricao": "Receita com Venda de Serviços"
+        },
+        {
+          "codigo": "1.002",
+          "descricao": "Gympass"
+        },
+        {
+          "codigo": "1.003",
+          "descricao": "Sub-Locação"
+        },
+        {
+          "codigo": "1.004",
+          "descricao": "Monetizações de Marketing"
+        },
+        {
+          "codigo": "1.006",
+          "descricao": "Outras Receitas"
+        }
+      ]
+    },
+    {
+      "codigo": "2",
+      "descricao": "Tributos",
+      "subcontas": [
+        {
+          "codigo": "2.001",
+          "descricao": "PIS"
+        },
+        {
+          "codigo": "2.002",
+          "descricao": "COFINS"
+        },
+        {
+          "codigo": "2.003",
+          "descricao": "ISS"
+        },
+        {
+          "codigo": "2.004",
+          "descricao": "IRRF Retido"
+        },
+        {
+          "codigo": "2.005",
+          "descricao": "Simples Nacional"
+        },
+        {
+          "codigo": "2.006",
+          "descricao": "(-) Devolução de Vendas de Serviços Prestados"
+        },
+        {
+          "codigo": "2.007",
+          "descricao": "CSLL"
+        },
+        {
+          "codigo": "2.008",
+          "descricao": "IRPJ"
+        }
+      ]
+    },
+    {
+      "codigo": "3",
+      "descricao": "Custos",
+      "subcontas": [
+        {
+          "codigo": "3.001",
+          "descricao": "Royalties"
+        },
+        {
+          "codigo": "3.002",
+          "descricao": "13º Salário"
+        },
+        {
+          "codigo": "3.003",
+          "descricao": "Adiantamento Salarial"
+        },
+        {
+          "codigo": "3.004",
+          "descricao": "Exames ASO (Atestado de Saúde Ocupacional)"
+        },
+        {
+          "codigo": "3.005",
+          "descricao": "Férias"
+        },
+        {
+          "codigo": "3.006",
+          "descricao": "FGTS"
+        },
+        {
+          "codigo": "3.007",
+          "descricao": "INSS"
+        },
+        {
+          "codigo": "3.008",
+          "descricao": "IRRF"
+        },
+        {
+          "codigo": "3.009",
+          "descricao": "Multa FGTS"
+        },
+        {
+          "codigo": "3.010",
+          "descricao": "Rescisões"
+        },
+        {
+          "codigo": "3.011",
+          "descricao": "Salários e Ordenados"
+        },
+        {
+          "codigo": "3.012",
+          "descricao": "Seguro de Vida"
+        },
+        {
+          "codigo": "3.013",
+          "descricao": "Vale-Alimentação"
+        },
+        {
+          "codigo": "3.014",
+          "descricao": "Vale-Transporte"
+        },
+        {
+          "codigo": "3.015",
+          "descricao": "Ajuda de Custo"
+        },
+        {
+          "codigo": "3.016",
+          "descricao": "Serviços de Estagiários"
+        },
+        {
+          "codigo": "3.017",
+          "descricao": "Cursos para Professores"
+        },
+        {
+          "codigo": "3.018",
+          "descricao": "Auxílio Combustível"
+        },
+        {
+          "codigo": "3.019",
+          "descricao": "Bonificações"
+        },
+        {
+          "codigo": "3.020",
+          "descricao": "Prêmios e Gratificações"
+        },
+        {
+          "codigo": "3.021",
+          "descricao": "Professor Substituto"
+        }
+      ]
+    },
+    {
+      "codigo": "4",
+      "descricao": "Despesas",
+      "subcontas": [
+        {
+          "codigo": "4.001",
+          "descricao": "Assinaturas"
+        },
+        {
+          "codigo": "4.002",
+          "descricao": "Advocacia"
+        },
+        {
+          "codigo": "4.003",
+          "descricao": "Cartório / Autenticações"
+        },
+        {
+          "codigo": "4.004",
+          "descricao": "Contabilidade"
+        },
+        {
+          "codigo": "4.005",
+          "descricao": "Combustíveis e Lubrificantes"
+        },
+        {
+          "codigo": "4.006",
+          "descricao": "Correios e Malotes"
+        },
+        {
+          "codigo": "4.007",
+          "descricao": "Despesas com Veículos"
+        },
+        {
+          "codigo": "4.008",
+          "descricao": "IPVA"
+        },
+        {
+          "codigo": "4.009",
+          "descricao": "Licença e Uso de Software"
+        },
+        {
+          "codigo": "4.010",
+          "descricao": "Material de Copa e Cozinha"
+        },
+        {
+          "codigo": "4.011",
+          "descricao": "Material de Higiene e Limpeza"
+        },
+        {
+          "codigo": "4.012",
+          "descricao": "Material de Uso e Consumo"
+        },
+        {
+          "codigo": "4.013",
+          "descricao": "Seguros"
+        },
+        {
+          "codigo": "4.014",
+          "descricao": "Serviços de Terceiros"
+        },
+        {
+          "codigo": "4.015",
+          "descricao": "Serviços de Terceiros - Limpeza"
+        },
+        {
+          "codigo": "4.016",
+          "descricao": "Serviços Gráficos"
+        },
+        {
+          "codigo": "4.017",
+          "descricao": "Telecomunicações"
+        },
+        {
+          "codigo": "4.018",
+          "descricao": "Títulos Pagos Não Identificados"
+        },
+        {
+          "codigo": "4.019",
+          "descricao": "Lanches e Refeições"
+        },
+        {
+          "codigo": "4.020",
+          "descricao": "Aluguel de Maquininha"
+        },
+        {
+          "codigo": "4.021",
+          "descricao": "Multa de Trânsito"
+        },
+        {
+          "codigo": "4.022",
+          "descricao": "Taxas de Serviços Estaduais"
+        },
+        {
+          "codigo": "4.023",
+          "descricao": "Taxas de Serviços Municipais"
+        },
+        {
+          "codigo": "4.024",
+          "descricao": "Taxas de Instituições Associativas"
+        },
+        {
+          "codigo": "4.025",
+          "descricao": "Multa Municipal"
+        },
+        {
+          "codigo": "4.026",
+          "descricao": "Tarifas Bancárias"
+        },
+        {
+          "codigo": "4.027",
+          "descricao": "Taxa MDR"
+        },
+        {
+          "codigo": "4.028",
+          "descricao": "Tarifa de Cesta de Serviços"
+        },
+        {
+          "codigo": "4.029",
+          "descricao": "Tarifa de PIX"
+        },
+        {
+          "codigo": "4.030",
+          "descricao": "Brindes de Campanha"
+        },
+        {
+          "codigo": "4.031",
+          "descricao": "Despesas de Viagens"
+        },
+        {
+          "codigo": "4.032",
+          "descricao": "Estacionamento Comercial"
+        },
+        {
+          "codigo": "4.033",
+          "descricao": "Promoções e Eventos"
+        },
+        {
+          "codigo": "4.034",
+          "descricao": "Propaganda e Marketing"
+        },
+        {
+          "codigo": "4.035",
+          "descricao": "Vigilância e Segurança"
+        },
+        {
+          "codigo": "4.036",
+          "descricao": "Manutenção / Reparos e Conservação de Instalações"
+        },
+        {
+          "codigo": "4.037",
+          "descricao": "Materiais para Manutenção de Instalações"
+        },
+        {
+          "codigo": "4.038",
+          "descricao": "Água e Esgoto"
+        },
+        {
+          "codigo": "4.039",
+          "descricao": "Aluguéis de Imóveis"
+        },
+        {
+          "codigo": "4.040",
+          "descricao": "Condomínios"
+        },
+        {
+          "codigo": "4.041",
+          "descricao": "Energia Elétrica"
+        },
+        {
+          "codigo": "4.042",
+          "descricao": "IPTU/ITU"
+        },
+        {
+          "codigo": "4.043",
+          "descricao": "Aluguéis"
+        },
+        {
+          "codigo": "4.044",
+          "descricao": "13º Salário"
+        },
+        {
+          "codigo": "4.045",
+          "descricao": "Adiantamento Salarial"
+        },
+        {
+          "codigo": "4.046",
+          "descricao": "Exames ASO (Atestado de Saúde Ocupacional)"
+        },
+        {
+          "codigo": "4.047",
+          "descricao": "Férias"
+        },
+        {
+          "codigo": "4.048",
+          "descricao": "FGTS"
+        },
+        {
+          "codigo": "4.049",
+          "descricao": "INSS"
+        },
+        {
+          "codigo": "4.050",
+          "descricao": "IRRF"
+        },
+        {
+          "codigo": "4.051",
+          "descricao": "Multa FGTS"
+        },
+        {
+          "codigo": "4.052",
+          "descricao": "Pró-Labore"
+        },
+        {
+          "codigo": "4.053",
+          "descricao": "Rescisões"
+        },
+        {
+          "codigo": "4.054",
+          "descricao": "Salários e Ordenados"
+        },
+        {
+          "codigo": "4.055",
+          "descricao": "Seguro de Vida"
+        },
+        {
+          "codigo": "4.056",
+          "descricao": "Uniformes / EPI"
+        },
+        {
+          "codigo": "4.057",
+          "descricao": "Vale-Alimentação"
+        },
+        {
+          "codigo": "4.058",
+          "descricao": "Vale-Transporte"
+        },
+        {
+          "codigo": "4.059",
+          "descricao": "Auxílio Combustível"
+        },
+        {
+          "codigo": "4.060",
+          "descricao": "Endomarketing"
+        },
+        {
+          "codigo": "4.061",
+          "descricao": "Empréstimos Bancários"
+        },
+        {
+          "codigo": "4.062",
+          "descricao": "Rendimentos de Aplicações Financeiras"
+        },
+        {
+          "codigo": "4.063",
+          "descricao": "Juros Passivos"
+        },
+        {
+          "codigo": "4.064",
+          "descricao": "Juros sobre Empréstimos"
+        },
+        {
+          "codigo": "4.065",
+          "descricao": "Juros sobre Empréstimos - Investidor"
+        },
+        {
+          "codigo": "4.066",
+          "descricao": "Pagamento de Empréstimos"
+        },
+        {
+          "codigo": "4.067",
+          "descricao": "Prejuízo em Aplicações Financeiras"
+        },
+        {
+          "codigo": "4.068",
+          "descricao": "IOF"
+        },
+        {
+          "codigo": "4.069",
+          "descricao": "IR sobre Aplicações"
+        },
+        {
+          "codigo": "4.070",
+          "descricao": "Bonificações"
+        },
+        {
+          "codigo": "4.071",
+          "descricao": "Prêmios e Gratificações"
+        },
+        {
+          "codigo": "4.072",
+          "descricao": "Cursos para Professores"
+        },
+        {
+          "codigo": "4.073",
+          "descricao": "Aluguel Cleusa"
+        },
+        {
+          "codigo": "4.074",
+          "descricao": "Capitalização"
+        },
+        {
+          "codigo": "4.075",
+          "descricao": "Taxi e Uber"
+        }
+      ]
+    },
+    {
+      "codigo": "5",
+      "descricao": "Investimento",
+      "subcontas": [
+        {
+          "codigo": "5.001",
+          "descricao": "Consórcios"
+        },
+        {
+          "codigo": "5.002",
+          "descricao": "Maquinas, Aparelhos e Equipamentos"
+        },
+        {
+          "codigo": "5.003",
+          "descricao": "Móveis e Utensílios"
+        },
+        {
+          "codigo": "5.004",
+          "descricao": "Veículos - Novos e Usados"
+        },
+        {
+          "codigo": "5.005",
+          "descricao": "Compra de Cotas"
+        }
+      ]
+    },
+    {
+      "codigo": "6",
+      "descricao": "Distribuição",
+      "subcontas": [
+        {
+          "codigo": "6.001",
+          "descricao": "Aportes"
+        },
+        {
+          "codigo": "6.002",
+          "descricao": "Distribuição de Lucros"
+        },
+        {
+          "codigo": "6.003",
+          "descricao": "Aportes - Investidores"
+        },
+        {
+          "codigo": "6.004",
+          "descricao": "Amortização - Investidores"
+        },
+        {
+          "codigo": "6.005",
+          "descricao": "Distribuição de Lucros - Pró-Labore"
+        }
+      ]
+    }
+  ]
+}

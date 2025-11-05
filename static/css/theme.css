@@ -1,0 +1,200 @@
+/* ========================================
+   PALETA DE CORES PREMIUM
+   Projeto: Classificador Financeiro
+   Cores Principais: #101D43 (Azul) | #D6BC71 (Dourado)
+   ======================================== */
+
+:root {
+    /* ===== CORES PRINCIPAIS ===== */
+    --primary-dark: #101D43;      /* Azul escuro principal */
+    --primary-gold: #D6BC71;      /* Dourado/Amarelo elegante */
+    
+    /* ===== CORES COMPLEMENTARES ===== */
+    --secondary-blue: #1a2d5a;    /* Azul médio */
+    --light-blue: #2a3d6a;        /* Azul claro para hover */
+    --dark-gold: #c0a85f;         /* Dourado escuro */
+    --light-gold: #e8d9a8;        /* Dourado claro */
+    --pale-gold: #faf8f3;         /* Dourado muito claro (backgrounds) */
+    
+    /* ===== CORES DE SUPORTE ===== */
+    --success: #4caf50;           /* Verde para receitas */
+    --success-dark: #388e3c;      /* Verde escuro */
+    --danger: #f44336;            /* Vermelho para despesas */
+    --danger-dark: #c62828;       /* Vermelho escuro */
+    --warning: #ff9800;           /* Laranja para alertas */
+    --info: #2196f3;              /* Azul info */
+    
+    /* ===== BACKGROUNDS ===== */
+    --background: #f5f7fa;        /* Fundo claro */
+    --background-light: #fefdfb;  /* Fundo muito claro */
+    --card-bg: #ffffff;           /* Background de cards */
+    
+    /* ===== TEXTOS ===== */
+    --text-dark: #2c3e50;         /* Texto escuro */
+    --text-light: #ffffff;        /* Texto claro */
+    --text-muted: #95a5a6;        /* Texto secundário */
+    
+    /* ===== SOMBRAS ===== */
+    --shadow-sm: 0 2px 8px rgba(16, 29, 67, 0.08);
+    --shadow-md: 0 8px 20px rgba(16, 29, 67, 0.15);
+    --shadow-lg: 0 15px 40px rgba(16, 29, 67, 0.25);
+    --shadow-xl: 0 30px 80px rgba(16, 29, 67, 0.30);
+    --shadow-gold: 0 8px 20px rgba(214, 188, 113, 0.3);
+    --shadow-gold-lg: 0 12px 30px rgba(214, 188, 113, 0.5);
+    
+    /* ===== GRADIENTES ===== */
+    --gradient-primary: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-blue) 50%, var(--light-blue) 100%);
+    --gradient-gold: linear-gradient(135deg, var(--light-gold) 0%, var(--primary-gold) 100%);
+    --gradient-success: linear-gradient(135deg, var(--success) 0%, var(--success-dark) 100%);
+    --gradient-danger: linear-gradient(135deg, var(--danger) 0%, var(--danger-dark) 100%);
+    --gradient-card: linear-gradient(135deg, var(--background-light) 0%, var(--pale-gold) 100%);
+    
+    /* ===== TRANSIÇÕES ===== */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.2s ease;
+    --transition-slow: all 0.5s ease;
+    
+    /* ===== BORDER RADIUS ===== */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 20px;
+    
+    /* ===== ESPAÇAMENTOS ===== */
+    --spacing-xs: 8px;
+    --spacing-sm: 12px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-2xl: 48px;
+}
+
+/* ========================================
+   RESET E BASE STYLES
+   ======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ========================================
+   CLASSES UTILITÁRIAS
+   ======================================== */
+
+/* Backgrounds */
+.bg-primary { background: var(--primary-dark); }
+.bg-gold { background: var(--primary-gold); }
+.bg-gradient-primary { background: var(--gradient-primary); }
+.bg-gradient-gold { background: var(--gradient-gold); }
+.bg-white { background: var(--card-bg); }
+
+/* Textos */
+.text-primary { color: var(--primary-dark); }
+.text-gold { color: var(--primary-gold); }
+.text-success { color: var(--success); }
+.text-danger { color: var(--danger); }
+.text-light { color: var(--text-light); }
+.text-muted { color: var(--text-muted); }
+
+/* Bordas */
+.border-gold { border: 2px solid var(--primary-gold); }
+.border-primary { border: 2px solid var(--primary-dark); }
+.border-gold-3 { border: 3px solid var(--primary-gold); }
+
+/* Sombras */
+.shadow-sm { box-shadow: var(--shadow-sm); }
+.shadow-md { box-shadow: var(--shadow-md); }
+.shadow-lg { box-shadow: var(--shadow-lg); }
+.shadow-xl { box-shadow: var(--shadow-xl); }
+.shadow-gold { box-shadow: var(--shadow-gold); }
+
+/* Border Radius */
+.rounded { border-radius: var(--radius-md); }
+.rounded-lg { border-radius: var(--radius-lg); }
+.rounded-xl { border-radius: var(--radius-xl); }
+
+/* ========================================
+   ANIMAÇÕES
+   ======================================== */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* Classes de animação */
+.fade-in { animation: fadeIn 0.5s ease; }
+.slide-up { animation: slideUp 0.5s ease; }
+.float { animation: float 3s ease-in-out infinite; }
+.pulse { animation: pulse 2s ease-in-out infinite; }
+
+/* ========================================
+   SCROLLBAR PERSONALIZADA
+   ======================================== */
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-gold);
+    border-radius: 10px;
+    transition: var(--transition-fast);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--dark-gold);
+}

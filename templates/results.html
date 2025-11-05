@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados - Classificador de Transações</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-dark: #101D43;
+            --primary-gold: #D6BC71;
+            --secondary-blue: #1a2d5a;
+            --light-blue: #2a3d6a;
+            --dark-gold: #c0a85f;
+            --light-gold: #e8d9a8;
+            --success: #4caf50;
+            --danger: #f44336;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-blue) 50%, var(--light-blue) 100%);
+            min-height: 100vh;
+            padding: 20px;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 30%, var(--primary-gold) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, var(--dark-gold) 0%, transparent 40%);
+            opacity: 0.1;
+            pointer-events: none;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .header h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-blue) 100%);
+            color: white;
+            border: 2px solid var(--primary-gold);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(214, 188, 113, 0.4);
+            border-color: var(--dark-gold);
+        }
+
+        .btn-success {
+            background: #00b894;
+            color: white;
+        }
+
+        .btn-success:hover {
+            background: #00a383;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #5a6268;
+        }
+
+        /* Cards de Métricas */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .metric-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .metric-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+        }
+
+        .metric-icon.receita {
+            background: linear-gradient(135deg, #00b894, #00d2a0);
+        }
+
+        .metric-icon.despesa {
+            background: linear-gradient(135deg, #ff4757, #ff6b7a);
+        }
+
+        .metric-icon.lucro {
+            background: linear-gradient(135deg, var(--primary-dark), var(--secondary-blue));
+        }
+
+        .metric-content h3 {
+            color: #999;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .metric-content .value {
+            color: #333;
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        .metric-content .change {
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        .positive {
+            color: #00b894;
+        }
+
+        .negative {
+            color: #ff4757;
+        }
+
+        /* Gráficos */
+        .charts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .chart-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .chart-card h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+
+        /* Tabela */
+        .table-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            overflow-x: auto;
+        }
+
+        .table-card h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+
+        .table-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .search-box {
+            padding: 10px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 14px;
+            width: 300px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        thead {
+            background: #f8f9fa;
+        }
+
+        th {
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            color: #333;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        tbody tr {
+            transition: background 0.2s;
+        }
+
+        tbody tr:hover {
+            background: #f8f9ff;
+        }
+
+        .edit-select {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            background: white;
+            font-size: 12px;
+            cursor: pointer;
+            width: 100%;
+            min-width: 250px;
+            max-height: 35px;
+        }
+
+        .edit-select:focus {
+            outline: none;
+            border-color: var(--primary-gold);
+            box-shadow: 0 0 0 3px rgba(214, 188, 113, 0.2);
+        }
+
+        .edit-select option {
+            padding: 8px;
+            font-size: 12px;
+        }
+
+        .edit-select option:disabled {
+            color: #999;
+            font-weight: bold;
+        }
+
+        .valor-positivo {
+            color: #00b894;
+            font-weight: 600;
+        }
+
+        .valor-negativo {
+            color: #ff4757;
+            font-weight: 600;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .badge-receita {
+            background: #e0ffe0;
+            color: #00b894;
+        }
+
+        .badge-despesa {
+            background: #ffe0e0;
+            color: #ff4757;
+        }
+
+        .loader {
+            border: 5px solid var(--light-gold);
+            border-top: 5px solid var(--primary-gold);
+            border-right: 5px solid var(--dark-gold);
+            border-bottom: 5px solid var(--primary-dark);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 50px auto;
+            box-shadow: 0 4px 15px rgba(214, 188, 113, 0.4);
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .alert {
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .alert.show {
+            display: block;
+        }
+
+        .alert-success {
+            background: #e0ffe0;
+            color: #00b894;
+            border-left: 4px solid #00b894;
+        }
+
+        .alert-error {
+            background: #ffe0e0;
+            color: #d63031;
+            border-left: 4px solid #d63031;
+        }
+
+        @media (max-width: 768px) {
+            .charts-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .search-box {
+                width: 100%;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            .header {
+                padding: 20px;
+            }
+
+            .header h1 {
+                font-size: 20px;
+            }
+
+            .header-actions {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .btn {
+                width: 100%;
+                padding: 10px;
+                font-size: 14px;
+            }
+
+            table {
+                font-size: 12px;
+            }
+
+            th, td {
+                padding: 8px 4px;
+            }
+
+            /* Logo menor em mobile */
+            body > div:first-child {
+                top: 5px;
+                left: 5px;
+            }
+
+            body > div:first-child img {
+                height: 20px !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 18px;
+            }
+
+            .stat-value {
+                font-size: 20px;
+            }
+
+            table {
+                font-size: 11px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Logo no canto superior esquerdo -->
+    <div style="position: fixed; top: 8px; left: 10px; z-index: 1000;">
+        <img src="/static/TAG_BSS_OFICIAL.png" alt="TAG BSS Logo" style="height: 25px; width: auto;">
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>📊 Resultados da Classificação</h1>
+            <p style="color: #666; margin-top: 5px;">Analise e edite suas transações classificadas</p>
+            <div class="header-actions">
+                <a href="/" class="btn btn-secondary">⬅️ Voltar</a>
+                <a href="/relatorio" class="btn btn-primary">📊 Ver Relatório Completo</a>
+                <button class="btn btn-success" onclick="saveChanges()">💾 Salvar Alterações</button>
+                <a href="/download" class="btn btn-primary" download>📥 Baixar Excel</a>
+            </div>
+        </div>
+
+        <div id="alert" class="alert"></div>
+
+        <div id="loader" class="loader"></div>
+
+        <div id="content" style="display: none;">
+            <!-- Cards de Métricas -->
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-icon receita">💰</div>
+                    <div class="metric-content">
+                        <h3>Entrada</h3>
+                        <div class="value" id="receitaTotal">R$ 0,00</div>
+                        <div class="change positive" id="receitaCount">0 transações</div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon despesa">💸</div>
+                    <div class="metric-content">
+                        <h3>Saída</h3>
+                        <div class="value" id="despesaTotal">R$ 0,00</div>
+                        <div class="change negative" id="despesaCount">0 transações</div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon lucro">📈</div>
+                    <div class="metric-content">
+                        <h3>Saldo</h3>
+                        <div class="value" id="lucroTotal">R$ 0,00</div>
+                        <div class="change" id="lucroPercentual">0%</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gráficos -->
+            <div class="charts-grid">
+                <div class="chart-card">
+                    <h2>📊 Transações por Categoria</h2>
+                    <canvas id="categoryChart"></canvas>
+                </div>
+                <div class="chart-card">
+                    <h2>📈 Evolução Mensal</h2>
+                    <canvas id="timelineChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Tabela de Transações -->
+            <div class="table-card">
+                <h2>💳 Transações Detalhadas</h2>
+                <div class="table-controls">
+                    <input type="text" class="search-box" id="searchBox" placeholder="🔍 Buscar por descrição, banco, valor...">
+                    <span id="recordCount">Total: 0 transações</span>
+                </div>
+                <table id="transactionsTable">
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Banco</th>
+                            <th>Valor</th>
+                            <th>Descrição</th>
+                            <th>Classificação</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let transactions = [];
+        let categories = [];
+        let editedTransactions = {};
+        let categoryChart, timelineChart;
+
+        // Carrega dados ao abrir a página
+        window.onload = async () => {
+            await loadData();
+        };
+
+        async function loadData() {
+            try {
+                const response = await fetch('/api/results');
+                const data = await response.json();
+
+                if (data.error) {
+                    showAlert(data.error, 'error');
+                    document.getElementById('loader').style.display = 'none';
+                    return;
+                }
+
+                transactions = data.transactions;
+                categories = data.categories;
+
+                // Agrupa categorias por grupo (código inicial)
+                const groupedCategories = {};
+                categories.forEach(cat => {
+                    const groupCode = cat.split('.')[0];
+                    if (!groupedCategories[groupCode]) {
+                        groupedCategories[groupCode] = [];
+                    }
+                    groupedCategories[groupCode].push(cat);
+                });
+
+                // Define nomes dos grupos
+                const groupNames = {
+                    '0': '📊 Transferências',
+                    '1': '💰 Receitas',
+                    '2': '🏛️ Tributos',
+                    '3': '💼 Custos',
+                    '4': '💸 Despesas',
+                    '5': '📈 Investimentos',
+                    '6': '🎯 Distribuição'
+                };
+
+                // Reorganiza categorias com grupos
+                const categoriesWithGroups = [];
+                Object.keys(groupedCategories).sort().forEach(groupCode => {
+                    categoriesWithGroups.push({
+                        isGroup: true,
+                        name: groupNames[groupCode] || `Grupo ${groupCode}`
+                    });
+                    groupedCategories[groupCode].forEach(cat => {
+                        categoriesWithGroups.push({
+                            isGroup: false,
+                            value: cat
+                        });
+                    });
+                });
+
+                categories = categoriesWithGroups;
+
+                document.getElementById('loader').style.display = 'none';
+                document.getElementById('content').style.display = 'block';
+
+                renderMetrics();
+                renderCharts();
+                renderTable();
+            } catch (error) {
+                showAlert('Erro ao carregar dados: ' + error.message, 'error');
+                document.getElementById('loader').style.display = 'none';
+            }
+        }
+
+        function renderMetrics() {
+            const receita = transactions
+                .filter(t => t.valor > 0)
+                .reduce((sum, t) => sum + t.valor, 0);
+            
+            const despesa = Math.abs(transactions
+                .filter(t => t.valor < 0)
+                .reduce((sum, t) => sum + t.valor, 0));
+            
+            const lucro = receita - despesa;
+
+            const receitaCount = transactions.filter(t => t.valor > 0).length;
+            const despesaCount = transactions.filter(t => t.valor < 0).length;
+
+            document.getElementById('receitaTotal').textContent = formatMoney(receita);
+            document.getElementById('despesaTotal').textContent = formatMoney(despesa);
+            document.getElementById('lucroTotal').textContent = formatMoney(lucro);
+            
+            document.getElementById('receitaCount').textContent = `${receitaCount} transações`;
+            document.getElementById('despesaCount').textContent = `${despesaCount} transações`;
+            
+            const percentual = receita > 0 ? ((lucro / receita) * 100).toFixed(1) : 0;
+            document.getElementById('lucroPercentual').textContent = `${percentual}% margem`;
+            document.getElementById('lucroPercentual').className = lucro >= 0 ? 'change positive' : 'change negative';
+        }
+
+        function renderCharts() {
+            // Destroi gráficos anteriores se existirem
+            if (categoryChart) {
+                categoryChart.destroy();
+            }
+            if (timelineChart) {
+                timelineChart.destroy();
+            }
+
+            // Gráfico de Categorias
+            const categoryCounts = {};
+            transactions.forEach(t => {
+                const cat = t.classificacao_sugerida || 'Não classificado';
+                categoryCounts[cat] = (categoryCounts[cat] || 0) + 1;
+            });
+
+            const ctx1 = document.getElementById('categoryChart').getContext('2d');
+            categoryChart = new Chart(ctx1, {
+                type: 'doughnut',
+                data: {
+                    labels: Object.keys(categoryCounts),
+                    datasets: [{
+                        data: Object.values(categoryCounts),
+                        backgroundColor: [
+                            '#667eea', '#764ba2', '#00b894', '#00d2a0',
+                            '#ff4757', '#ff6b7a', '#ffa502', '#ffb142',
+                            '#3c40c6', '#4b4bdb', '#00a8ff', '#4facfe'
+                        ]
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    plugins: {
+                        legend: {
+                            position: 'right'
+                        }
+                    }
+                }
+            });
+
+            // Gráfico de Linha (Evolução Temporal)
+            const monthlyData = {};
+            transactions.forEach(t => {
+                if (t.data) {
+                    // Converte data de DD/MM/YYYY para YYYY-MM
+                    const dateParts = t.data.split('/');
+                    if (dateParts.length === 3) {
+                        const day = dateParts[0];
+                        const month = dateParts[1];
+                        const year = dateParts[2];
+                        const monthKey = `${year}-${month}`; // YYYY-MM
+                        
+                        if (!monthlyData[monthKey]) {
+                            monthlyData[monthKey] = { receita: 0, despesa: 0 };
+                        }
+                        if (t.valor > 0) {
+                            monthlyData[monthKey].receita += t.valor;
+                        } else {
+                            monthlyData[monthKey].despesa += Math.abs(t.valor);
+                        }
+                    }
+                }
+            });
+
+            const sortedMonths = Object.keys(monthlyData).sort();
+            const receitas = sortedMonths.map(m => monthlyData[m].receita);
+            const despesas = sortedMonths.map(m => monthlyData[m].despesa);
+
+            // Formata labels de forma mais legível
+            const monthNames = {
+                '01': 'Jan', '02': 'Fev', '03': 'Mar', '04': 'Abr',
+                '05': 'Mai', '06': 'Jun', '07': 'Jul', '08': 'Ago',
+                '09': 'Set', '10': 'Out', '11': 'Nov', '12': 'Dez'
+            };
+
+            const ctx2 = document.getElementById('timelineChart').getContext('2d');
+            timelineChart = new Chart(ctx2, {
+                type: 'line',
+                data: {
+                    labels: sortedMonths.map(m => {
+                        const [year, month] = m.split('-');
+                        return `${monthNames[month]}/${year.substring(2)}`;
+                    }),
+                    datasets: [{
+                        label: 'Receitas',
+                        data: receitas,
+                        borderColor: '#00b894',
+                        backgroundColor: 'rgba(0, 184, 148, 0.1)',
+                        tension: 0.4,
+                        fill: true
+                    }, {
+                        label: 'Despesas',
+                        data: despesas,
+                        borderColor: '#ff4757',
+                        backgroundColor: 'rgba(255, 71, 87, 0.1)',
+                        tension: 0.4,
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                            labels: {
+                                font: {
+                                    size: 14,
+                                    weight: 'bold'
+                                },
+                                padding: 15
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return context.dataset.label + ': ' + 
+                                           new Intl.NumberFormat('pt-BR', {
+                                               style: 'currency',
+                                               currency: 'BRL'
+                                           }).format(context.parsed.y);
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            ticks: {
+                                maxRotation: 45,
+                                minRotation: 45,
+                                font: {
+                                    size: 11
+                                }
+                            },
+                            grid: {
+                                display: false
+                            }
+                        },
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                callback: function(value) {
+                                    return 'R$ ' + (value / 1000).toFixed(0) + 'k';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function renderTable(filter = '') {
+            const tbody = document.getElementById('tableBody');
+            tbody.innerHTML = '';
+
+            const filteredTransactions = transactions.filter(t => {
+                const searchText = filter.toLowerCase();
+                return (
+                    (t.descricao || '').toLowerCase().includes(searchText) ||
+                    (t.banco || '').toLowerCase().includes(searchText) ||
+                    (t.valor || '').toString().includes(searchText) ||
+                    (t.classificacao_sugerida || '').toLowerCase().includes(searchText)
+                );
+            });
+
+            document.getElementById('recordCount').textContent = `Total: ${filteredTransactions.length} transações`;
+
+            filteredTransactions.forEach((t, index) => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${t.data || '-'}</td>
+                    <td>${t.banco || '-'}</td>
+                    <td class="${t.valor >= 0 ? 'valor-positivo' : 'valor-negativo'}">
+                        ${formatMoney(t.valor)}
+                    </td>
+                    <td>${t.descricao || '-'}</td>
+                    <td>
+                        <select class="edit-select" data-index="${t.index}" onchange="markAsEdited(this)">
+                            <option value="${t.classificacao_sugerida}" selected>
+                                ${extractDescription(editedTransactions[t.index] || t.classificacao_sugerida || 'Não classificado')}
+                            </option>
+                            <option disabled>────────────────</option>
+                            ${categories.map(cat => {
+                                if (cat.isGroup) {
+                                    return `<option disabled style="font-weight: bold; color: var(--primary-dark); background: var(--light-gold);">${cat.name}</option>`;
+                                } else {
+                                    return `<option value="${cat.value}">&nbsp;&nbsp;${extractDescription(cat.value)}</option>`;
+                                }
+                            }).join('')}
+                        </select>
+                    </td>
+                    <td>
+                        <span class="badge ${t.valor >= 0 ? 'badge-receita' : 'badge-despesa'}">
+                            ${t.valor >= 0 ? 'Entrada' : 'Saída'}
+                        </span>
+                    </td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        function markAsEdited(select) {
+            const index = parseInt(select.dataset.index);
+            editedTransactions[index] = select.value;
+        }
+
+        async function saveChanges() {
+            if (Object.keys(editedTransactions).length === 0) {
+                showAlert('Nenhuma alteração foi feita.', 'error');
+                return;
+            }
+
+            try {
+                const response = await fetch('/api/save', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ edits: editedTransactions })
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    showAlert(result.message, 'success');
+                    editedTransactions = {};
+                    await loadData(); // Recarrega dados
+                } else {
+                    showAlert(result.error, 'error');
+                }
+            } catch (error) {
+                showAlert('Erro ao salvar: ' + error.message, 'error');
+            }
+        }
+
+        function formatMoney(value) {
+            return new Intl.NumberFormat('pt-BR', {
+                style: 'currency',
+                currency: 'BRL'
+            }).format(value);
+        }
+
+        function extractDescription(fullText) {
+            // Remove o código (ex: "0.001 - Saldo Inicial" -> "Saldo Inicial")
+            if (fullText && fullText.includes(' - ')) {
+                return fullText.split(' - ').slice(1).join(' - ').trim();
+            }
+            return fullText;
+        }
+
+        function showAlert(message, type) {
+            const alert = document.getElementById('alert');
+            alert.textContent = message;
+            alert.className = `alert alert-${type} show`;
+            setTimeout(() => {
+                alert.classList.remove('show');
+            }, 5000);
+        }
+
+        // Busca em tempo real
+        document.getElementById('searchBox').addEventListener('input', (e) => {
+            renderTable(e.target.value);
+        });
+    </script>
+</body>
+</html>

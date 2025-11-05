@@ -1,0 +1,1494 @@
+================================================================================
+RELATÓRIO DE DECISÕES DA IA
+================================================================================
+
+Sessão: 20251105_150058
+Início: 2025-11-05T15:00:58.488432
+Fim: 2025-11-05T15:19:53.600189
+Total de decisões: 422
+
+--------------------------------------------------------------------------------
+TIPOS DE DECISÕES
+--------------------------------------------------------------------------------
+  rule: 114 decisões
+  ai: 279 decisões
+
+--------------------------------------------------------------------------------
+CLASSIFICAÇÕES (393 transações)
+--------------------------------------------------------------------------------
+
+Métodos usados:
+  - rule: 114 transações
+  - ai: 279 transações
+
+Exemplos de classificações:
+
+1. Transação ID -1
+   Entrada: PIX - ENVIADO - 01/09 10:59 BODY STATION ACADEMIA
+   Decisão: (-) Transferencia Entre Contas
+   Método: rule
+   Raciocínio: Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)...
+
+2. Transação ID -1
+   Entrada: BB RENDE FÁCIL - RENDE FACIL
+   Decisão: Resgate Aplicação Financeira
+   Método: rule
+   Raciocínio: Regra: Rende Fácil detectado + origem CAR = Resgate...
+
+3. Transação ID -1
+   Entrada: PIX - ENVIADO - 02/09 11:35 BODY STATION ACADEMIA
+   Decisão: (-) Transferencia Entre Contas
+   Método: rule
+   Raciocínio: Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)...
+
+4. Transação ID -1
+   Entrada: BB RENDE FÁCIL - RENDE FACIL
+   Decisão: Resgate Aplicação Financeira
+   Método: rule
+   Raciocínio: Regra: Rende Fácil detectado + origem CAR = Resgate...
+
+5. Transação ID -1
+   Entrada: BB RENDE FÁCIL - RENDE FACIL
+   Decisão: 0.006 - Aplicação Financeira
+   Método: rule
+   Raciocínio: Regra: Rende Fácil detectado + origem CAP = Aplicação...
+
+
+================================================================================
+EXPLICAÇÕES DAS DECISÕES DO RELATÓRIO EXECUTIVO
+================================================================================
+Esta seção mostra COMO A IA chegou em cada conclusão do relatório.
+Cada análise abaixo foi usada para gerar o PDF executivo.
+================================================================================
+
+--------------------------------------------------------------------------------
+ANÁLISES ESTRATÉGICAS (26 análises)
+--------------------------------------------------------------------------------
+
+1. KEY_EVENT_1
+   Data/Hora: 2025-11-05T15:09:18.504936
+
+   EXPLICAÇÃO DE COMO A IA CHEGOU NESTA CONCLUSÃO:
+   
+   EVENTO-CHAVE 1 - RACIOCÍNIO DA IA:
+   
+   TIPO: POSITIVO
+   TÍTULO: Receita significativa em setembro
+   
+   DESCRIÇÃO COMPLETA:
+   Em setembro de 2025, a receita totalizou 701,126.86, representando um aumento significativo em relação a agosto, que teve uma receita de 421,618.84. Este aumento foi impulsionado por uma transação de alto valor em 08/09/2025, onde a 'REDE VENDAS MASTER CRÉDIT' gerou uma receita de 35,233.92, a maior transação de receita do período.
+   
+   COMO A IA IDENTIFICOU ESTE EVENTO:
+   
+   1. ANÁLISE DE RELEVÂNCIA:
+      Este evento foi selecionado como um dos 3 mais importantes porque:
+      - Teve impacto significativo nos resultados financeiros do período
+      - Representa uma mudança ou tendência clara nos dados
+      - É relevante para tomada de decisão estratégica
+   
+   2. CLASSIFICAÇÃO DO TIPO (POSITIVO):
+      - POSITIVO: Evento que contribuiu para melhoria dos resultados ou apresenta oportunidade
+      
+      
+   
+   3. DADOS QUE SUPORTAM ESTE EVENTO:
+      - Identificado crescimento em métricas de receita ou volume
+      - Variação de receita entre primeiro e último mês: +66.3%
+   
+   4. IMPACTO NOS RESULTADOS:
+      - Receita total do período: R$ 1,122,745.70
+      - Despesa total do período: R$ 1,095,144.53
+      - Resultado líquido: R$ 27,601.17
+      - Este evento está diretamente relacionado com estes números
+   
+   5. CONTEXTO TEMPORAL:
+      Número de meses analisados: 2
+      Tendência observada: Crescente (última receita maior que primeira)
+   
+   RELEVÂNCIA PARA O RELATÓRIO:
+   Este evento foi incluído no Sumário Executivo porque representa um dos aspectos mais
+   críticos para entender o desempenho financeiro do período e orientar decisões futuras.
+   
+
+--------------------------------------------------------------------------------
+
+2. KEY_EVENT_2
+   Data/Hora: 2025-11-05T15:09:18.504936
+
+   EXPLICAÇÃO DE COMO A IA CHEGOU NESTA CONCLUSÃO:
+   
+   EVENTO-CHAVE 2 - RACIOCÍNIO DA IA:
+   
+   TIPO: NEGATIVO
+   TÍTULO: Despesa elevada com aplicação financeira
+   
+   DESCRIÇÃO COMPLETA:
+   Em 08/09/2025, houve uma despesa significativa de 61,771.94 relacionada à 'BB RENDE FÁCIL - RENDE FACIL', que foi a maior despesa do período. Esta aplicação financeira impactou negativamente o saldo do mês de setembro, que terminou praticamente zerado.
+   
+   COMO A IA IDENTIFICOU ESTE EVENTO:
+   
+   1. ANÁLISE DE RELEVÂNCIA:
+      Este evento foi selecionado como um dos 3 mais importantes porque:
+      - Teve impacto significativo nos resultados financeiros do período
+      - Representa uma mudança ou tendência clara nos dados
+      - É relevante para tomada de decisão estratégica
+   
+   2. CLASSIFICAÇÃO DO TIPO (NEGATIVO):
+      
+      - NEGATIVO: Evento que representa desafio ou risco para os resultados
+      
+   
+   3. DADOS QUE SUPORTAM ESTE EVENTO:
+      - Variação de receita entre primeiro e último mês: +66.3%
+   
+   4. IMPACTO NOS RESULTADOS:
+      - Receita total do período: R$ 1,122,745.70
+      - Despesa total do período: R$ 1,095,144.53
+      - Resultado líquido: R$ 27,601.17
+      - Este evento está diretamente relacionado com estes números
+   
+   5. CONTEXTO TEMPORAL:
+      Número de meses analisados: 2
+      Tendência observada: Crescente (última receita maior que primeira)
+   
+   RELEVÂNCIA PARA O RELATÓRIO:
+   Este evento foi incluído no Sumário Executivo porque representa um dos aspectos mais
+   críticos para entender o desempenho financeiro do período e orientar decisões futuras.
+   
+
+--------------------------------------------------------------------------------
+
+3. KEY_EVENT_3
+   Data/Hora: 2025-11-05T15:09:18.504936
+
+   EXPLICAÇÃO DE COMO A IA CHEGOU NESTA CONCLUSÃO:
+   
+   EVENTO-CHAVE 3 - RACIOCÍNIO DA IA:
+   
+   TIPO: NEUTRO
+   TÍTULO: Saldo mensal neutro em setembro
+   
+   DESCRIÇÃO COMPLETA:
+   Apesar do aumento de receita em setembro, o saldo do mês foi praticamente neutro, com um valor residual de apenas 0.00. Isso ocorreu devido a despesas que igualaram a receita, destacando a importância de gerenciar melhor as despesas para melhorar a margem de lucro.
+   
+   COMO A IA IDENTIFICOU ESTE EVENTO:
+   
+   1. ANÁLISE DE RELEVÂNCIA:
+      Este evento foi selecionado como um dos 3 mais importantes porque:
+      - Teve impacto significativo nos resultados financeiros do período
+      - Representa uma mudança ou tendência clara nos dados
+      - É relevante para tomada de decisão estratégica
+   
+   2. CLASSIFICAÇÃO DO TIPO (NEUTRO):
+      
+      
+      - NEUTRO: Evento relevante mas com impacto misto ou ainda não definido
+   
+   3. DADOS QUE SUPORTAM ESTE EVENTO:
+      - Identificado crescimento em métricas de receita ou volume
+      - Margem do período: 2.5%
+      - Variação de receita entre primeiro e último mês: +66.3%
+   
+   4. IMPACTO NOS RESULTADOS:
+      - Receita total do período: R$ 1,122,745.70
+      - Despesa total do período: R$ 1,095,144.53
+      - Resultado líquido: R$ 27,601.17
+      - Este evento está diretamente relacionado com estes números
+   
+   5. CONTEXTO TEMPORAL:
+      Número de meses analisados: 2
+      Tendência observada: Crescente (última receita maior que primeira)
+   
+   RELEVÂNCIA PARA O RELATÓRIO:
+   Este evento foi incluído no Sumário Executivo porque representa um dos aspectos mais
+   críticos para entender o desempenho financeiro do período e orientar decisões futuras.
+   
+
+--------------------------------------------------------------------------------
+
+4. SWOT_ANALYSIS
+   Data/Hora: 2025-11-05T15:10:28.915005
+
+   EXPLICAÇÃO DE COMO A IA CHEGOU NESTA CONCLUSÃO:
+   
+   ANÁLISE SWOT - RACIOCÍNIO DA IA:
+   
+   A IA analisou os dados financeiros do período e identificou:
+   
+   FORÇAS (4 itens):
+     • A receita total de R$1.122.745,70 supera as despesas de R$1.095.144,53, resultando em um saldo positivo de R$27.601,17.
+     • A margem de lucro de 2,46% indica que a empresa está operando com lucro, mesmo que pequeno.
+     • A categoria 'Receita com Venda de Serviços' gerou R$498.694,96, representando uma parte significativa da receita total.
+     • O ticket médio de receita é de R$5.558,15, superior ao ticket médio de despesa de R$4.782,29, indicando eficiência nas transações de receita.
+   
+   JUSTIFICATIVA: Estas forças foram identificadas analisando métricas positivas como crescimento de receita, 
+   margem de lucro, eficiência operacional e tendências favoráveis nos dados do período.
+   
+   FRAQUEZAS (4 itens):
+     • As despesas totais de R$1.095.144,53 estão muito próximas das receitas, resultando em uma margem de lucro baixa de 2,46%.
+     • A categoria 'Transferência Entre Contas' apresenta um saldo negativo significativo de R$-515.103,97, impactando negativamente o fluxo de caixa.
+     • A categoria 'Aplicação Financeira' resultou em uma despesa de R$-201.491,18, o que pode indicar perdas ou baixa rentabilidade dos investimentos.
+     • A despesa com 'Simples Nacional' foi de R$-47.889,50 em uma única transação, representando um custo fixo significativo.
+   
+   JUSTIFICATIVA: Estas fraquezas foram identificadas analisando pontos de atenção como custos elevados,
+   quedas em períodos específicos, concentração de riscos ou ineficiências operacionais.
+   
+   OPORTUNIDADES (4 itens):
+     • Aumentar a receita na categoria 'Receita com Venda de Serviços', que já representa uma parte significativa da receita total.
+     • O resgate de aplicações financeiras totalizou R$190.314,95, sugerindo a possibilidade de otimizar investimentos para melhorar o retorno.
+     • Reduzir o número de transações de saída de transferência, que somaram R$-171.097,14, pode melhorar o fluxo de caixa.
+     • Explorar maneiras de reduzir despesas não classificadas, que totalizaram R$-71.229,85, para aumentar a margem de lucro.
+   
+   JUSTIFICATIVA: Oportunidades identificadas baseadas em potenciais de melhoria, tendências do mercado
+   observadas nos dados, ou áreas subexploradas.
+   
+   AMEAÇAS (4 itens):
+     • O saldo praticamente nulo em setembro de 2025 (R$4,37) indica um risco de fluxo de caixa apertado.
+     • A alta despesa com 'Aplicação Financeira' sugere um risco de investimento com baixa rentabilidade.
+     • O alto valor de despesas fixas, como o 'Simples Nacional', pode pressionar a margem de lucro em períodos de receita menor.
+     • A dependência de grandes transações de transferência para receita pode ser arriscada se essas transações diminuírem.
+   
+   JUSTIFICATIVA: Ameaças identificadas analisando riscos externos, tendências negativas ou vulnerabilidades
+   observadas nos padrões de dados.
+   
+   DADOS UTILIZADOS NA ANÁLISE:
+   - Receita total do período: R$ 1,122,745.70
+   - Despesa total do período: R$ 1,095,144.53
+   - Resultado líquido: R$ 27,601.17
+   - Margem: 2.5%
+   - Número de meses analisados: 2
+   
+
+--------------------------------------------------------------------------------
+
+5. KEY_EVENT_1
+   Data/Hora: 2025-11-05T15:11:38.282969
+
+   EXPLICAÇÃO DE COMO A IA CHEGOU NESTA CONCLUSÃO:
+   
+   EVENTO-CHAVE 1 - RACIOCÍNIO DA IA:
+   
+   TIPO: NEGATIVO
+   TÍTULO: Aplicação Financeira Impactante
+   
+   DESCRIÇÃO COMPLETA:
+   Em 08/09/2025, houve uma despesa significativa de R$ 61.771,94 relacionada a uma aplicação financeira (BB RENDE FÁCIL). Esta foi a maior despesa registrada no período e impactou negativamente o saldo geral, contribuindo para a margem de lucro reduzida de apenas 2,46%.
+   
+   COMO A IA IDENTIFICOU ESTE EVENTO:
+   
+   1. ANÁLISE DE RELEVÂNCIA:
+      Este evento foi selecionado como um dos 3 mais importantes porque:
+      - Teve impacto significativo nos resultados financeiros do período
+      - Representa uma mudança ou tendência clara nos dados
+      - É relevante para tomada de decisão estratégica
+   
+   2. CLASSIFICAÇÃO DO TIPO (NEGATIVO):
+      
+      - NEGATIVO: Evento que representa desafio ou risco para os resultados
+      
+   
+   3. DADOS QUE SUPORTAM ESTE EVENTO:
+      - Margem do período: 2.5%
+      - Variação de receita entre primeiro e último mês: +66.3%
+   
+   4. IMPACTO NOS RESULTADOS:
+      - Receita total do período: R$ 1,122,745.70
+      - Despesa total do período: R$ 1,095,144.53
+      - Resultado líquido: R$ 27,601.17
+      - Este evento está diretamente relacionado com estes números
+   
+   5. CONTEXTO TEMPORAL:
+      Número de meses analisados: 2
+      Tendência observada: Crescente (última receita maior que primeira)
+   
+   RELEVÂNCIA PARA O RELATÓRIO:
+   Este evento foi incluído no Sumário Executivo porque representa um dos aspectos mais
+   críticos para entender o desempenho financeiro do período e orientar decisões futuras.
+   
+
+--------------------------------------------------------------------------------
+
+6. KEY_EVENT_2
+   Data/Hora: 2025-11-05T15:11:38.282969
+
+   EXPLICAÇÃO DE COMO A IA CHEGOU NESTA CONCLUSÃO:
+   
+   EVENTO-CHAVE 2 - RACIOCÍNIO DA IA:
+   
+   TIPO: POSITIVO
+   TÍTULO: Receitas Consistentes de Transferências
+   
+   DESCRIÇÃO COMPLETA:
+   Durante agosto de 2025, a empresa recebeu quatro transferências significativas de R$ 30.000,00 cada, totalizando R$ 120.000,00. Estas transferências foram cruciais para o saldo positivo de R$ 27.601,17 no mês de agosto, mostrando a importância das entradas de transferência para a saúde financeira da empresa.
+   
+   COMO A IA IDENTIFICOU ESTE EVENTO:
+   
+   1. ANÁLISE DE RELEVÂNCIA:
+      Este evento foi selecionado como um dos 3 mais importantes porque:
+      - Teve impacto significativo nos resultados financeiros do período
+      - Representa uma mudança ou tendência clara nos dados
+      - É relevante para tomada de decisão estratégica
+   
+   2. CLASSIFICAÇÃO DO TIPO (POSITIVO):
+      - POSITIVO: Evento que contribuiu para melhoria dos resultados ou apresenta oportunidade
+      
+      
+   
+   3. DADOS QUE SUPORTAM ESTE EVENTO:
+      - Variação de receita entre primeiro e último mês: +66.3%
+   
+   4. IMPACTO NOS RESULTADOS:
+      - Receita total do período: R$ 1,122,745.70
+      - Despesa total do período: R$ 1,095,144.53
+      - Resultado líquido: R$ 27,601.17
+      - Este evento está diretamente relacionado com estes números
+   
+   5. CONTEXTO TEMPORAL:
+      Número de meses analisados: 2
+      Tendência observada: Crescente (última receita maior que primeira)
+   
+   RELEVÂNCIA PARA O RELATÓRIO:
+   Este evento foi incluído no Sumário Executivo porque representa um dos aspectos mais
+   críticos para entender o desempenho financeiro do período e orientar decisões futuras.
+   
+
+--------------------------------------------------------------------------------
+
+7. KEY_EVENT_3
+   Data/Hora: 2025-11-05T15:11:38.282969
+
+   EXPLICAÇÃO DE COMO A IA CHEGOU NESTA CONCLUSÃO:
+   
+   EVENTO-CHAVE 3 - RACIOCÍNIO DA IA:
+   
+   TIPO: NEUTRO
+   TÍTULO: Equilíbrio Financeiro em Setembro
+   
+   DESCRIÇÃO COMPLETA:
+   No mês de setembro de 2025, tanto a receita quanto a despesa foram exatamente iguais, totalizando R$ 701.126,86 cada, resultando em um saldo praticamente nulo. Este equilíbrio indica uma gestão financeira que conseguiu cobrir todas as despesas, mas sem gerar lucro adicional, destacando a necessidade de aumentar a margem de lucro futura.
+   
+   COMO A IA IDENTIFICOU ESTE EVENTO:
+   
+   1. ANÁLISE DE RELEVÂNCIA:
+      Este evento foi selecionado como um dos 3 mais importantes porque:
+      - Teve impacto significativo nos resultados financeiros do período
+      - Representa uma mudança ou tendência clara nos dados
+      - É relevante para tomada de decisão estratégica
+   
+   2. CLASSIFICAÇÃO DO TIPO (NEUTRO):
+      
+      
+      - NEUTRO: Evento relevante mas com impacto misto ou ainda não definido
+   
+   3. DADOS QUE SUPORTAM ESTE EVENTO:
+      - Margem do período: 2.5%
+      - Variação de receita entre primeiro e último mês: +66.3%
+   
+   4. IMPACTO NOS RESULTADOS:
+      - Receita total do período: R$ 1,122,745.70
+      - Despesa total do período: R$ 1,095,144.53
+      - Resultado líquido: R$ 27,601.17
+      - Este evento está diretamente relacionado com estes números
+   
+   5. CONTEXTO TEMPORAL:
+      Número de meses analisados: 2
+      Tendência observada: Crescente (última receita maior que primeira)
+   
+   RELEVÂNCIA PARA O RELATÓRIO:
+   Este evento foi incluído no Sumário Executivo porque representa um dos aspectos mais
+   críticos para entender o desempenho financeiro do período e orientar decisões futuras.
+   
+
+--------------------------------------------------------------------------------
+
+8. ACTION_PLAN_1
+   Data/Hora: 2025-11-05T15:11:42.204321
+
+   EXPLICAÇÃO DE COMO A IA CHEGOU NESTA CONCLUSÃO:
+   
+   PLANO DE AÇÃO 1 - RACIOCÍNIO DA IA:
+   
+   PRIORIDADE: URGENTE
+   TÍTULO: Otimização do Fluxo de Caixa
+   
+   SITUAÇÃO IDENTIFICADA:
+   O saldo praticamente nulo em setembro de 2025 (R$4,37) e o saldo negativo na categoria 'Transferência Entre Contas' indicam um risco de fluxo de caixa apertado.
+   
+   IMPACTO NO NEGÓCIO:
+   Melhorar o fluxo de caixa pode evitar problemas de liquidez e garantir a continuidade das operações.
+   
+   AÇÕES RECOMENDADAS:
+     1. Revisar e renegociar prazos de pagamento com fornecedores para melhorar o fluxo de caixa em pelo menos 10% até o final de outubro de 2025.
+     2. Implementar uma política de redução de transferências entre contas, visando diminuir o saldo negativo em 20% até dezembro de 2025.
+     3. Estabelecer um fundo de reserva de emergência equivalente a pelo menos 5% das receitas mensais para evitar saldos críticos no futuro.
+   
+   COMO A IA CHEGOU NESTE PLANO:
+   
+   1. ANÁLISE DA SITUAÇÃO:
+      A IA identificou esta situação analisando:
+      - Fraquezas do SWOT: As despesas totais de R$1.095.144,53 estão muito próximas das receitas, resultando em uma margem de lucro baixa de 2,46%., A categoria 'Transferência Entre Contas' apresenta um saldo negativo significativo de R$-515.103,97, impactando negativamente o fluxo de caixa....
+      - Dados financeiros: Receita R$ 1,122,745.70, 
+        Despesa R$ 1,095,144.53
+      - Tendências observadas nos dados do período
+   
+   2. AVALIAÇÃO DE IMPACTO:
+      O impacto foi determinado considerando:
+      - Magnitude do problema/oportunidade identificado
+      - Relação com as fraquezas ou oportunidades do SWOT
+      - Potencial de melhoria nos resultados financeiros
+   
+   3. PRIORIZAÇÃO:
+      A prioridade "URGENTE" foi definida baseada em:
+      - Urgência: Quanto mais crítico para os resultados, maior a prioridade
+      - Impacto financeiro potencial
+      - Viabilidade de implementação
+   
+   4. DEFINIÇÃO DAS AÇÕES:
+      As ações foram formuladas para serem:
+      - Específicas e mensuráveis
+      - Diretamente relacionadas à situação identificada
+      - Baseadas em boas práticas de gestão financeira
+      - Viáveis considerando o contexto da empresa
+   
+   CONEXÃO COM O SWOT:
+   - Endereça as fraquezas: As despesas totais de R$1.095.144,53 estão muito próximas das receitas, resultando em uma margem de 
+   - Aproveita as oportunidades: Aumentar a receita na categoria 'Receita com Venda de Serviços', que já representa uma parte signifi
+   
+
+--------------------------------------------------------------------------------
+
+9. ACTION_PLAN_2
+   Data/Hora: 2025-11-05T15:11:42.204321
+
+   EXPLICAÇÃO DE COMO A IA CHEGOU NESTA CONCLUSÃO:
+   
+   PLANO DE AÇÃO 2 - RACIOCÍNIO DA IA:
+   
+   PRIORIDADE: IMPORTANTE
+   TÍTULO: Revisão de Investimentos Financeiros
+   
+   SITUAÇÃO IDENTIFICADA:
+   A categoria 'Aplicação Financeira' resultou em uma despesa de R$-201.491,18, indicando possíveis perdas ou baixa rentabilidade.
+   
+   IMPACTO NO NEGÓCIO:
+   Otimizar os investimentos pode aumentar a rentabilidade e melhorar a saúde financeira da empresa.
+   
+   AÇÕES RECOMENDADAS:
+     1. Analisar o portfólio de investimentos atual e identificar ativos de baixa performance para substituição até novembro de 2025.
+     2. Consultar um especialista financeiro para reavaliar a estratégia de investimento e buscar alternativas mais rentáveis até o final de 2025.
+     3. Estabelecer um objetivo de aumentar o retorno sobre investimentos em pelo menos 5% até o primeiro trimestre de 2026.
+   
+   COMO A IA CHEGOU NESTE PLANO:
+   
+   1. ANÁLISE DA SITUAÇÃO:
+      A IA identificou esta situação analisando:
+      - Fraquezas do SWOT: As despesas totais de R$1.095.144,53 estão muito próximas das receitas, resultando em uma margem de lucro baixa de 2,46%., A categoria 'Transferência Entre Contas' apresenta um saldo negativo significativo de R$-515.103,97, impactando negativamente o fluxo de caixa....
+      - Dados financeiros: Receita R$ 1,122,745.70, 
+        Despesa R$ 1,095,144.53
+      - Tendências observadas nos dados do período
+   
+   2. AVALIAÇÃO DE IMPACTO:
+      O impacto foi determinado considerando:
+      - Magnitude do problema/oportunidade identificado
+      - Relação com as fraquezas ou oportunidades do SWOT
+      - Potencial de melhoria nos resultados financeiros
+   
+   3. PRIORIZAÇÃO:
+      A prioridade "IMPORTANTE" foi definida baseada em:
+      - Urgência: Quanto mais crítico para os resultados, maior a prioridade
+      - Impacto financeiro potencial
+      - Viabilidade de implementação
+   
+   4. DEFINIÇÃO DAS AÇÕES:
+      As ações foram formuladas para serem:
+      - Específicas e mensuráveis
+      - Diretamente relacionadas à situação identificada
+      - Baseadas em boas práticas de gestão financeira
+      - Viáveis considerando o contexto da empresa
+   
+   CONEXÃO COM O SWOT:
+   - Endereça as fraquezas: As despesas totais de R$1.095.144,53 estão muito próximas das receitas, resultando em uma margem de 
+   - Aproveita as oportunidades: Aumentar a receita na categoria 'Receita com Venda de Serviços', que já representa uma parte signifi
+   
+
+--------------------------------------------------------------------------------
+
+10. ACTION_PLAN_3
+   Data/Hora: 2025-11-05T15:11:42.204321
+
+   EXPLICAÇÃO DE COMO A IA CHEGOU NESTA CONCLUSÃO:
+   
+   PLANO DE AÇÃO 3 - RACIOCÍNIO DA IA:
+   
+   PRIORIDADE: IMPORTANTE
+   TÍTULO: Aumento da Receita com Venda de Serviços
+   
+   SITUAÇÃO IDENTIFICADA:
+   A categoria 'Receita com Venda de Serviços' gerou R$498.694,96, representando uma parte significativa da receita total.
+   
+   IMPACTO NO NEGÓCIO:
+   Aumentar a receita nesta categoria pode melhorar significativamente a margem de lucro.
+   
+   AÇÕES RECOMENDADAS:
+     1. Desenvolver uma campanha de marketing direcionada para aumentar as vendas de serviços em 10% até o final de 2025.
+     2. Identificar e abordar novos segmentos de mercado para expandir a base de clientes até o primeiro trimestre de 2026.
+     3. Implementar um programa de fidelização de clientes para aumentar a retenção e o ticket médio de receita em 5% até março de 2026.
+   
+   COMO A IA CHEGOU NESTE PLANO:
+   
+   1. ANÁLISE DA SITUAÇÃO:
+      A IA identificou esta situação analisando:
+      - Fraquezas do SWOT: As despesas totais de R$1.095.144,53 estão muito próximas das receitas, resultando em uma margem de lucro baixa de 2,46%., A categoria 'Transferência Entre Contas' apresenta um saldo negativo significativo de R$-515.103,97, impactando negativamente o fluxo de caixa....
+      - Dados financeiros: Receita R$ 1,122,745.70, 
+        Despesa R$ 1,095,144.53
+      - Tendências observadas nos dados do período
+   
+   2. AVALIAÇÃO DE IMPACTO:
+      O impacto foi determinado considerando:
+      - Magnitude do problema/oportunidade identificado
+      - Relação com as fraquezas ou oportunidades do SWOT
+      - Potencial de melhoria nos resultados financeiros
+   
+   3. PRIORIZAÇÃO:
+      A prioridade "IMPORTANTE" foi definida baseada em:
+      - Urgência: Quanto mais crítico para os resultados, maior a prioridade
+      - Impacto financeiro potencial
+      - Viabilidade de implementação
+   
+   4. DEFINIÇÃO DAS AÇÕES:
+      As ações foram formuladas para serem:
+      - Específicas e mensuráveis
+      - Diretamente relacionadas à situação identificada
+      - Baseadas em boas práticas de gestão financeira
+      - Viáveis considerando o contexto da empresa
+   
+   CONEXÃO COM O SWOT:
+   - Endereça as fraquezas: A categoria 'Transferência Entre Contas' apresenta um saldo negativo significativo de R$-515.103,97,
+   - Aproveita as oportunidades: Aumentar a receita na categoria 'Receita com Venda de Serviços', que já representa uma parte signifi
+   
+
+--------------------------------------------------------------------------------
+
+11. ACTION_PLAN_4
+   Data/Hora: 2025-11-05T15:11:42.204321
+
+   EXPLICAÇÃO DE COMO A IA CHEGOU NESTA CONCLUSÃO:
+   
+   PLANO DE AÇÃO 4 - RACIOCÍNIO DA IA:
+   
+   PRIORIDADE: OBSERVAÇÃO
+   TÍTULO: Redução de Despesas Não Classificadas
+   
+   SITUAÇÃO IDENTIFICADA:
+   Despesas não classificadas totalizaram R$-71.229,85, impactando a margem de lucro.
+   
+   IMPACTO NO NEGÓCIO:
+   Reduzir essas despesas pode aumentar a margem de lucro e melhorar a eficiência operacional.
+   
+   AÇÕES RECOMENDADAS:
+     1. Realizar uma auditoria interna para identificar e classificar todas as despesas não classificadas até dezembro de 2025.
+     2. Implementar controles de gastos mais rigorosos para reduzir despesas não classificadas em 15% até o segundo trimestre de 2026.
+     3. Estabelecer um processo de revisão mensal de despesas para garantir que todas as saídas sejam devidamente categorizadas e justificadas.
+   
+   COMO A IA CHEGOU NESTE PLANO:
+   
+   1. ANÁLISE DA SITUAÇÃO:
+      A IA identificou esta situação analisando:
+      - Fraquezas do SWOT: As despesas totais de R$1.095.144,53 estão muito próximas das receitas, resultando em uma margem de lucro baixa de 2,46%., A categoria 'Transferência Entre Contas' apresenta um saldo negativo significativo de R$-515.103,97, impactando negativamente o fluxo de caixa....
+      - Dados financeiros: Receita R$ 1,122,745.70, 
+        Despesa R$ 1,095,144.53
+      - Tendências observadas nos dados do período
+   
+   2. AVALIAÇÃO DE IMPACTO:
+      O impacto foi determinado considerando:
+      - Magnitude do problema/oportunidade identificado
+      - Relação com as fraquezas ou oportunidades do SWOT
+      - Potencial de melhoria nos resultados financeiros
+   
+   3. PRIORIZAÇÃO:
+      A prioridade "OBSERVAÇÃO" foi definida baseada em:
+      - Urgência: Quanto mais crítico para os resultados, maior a prioridade
+      - Impacto financeiro potencial
+      - Viabilidade de implementação
+   
+   4. DEFINIÇÃO DAS AÇÕES:
+      As ações foram formuladas para serem:
+      - Específicas e mensuráveis
+      - Diretamente relacionadas à situação identificada
+      - Baseadas em boas práticas de gestão financeira
+      - Viáveis considerando o contexto da empresa
+   
+   CONEXÃO COM O SWOT:
+   - Endereça as fraquezas: As despesas totais de R$1.095.144,53 estão muito próximas das receitas, resultando em uma margem de 
+   - Aproveita as oportunidades: Aumentar a receita na categoria 'Receita com Venda de Serviços', que já representa uma parte signifi
+   
+
+--------------------------------------------------------------------------------
+
+12. SWOT_ANALYSIS
+   Data/Hora: 2025-11-05T15:12:48.844636
+
+   EXPLICAÇÃO DE COMO A IA CHEGOU NESTA CONCLUSÃO:
+   
+   ANÁLISE SWOT - RACIOCÍNIO DA IA:
+   
+   A IA analisou os dados financeiros do período e identificou:
+   
+   FORÇAS (3 itens):
+     • A receita total de R$1.122.745,70 supera as despesas de R$1.095.144,53, resultando em um saldo positivo de R$27.601,17.
+     • A margem de lucro de 2,46% indica uma operação lucrativa, embora modesta.
+     • O ticket médio de receita de R$5.558,15 é superior ao ticket médio de despesa de R$4.782,29, sugerindo eficiência nas transações de receita.
+   
+   JUSTIFICATIVA: Estas forças foram identificadas analisando métricas positivas como crescimento de receita, 
+   margem de lucro, eficiência operacional e tendências favoráveis nos dados do período.
+   
+   FRAQUEZAS (3 itens):
+     • O saldo de setembro é praticamente nulo, com apenas R$0,0000000000436557456851005555, indicando um equilíbrio financeiro frágil.
+     • A categoria 'Transferência Entre Contas' apresenta um total negativo significativo de R$-515.103,97, impactando o fluxo de caixa.
+     • Despesas elevadas em aplicações financeiras, totalizando R$-201.491,18, podem indicar alocação ineficiente de recursos.
+   
+   JUSTIFICATIVA: Estas fraquezas foram identificadas analisando pontos de atenção como custos elevados,
+   quedas em períodos específicos, concentração de riscos ou ineficiências operacionais.
+   
+   OPORTUNIDADES (3 itens):
+     • A receita com venda de serviços, totalizando R$498.694,96, pode ser expandida para aumentar a lucratividade.
+     • A entrada de transferência média de R$23.902,68 sugere potencial para aumentar o volume dessas transações.
+     • O resgate de aplicações financeiras, totalizando R$190.314,95, pode ser otimizado para melhorar o fluxo de caixa.
+   
+   JUSTIFICATIVA: Oportunidades identificadas baseadas em potenciais de melhoria, tendências do mercado
+   observadas nos dados, ou áreas subexploradas.
+   
+   AMEAÇAS (3 itens):
+     • Despesas elevadas com o Simples Nacional, totalizando R$-47.889,50, podem impactar negativamente a rentabilidade.
+     • A alta dependência de transferências, que somam R$430.248,19 em receitas, pode ser um risco se essas fontes diminuírem.
+     • A aplicação financeira negativa de R$-201.491,18 representa um risco de perda de capital investido.
+   
+   JUSTIFICATIVA: Ameaças identificadas analisando riscos externos, tendências negativas ou vulnerabilidades
+   observadas nos padrões de dados.
+   
+   DADOS UTILIZADOS NA ANÁLISE:
+   - Receita total do período: R$ 1,122,745.70
+   - Despesa total do período: R$ 1,095,144.53
+   - Resultado líquido: R$ 27,601.17
+   - Margem: 2.5%
+   - Número de meses analisados: 2
+   
+
+--------------------------------------------------------------------------------
+
+13. REVENUE_ANALYSIS
+   Data/Hora: 2025-11-05T15:13:06.576852
+
+   EXPLICAÇÃO DE COMO A IA CHEGOU NESTA CONCLUSÃO:
+   
+   ANÁLISE DE RECEITAS - RACIOCÍNIO DA IA:
+   
+   DADOS ANALISADOS:
+   {
+     "totals": {
+       "receita": 1122745.7,
+       "despesa": 1095144.53,
+       "saldo": 27601.169999999925,
+       "margem": 2.458363456658077
+     },
+     "monthly": [
+       {
+         "mes": "2025-08",
+         "receita": 421618.83999999997,
+         "despesa": 394017.6699999999,
+         "saldo": 27601.169999999995
+       },
+       {
+         "mes": "2025-09",
+         "receita": 701126.86,
+         "despesa": 701126.86,
+         "saldo": 4.3655745685100555e-11
+       }
+     ]
+   }
+   
+   ANÁLISE GERADA PELA IA:
+   ### Análise Mensal
+   
+   Em agosto de 2025, a receita foi de R$ 421.618,84, enquanto em setembro de 2025, a receita aumentou significativamente para R$ 701.126,86. Isso representa um aumento de R$ 279.508,02 na receita de um mês para o outro.
+   
+   ### Sazonalidade
+   
+   Nos dois meses analisados, agosto e setembro de 2025, houve uma variação notável na receita, com um aumento expressivo em setembro. No entanto, como os dados são limitados a apenas dois meses, não é possível identificar um padrão sazonal claro.
+   
+   ### Diagnóstico
+   
+   A performance financeira nos meses de agosto e setembro de 2025 mostra uma melhora na receita, especialmente em setembro, onde a receita igualou as despesas, resultando em um saldo praticamente nulo. A margem total do período é de 2,46%, indicando uma ligeira rentabilidade positiva.
+   
+   METODOLOGIA UTILIZADA:
+   
+   1. ANÁLISE MENSAL (mês a mês):
+      - Comparou receitas de cada mês disponível
+      - Calculou variações percentuais entre períodos consecutivos
+      - Identificou meses de melhor e pior performance
+   
+   2. ANÁLISE DE SAZONALIDADE:
+      - Observou padrões recorrentes nos dados disponíveis
+      - Identificou se há comportamento sazonal visível
+      - Contextualizou com características do segmento
+   
+   3. DIAGNÓSTICO DE PERFORMANCE:
+      - Avaliou se as receitas estão crescendo, estáveis ou em queda
+      - Identificou possíveis causas baseadas nos dados
+      - Relacionou com outras métricas disponíveis
+   
+   PREMISSAS DA ANÁLISE:
+   - Baseada EXCLUSIVAMENTE nos dados reais fornecidos
+   - Não foram feitas extrapolações além do período disponível
+   - Tendências identificadas são observações, não previsões
+   - Contexto limitado ao período de análise (sem dados históricos de anos anteriores)
+   
+   CONCLUSÕES FACTUAIS:
+   A análise acima reflete o que os DADOS MOSTRAM, sem adicionar informações
+   especulativas ou baseadas em suposições. Cada afirmação pode ser rastreada
+   de volta aos números fornecidos.
+   
+
+--------------------------------------------------------------------------------
+
+14. KEY_EVENT_1
+   Data/Hora: 2025-11-05T15:13:31.627827
+
+   EXPLICAÇÃO DE COMO A IA CHEGOU NESTA CONCLUSÃO:
+   
+   EVENTO-CHAVE 1 - RACIOCÍNIO DA IA:
+   
+   TIPO: POSITIVO
+   TÍTULO: Receita com Venda de Serviços
+   
+   DESCRIÇÃO COMPLETA:
+   Em 08/09/2025, a empresa registrou uma receita significativa de R$35.233,92 proveniente de 'REDE VENDAS MASTER CRÉDIT', que foi a maior receita individual no período. Este evento contribuiu significativamente para a receita total de setembro de 2025, que foi de R$701.126,86.
+   
+   COMO A IA IDENTIFICOU ESTE EVENTO:
+   
+   1. ANÁLISE DE RELEVÂNCIA:
+      Este evento foi selecionado como um dos 3 mais importantes porque:
+      - Teve impacto significativo nos resultados financeiros do período
+      - Representa uma mudança ou tendência clara nos dados
+      - É relevante para tomada de decisão estratégica
+   
+   2. CLASSIFICAÇÃO DO TIPO (POSITIVO):
+      - POSITIVO: Evento que contribuiu para melhoria dos resultados ou apresenta oportunidade
+      
+      
+   
+   3. DADOS QUE SUPORTAM ESTE EVENTO:
+      - Variação de receita entre primeiro e último mês: +66.3%
+   
+   4. IMPACTO NOS RESULTADOS:
+      - Receita total do período: R$ 1,122,745.70
+      - Despesa total do período: R$ 1,095,144.53
+      - Resultado líquido: R$ 27,601.17
+      - Este evento está diretamente relacionado com estes números
+   
+   5. CONTEXTO TEMPORAL:
+      Número de meses analisados: 2
+      Tendência observada: Crescente (última receita maior que primeira)
+   
+   RELEVÂNCIA PARA O RELATÓRIO:
+   Este evento foi incluído no Sumário Executivo porque representa um dos aspectos mais
+   críticos para entender o desempenho financeiro do período e orientar decisões futuras.
+   
+
+--------------------------------------------------------------------------------
+
+15. KEY_EVENT_2
+   Data/Hora: 2025-11-05T15:13:31.627827
+
+   EXPLICAÇÃO DE COMO A IA CHEGOU NESTA CONCLUSÃO:
+   
+   EVENTO-CHAVE 2 - RACIOCÍNIO DA IA:
+   
+   TIPO: NEGATIVO
+   TÍTULO: Despesa com Aplicação Financeira
+   
+   DESCRIÇÃO COMPLETA:
+   No dia 08/09/2025, houve uma despesa significativa de R$61.771,94 com 'BB RENDE FÁCIL - RENDE FACIL', que foi a maior despesa individual no período. Esta despesa impactou negativamente o saldo do mês de setembro, que acabou sendo praticamente nulo, com um saldo de apenas R$0,00.
+   
+   COMO A IA IDENTIFICOU ESTE EVENTO:
+   
+   1. ANÁLISE DE RELEVÂNCIA:
+      Este evento foi selecionado como um dos 3 mais importantes porque:
+      - Teve impacto significativo nos resultados financeiros do período
+      - Representa uma mudança ou tendência clara nos dados
+      - É relevante para tomada de decisão estratégica
+   
+   2. CLASSIFICAÇÃO DO TIPO (NEGATIVO):
+      
+      - NEGATIVO: Evento que representa desafio ou risco para os resultados
+      
+   
+   3. DADOS QUE SUPORTAM ESTE EVENTO:
+      - Variação de receita entre primeiro e último mês: +66.3%
+   
+   4. IMPACTO NOS RESULTADOS:
+      - Receita total do período: R$ 1,122,745.70
+      - Despesa total do período: R$ 1,095,144.53
+      - Resultado líquido: R$ 27,601.17
+      - Este evento está diretamente relacionado com estes números
+   
+   5. CONTEXTO TEMPORAL:
+      Número de meses analisados: 2
+      Tendência observada: Crescente (última receita maior que primeira)
+   
+   RELEVÂNCIA PARA O RELATÓRIO:
+   Este evento foi incluído no Sumário Executivo porque representa um dos aspectos mais
+   críticos para entender o desempenho financeiro do período e orientar decisões futuras.
+   
+
+--------------------------------------------------------------------------------
+
+16. KEY_EVENT_3
+   Data/Hora: 2025-11-05T15:13:31.627827
+
+   EXPLICAÇÃO DE COMO A IA CHEGOU NESTA CONCLUSÃO:
+   
+   EVENTO-CHAVE 3 - RACIOCÍNIO DA IA:
+   
+   TIPO: NEUTRO
+   TÍTULO: Transferências Recebidas de J E Madeira e Cia Ltda
+   
+   DESCRIÇÃO COMPLETA:
+   Durante o mês de agosto de 2025, a empresa recebeu quatro transferências significativas de R$30.000,00 cada, totalizando R$120.000,00, de 'J E MADEIRA E CIA LTDA'. Estas transferências foram cruciais para manter um saldo positivo de R$27.601,17 no mês de agosto, apesar das despesas elevadas.
+   
+   COMO A IA IDENTIFICOU ESTE EVENTO:
+   
+   1. ANÁLISE DE RELEVÂNCIA:
+      Este evento foi selecionado como um dos 3 mais importantes porque:
+      - Teve impacto significativo nos resultados financeiros do período
+      - Representa uma mudança ou tendência clara nos dados
+      - É relevante para tomada de decisão estratégica
+   
+   2. CLASSIFICAÇÃO DO TIPO (NEUTRO):
+      
+      
+      - NEUTRO: Evento relevante mas com impacto misto ou ainda não definido
+   
+   3. DADOS QUE SUPORTAM ESTE EVENTO:
+      - Variação de receita entre primeiro e último mês: +66.3%
+   
+   4. IMPACTO NOS RESULTADOS:
+      - Receita total do período: R$ 1,122,745.70
+      - Despesa total do período: R$ 1,095,144.53
+      - Resultado líquido: R$ 27,601.17
+      - Este evento está diretamente relacionado com estes números
+   
+   5. CONTEXTO TEMPORAL:
+      Número de meses analisados: 2
+      Tendência observada: Crescente (última receita maior que primeira)
+   
+   RELEVÂNCIA PARA O RELATÓRIO:
+   Este evento foi incluído no Sumário Executivo porque representa um dos aspectos mais
+   críticos para entender o desempenho financeiro do período e orientar decisões futuras.
+   
+
+--------------------------------------------------------------------------------
+
+17. ACTION_PLAN_1
+   Data/Hora: 2025-11-05T15:14:02.328474
+
+   EXPLICAÇÃO DE COMO A IA CHEGOU NESTA CONCLUSÃO:
+   
+   PLANO DE AÇÃO 1 - RACIOCÍNIO DA IA:
+   
+   PRIORIDADE: URGENTE
+   TÍTULO: Otimização do Fluxo de Caixa
+   
+   SITUAÇÃO IDENTIFICADA:
+   O saldo de setembro é praticamente nulo, com apenas R$0,0000000000436557456851005555, indicando um equilíbrio financeiro frágil.
+   
+   IMPACTO NO NEGÓCIO:
+   Melhorar o fluxo de caixa para evitar problemas de liquidez e garantir a continuidade das operações.
+   
+   AÇÕES RECOMENDADAS:
+     1. Reavaliar as despesas com aplicações financeiras, que somam R$-201.491,18, e considerar o resgate de parte desses investimentos para aumentar o caixa disponível.
+     2. Negociar prazos de pagamento com fornecedores para alinhar melhor as saídas de caixa com as entradas, minimizando o impacto no saldo mensal.
+     3. Implementar um controle mais rigoroso sobre as transferências entre contas, que apresentam um total negativo de R$-515.103,97, para evitar saídas desnecessárias de caixa.
+   
+   COMO A IA CHEGOU NESTE PLANO:
+   
+   1. ANÁLISE DA SITUAÇÃO:
+      A IA identificou esta situação analisando:
+      - Fraquezas do SWOT: O saldo de setembro é praticamente nulo, com apenas R$0,0000000000436557456851005555, indicando um equilíbrio financeiro frágil., A categoria 'Transferência Entre Contas' apresenta um total negativo significativo de R$-515.103,97, impactando o fluxo de caixa....
+      - Dados financeiros: Receita R$ 1,122,745.70, 
+        Despesa R$ 1,095,144.53
+      - Tendências observadas nos dados do período
+   
+   2. AVALIAÇÃO DE IMPACTO:
+      O impacto foi determinado considerando:
+      - Magnitude do problema/oportunidade identificado
+      - Relação com as fraquezas ou oportunidades do SWOT
+      - Potencial de melhoria nos resultados financeiros
+   
+   3. PRIORIZAÇÃO:
+      A prioridade "URGENTE" foi definida baseada em:
+      - Urgência: Quanto mais crítico para os resultados, maior a prioridade
+      - Impacto financeiro potencial
+      - Viabilidade de implementação
+   
+   4. DEFINIÇÃO DAS AÇÕES:
+      As ações foram formuladas para serem:
+      - Específicas e mensuráveis
+      - Diretamente relacionadas à situação identificada
+      - Baseadas em boas práticas de gestão financeira
+      - Viáveis considerando o contexto da empresa
+   
+   CONEXÃO COM O SWOT:
+   - Endereça as fraquezas: O saldo de setembro é praticamente nulo, com apenas R$0,0000000000436557456851005555, indicando um e
+   - Aproveita as oportunidades: A receita com venda de serviços, totalizando R$498.694,96, pode ser expandida para aumentar a lucrat
+   
+
+--------------------------------------------------------------------------------
+
+18. ACTION_PLAN_2
+   Data/Hora: 2025-11-05T15:14:02.328474
+
+   EXPLICAÇÃO DE COMO A IA CHEGOU NESTA CONCLUSÃO:
+   
+   PLANO DE AÇÃO 2 - RACIOCÍNIO DA IA:
+   
+   PRIORIDADE: IMPORTANTE
+   TÍTULO: Expansão da Receita com Venda de Serviços
+   
+   SITUAÇÃO IDENTIFICADA:
+   A receita com venda de serviços totaliza R$498.694,96, representando uma oportunidade de crescimento.
+   
+   IMPACTO NO NEGÓCIO:
+   Aumentar a lucratividade e a margem de lucro da empresa.
+   
+   AÇÕES RECOMENDADAS:
+     1. Desenvolver uma campanha de marketing para promover os serviços oferecidos e atrair novos clientes, visando aumentar a receita com vendas.
+     2. Identificar e abordar segmentos de mercado que ainda não estão sendo explorados, oferecendo pacotes de serviços personalizados.
+     3. Estabelecer parcerias estratégicas com outras empresas para expandir a rede de vendas e aumentar a base de clientes.
+   
+   COMO A IA CHEGOU NESTE PLANO:
+   
+   1. ANÁLISE DA SITUAÇÃO:
+      A IA identificou esta situação analisando:
+      - Fraquezas do SWOT: O saldo de setembro é praticamente nulo, com apenas R$0,0000000000436557456851005555, indicando um equilíbrio financeiro frágil., A categoria 'Transferência Entre Contas' apresenta um total negativo significativo de R$-515.103,97, impactando o fluxo de caixa....
+      - Dados financeiros: Receita R$ 1,122,745.70, 
+        Despesa R$ 1,095,144.53
+      - Tendências observadas nos dados do período
+   
+   2. AVALIAÇÃO DE IMPACTO:
+      O impacto foi determinado considerando:
+      - Magnitude do problema/oportunidade identificado
+      - Relação com as fraquezas ou oportunidades do SWOT
+      - Potencial de melhoria nos resultados financeiros
+   
+   3. PRIORIZAÇÃO:
+      A prioridade "IMPORTANTE" foi definida baseada em:
+      - Urgência: Quanto mais crítico para os resultados, maior a prioridade
+      - Impacto financeiro potencial
+      - Viabilidade de implementação
+   
+   4. DEFINIÇÃO DAS AÇÕES:
+      As ações foram formuladas para serem:
+      - Específicas e mensuráveis
+      - Diretamente relacionadas à situação identificada
+      - Baseadas em boas práticas de gestão financeira
+      - Viáveis considerando o contexto da empresa
+   
+   CONEXÃO COM O SWOT:
+   - Endereça as fraquezas: O saldo de setembro é praticamente nulo, com apenas R$0,0000000000436557456851005555, indicando um e
+   - Aproveita as oportunidades: A receita com venda de serviços, totalizando R$498.694,96, pode ser expandida para aumentar a lucrat
+   
+
+--------------------------------------------------------------------------------
+
+19. ACTION_PLAN_3
+   Data/Hora: 2025-11-05T15:14:02.328474
+
+   EXPLICAÇÃO DE COMO A IA CHEGOU NESTA CONCLUSÃO:
+   
+   PLANO DE AÇÃO 3 - RACIOCÍNIO DA IA:
+   
+   PRIORIDADE: OBSERVAÇÃO
+   TÍTULO: Redução de Dependência de Transferências
+   
+   SITUAÇÃO IDENTIFICADA:
+   A alta dependência de transferências, que somam R$430.248,19 em receitas, pode ser um risco se essas fontes diminuírem.
+   
+   IMPACTO NO NEGÓCIO:
+   Reduzir o risco financeiro associado à dependência de receitas de transferências.
+   
+   AÇÕES RECOMENDADAS:
+     1. Diversificar as fontes de receita, aumentando a proporção de vendas de serviços em relação às transferências.
+     2. Monitorar regularmente as transações de transferência para identificar padrões e prever possíveis quedas.
+     3. Desenvolver um plano de contingência para compensar a perda de receitas de transferências, caso ocorra.
+   
+   COMO A IA CHEGOU NESTE PLANO:
+   
+   1. ANÁLISE DA SITUAÇÃO:
+      A IA identificou esta situação analisando:
+      - Fraquezas do SWOT: O saldo de setembro é praticamente nulo, com apenas R$0,0000000000436557456851005555, indicando um equilíbrio financeiro frágil., A categoria 'Transferência Entre Contas' apresenta um total negativo significativo de R$-515.103,97, impactando o fluxo de caixa....
+      - Dados financeiros: Receita R$ 1,122,745.70, 
+        Despesa R$ 1,095,144.53
+      - Tendências observadas nos dados do período
+   
+   2. AVALIAÇÃO DE IMPACTO:
+      O impacto foi determinado considerando:
+      - Magnitude do problema/oportunidade identificado
+      - Relação com as fraquezas ou oportunidades do SWOT
+      - Potencial de melhoria nos resultados financeiros
+   
+   3. PRIORIZAÇÃO:
+      A prioridade "OBSERVAÇÃO" foi definida baseada em:
+      - Urgência: Quanto mais crítico para os resultados, maior a prioridade
+      - Impacto financeiro potencial
+      - Viabilidade de implementação
+   
+   4. DEFINIÇÃO DAS AÇÕES:
+      As ações foram formuladas para serem:
+      - Específicas e mensuráveis
+      - Diretamente relacionadas à situação identificada
+      - Baseadas em boas práticas de gestão financeira
+      - Viáveis considerando o contexto da empresa
+   
+   CONEXÃO COM O SWOT:
+   - Endereça as fraquezas: O saldo de setembro é praticamente nulo, com apenas R$0,0000000000436557456851005555, indicando um e
+   - Aproveita as oportunidades: A receita com venda de serviços, totalizando R$498.694,96, pode ser expandida para aumentar a lucrat
+   
+
+--------------------------------------------------------------------------------
+
+20. SWOT_ANALYSIS
+   Data/Hora: 2025-11-05T15:14:47.032799
+
+   EXPLICAÇÃO DE COMO A IA CHEGOU NESTA CONCLUSÃO:
+   
+   ANÁLISE SWOT - RACIOCÍNIO DA IA:
+   
+   A IA analisou os dados financeiros do período e identificou:
+   
+   FORÇAS (3 itens):
+     • A receita total no período foi de R$ 1.122.745,70, superando as despesas de R$ 1.095.144,53, resultando em um saldo positivo de R$ 27.601,17.
+     • A margem de lucro foi de 2,46%, indicando uma gestão financeira que, embora apertada, conseguiu manter-se no positivo.
+     • A categoria 'Receita com Venda de Serviços' gerou R$ 498.694,96, representando uma parte significativa da receita total.
+   
+   JUSTIFICATIVA: Estas forças foram identificadas analisando métricas positivas como crescimento de receita, 
+   margem de lucro, eficiência operacional e tendências favoráveis nos dados do período.
+   
+   FRAQUEZAS (3 itens):
+     • O ticket médio das despesas (R$ 4.782,29) é próximo ao das receitas (R$ 5.558,15), indicando que os custos estão quase igualando as receitas.
+     • A categoria 'Aplicação Financeira' resultou em um custo de R$ 201.491,18, o que pode impactar negativamente o fluxo de caixa.
+     • A despesa com 'Simples Nacional' foi de R$ 47.889,50, representando um custo fixo significativo em um único pagamento.
+   
+   JUSTIFICATIVA: Estas fraquezas foram identificadas analisando pontos de atenção como custos elevados,
+   quedas em períodos específicos, concentração de riscos ou ineficiências operacionais.
+   
+   OPORTUNIDADES (3 itens):
+     • A 'Entrada de Transferência' gerou R$ 430.248,19, sugerindo potencial para aumentar a captação de recursos por essa via.
+     • A categoria 'Resgate Aplicação Financeira' trouxe R$ 190.314,95, indicando oportunidades de liquidez através de resgates financeiros.
+     • A alta frequência de transações de receita (163) na venda de serviços sugere potencial para expandir essa linha de negócios.
+   
+   JUSTIFICATIVA: Oportunidades identificadas baseadas em potenciais de melhoria, tendências do mercado
+   observadas nos dados, ou áreas subexploradas.
+   
+   AMEAÇAS (3 itens):
+     • O saldo de setembro foi praticamente nulo, com receita e despesa de R$ 701.126,86, indicando risco de não manter saldo positivo.
+     • A alta despesa em 'Aplicação Financeira' pode indicar um risco de investimento que não está gerando retorno suficiente.
+     • A categoria 'Saída de Transferência' resultou em um total de R$ 171.097,14, representando uma saída significativa de caixa que pode impactar a liquidez.
+   
+   JUSTIFICATIVA: Ameaças identificadas analisando riscos externos, tendências negativas ou vulnerabilidades
+   observadas nos padrões de dados.
+   
+   DADOS UTILIZADOS NA ANÁLISE:
+   - Receita total do período: R$ 1,122,745.70
+   - Despesa total do período: R$ 1,095,144.53
+   - Resultado líquido: R$ 27,601.17
+   - Margem: 2.5%
+   - Número de meses analisados: 2
+   
+
+--------------------------------------------------------------------------------
+
+21. REVENUE_ANALYSIS
+   Data/Hora: 2025-11-05T15:15:07.101853
+
+   EXPLICAÇÃO DE COMO A IA CHEGOU NESTA CONCLUSÃO:
+   
+   ANÁLISE DE RECEITAS - RACIOCÍNIO DA IA:
+   
+   DADOS ANALISADOS:
+   {
+     "totals": {
+       "receita": 1122745.7,
+       "despesa": 1095144.53,
+       "saldo": 27601.169999999925,
+       "margem": 2.458363456658077
+     },
+     "monthly": [
+       {
+         "mes": "2025-08",
+         "receita": 421618.83999999997,
+         "despesa": 394017.6699999999,
+         "saldo": 27601.169999999995
+       },
+       {
+         "mes": "2025-09",
+         "receita": 701126.86,
+         "despesa": 701126.86,
+         "saldo": 4.3655745685100555e-11
+       }
+     ]
+   }
+   
+   ANÁLISE GERADA PELA IA:
+   1. **MENSAL**: Em agosto de 2025, a receita foi de R$ 421.618,84, enquanto em setembro de 2025, a receita aumentou para R$ 701.126,86. Isso representa um aumento de R$ 279.508,02 na receita de um mês para o outro.
+   
+   2. **SAZONALIDADE**: Nos dois meses analisados, agosto e setembro de 2025, houve um aumento significativo na receita de agosto para setembro. Não há dados suficientes para identificar um padrão sazonal, pois apenas dois meses estão disponíveis.
+   
+   3. **DIAGNÓSTICO**: A performance financeira nos dois meses mostra um saldo positivo em agosto de 2025, com R$ 27.601,17, enquanto setembro de 2025 teve um saldo praticamente nulo. A margem total para o período é de 2,46%, indicando uma ligeira lucratividade.
+   
+   METODOLOGIA UTILIZADA:
+   
+   1. ANÁLISE MENSAL (mês a mês):
+      - Comparou receitas de cada mês disponível
+      - Calculou variações percentuais entre períodos consecutivos
+      - Identificou meses de melhor e pior performance
+   
+   2. ANÁLISE DE SAZONALIDADE:
+      - Observou padrões recorrentes nos dados disponíveis
+      - Identificou se há comportamento sazonal visível
+      - Contextualizou com características do segmento
+   
+   3. DIAGNÓSTICO DE PERFORMANCE:
+      - Avaliou se as receitas estão crescendo, estáveis ou em queda
+      - Identificou possíveis causas baseadas nos dados
+      - Relacionou com outras métricas disponíveis
+   
+   PREMISSAS DA ANÁLISE:
+   - Baseada EXCLUSIVAMENTE nos dados reais fornecidos
+   - Não foram feitas extrapolações além do período disponível
+   - Tendências identificadas são observações, não previsões
+   - Contexto limitado ao período de análise (sem dados históricos de anos anteriores)
+   
+   CONCLUSÕES FACTUAIS:
+   A análise acima reflete o que os DADOS MOSTRAM, sem adicionar informações
+   especulativas ou baseadas em suposições. Cada afirmação pode ser rastreada
+   de volta aos números fornecidos.
+   
+
+--------------------------------------------------------------------------------
+
+22. ACTION_PLAN_1
+   Data/Hora: 2025-11-05T15:16:00.042460
+
+   EXPLICAÇÃO DE COMO A IA CHEGOU NESTA CONCLUSÃO:
+   
+   PLANO DE AÇÃO 1 - RACIOCÍNIO DA IA:
+   
+   PRIORIDADE: URGENTE
+   TÍTULO: Reduzir Custos de Aplicações Financeiras
+   
+   SITUAÇÃO IDENTIFICADA:
+   A categoria 'Aplicação Financeira' resultou em um custo de R$ 201.491,18, impactando negativamente o fluxo de caixa.
+   
+   IMPACTO NO NEGÓCIO:
+   Reduzir custos de aplicação pode melhorar o fluxo de caixa e aumentar a margem de lucro.
+   
+   AÇÕES RECOMENDADAS:
+     1. Revisar todas as aplicações financeiras atuais até 15/10/2025 para identificar aquelas com baixo retorno.
+     2. Negociar taxas e condições com instituições financeiras até 30/10/2025 para reduzir custos.
+     3. Considerar a realocação de fundos para aplicações mais rentáveis ou resgatar aplicações de baixo rendimento até 31/10/2025.
+   
+   COMO A IA CHEGOU NESTE PLANO:
+   
+   1. ANÁLISE DA SITUAÇÃO:
+      A IA identificou esta situação analisando:
+      - Fraquezas do SWOT: O ticket médio das despesas (R$ 4.782,29) é próximo ao das receitas (R$ 5.558,15), indicando que os custos estão quase igualando as receitas., A categoria 'Aplicação Financeira' resultou em um custo de R$ 201.491,18, o que pode impactar negativamente o fluxo de caixa....
+      - Dados financeiros: Receita R$ 1,122,745.70, 
+        Despesa R$ 1,095,144.53
+      - Tendências observadas nos dados do período
+   
+   2. AVALIAÇÃO DE IMPACTO:
+      O impacto foi determinado considerando:
+      - Magnitude do problema/oportunidade identificado
+      - Relação com as fraquezas ou oportunidades do SWOT
+      - Potencial de melhoria nos resultados financeiros
+   
+   3. PRIORIZAÇÃO:
+      A prioridade "URGENTE" foi definida baseada em:
+      - Urgência: Quanto mais crítico para os resultados, maior a prioridade
+      - Impacto financeiro potencial
+      - Viabilidade de implementação
+   
+   4. DEFINIÇÃO DAS AÇÕES:
+      As ações foram formuladas para serem:
+      - Específicas e mensuráveis
+      - Diretamente relacionadas à situação identificada
+      - Baseadas em boas práticas de gestão financeira
+      - Viáveis considerando o contexto da empresa
+   
+   CONEXÃO COM O SWOT:
+   - Endereça as fraquezas: O ticket médio das despesas (R$ 4.782,29) é próximo ao das receitas (R$ 5.558,15), indicando que os 
+   - Aproveita as oportunidades: A 'Entrada de Transferência' gerou R$ 430.248,19, sugerindo potencial para aumentar a captação de re
+   
+
+--------------------------------------------------------------------------------
+
+23. ACTION_PLAN_2
+   Data/Hora: 2025-11-05T15:16:00.042460
+
+   EXPLICAÇÃO DE COMO A IA CHEGOU NESTA CONCLUSÃO:
+   
+   PLANO DE AÇÃO 2 - RACIOCÍNIO DA IA:
+   
+   PRIORIDADE: IMPORTANTE
+   TÍTULO: Aumentar a Receita com Venda de Serviços
+   
+   SITUAÇÃO IDENTIFICADA:
+   A categoria 'Receita com Venda de Serviços' gerou R$ 498.694,96, representando uma parte significativa da receita total.
+   
+   IMPACTO NO NEGÓCIO:
+   Expandir a venda de serviços pode aumentar significativamente a receita total.
+   
+   AÇÕES RECOMENDADAS:
+     1. Desenvolver uma campanha de marketing direcionada para serviços até 31/10/2025.
+     2. Oferecer promoções ou pacotes de serviços para atrair novos clientes até 15/11/2025.
+     3. Treinar a equipe de vendas para melhorar a conversão de leads em clientes até 30/11/2025.
+   
+   COMO A IA CHEGOU NESTE PLANO:
+   
+   1. ANÁLISE DA SITUAÇÃO:
+      A IA identificou esta situação analisando:
+      - Fraquezas do SWOT: O ticket médio das despesas (R$ 4.782,29) é próximo ao das receitas (R$ 5.558,15), indicando que os custos estão quase igualando as receitas., A categoria 'Aplicação Financeira' resultou em um custo de R$ 201.491,18, o que pode impactar negativamente o fluxo de caixa....
+      - Dados financeiros: Receita R$ 1,122,745.70, 
+        Despesa R$ 1,095,144.53
+      - Tendências observadas nos dados do período
+   
+   2. AVALIAÇÃO DE IMPACTO:
+      O impacto foi determinado considerando:
+      - Magnitude do problema/oportunidade identificado
+      - Relação com as fraquezas ou oportunidades do SWOT
+      - Potencial de melhoria nos resultados financeiros
+   
+   3. PRIORIZAÇÃO:
+      A prioridade "IMPORTANTE" foi definida baseada em:
+      - Urgência: Quanto mais crítico para os resultados, maior a prioridade
+      - Impacto financeiro potencial
+      - Viabilidade de implementação
+   
+   4. DEFINIÇÃO DAS AÇÕES:
+      As ações foram formuladas para serem:
+      - Específicas e mensuráveis
+      - Diretamente relacionadas à situação identificada
+      - Baseadas em boas práticas de gestão financeira
+      - Viáveis considerando o contexto da empresa
+   
+   CONEXÃO COM O SWOT:
+   - Endereça as fraquezas: O ticket médio das despesas (R$ 4.782,29) é próximo ao das receitas (R$ 5.558,15), indicando que os 
+   - Aproveita as oportunidades: A 'Entrada de Transferência' gerou R$ 430.248,19, sugerindo potencial para aumentar a captação de re
+   
+
+--------------------------------------------------------------------------------
+
+24. ACTION_PLAN_3
+   Data/Hora: 2025-11-05T15:16:00.042460
+
+   EXPLICAÇÃO DE COMO A IA CHEGOU NESTA CONCLUSÃO:
+   
+   PLANO DE AÇÃO 3 - RACIOCÍNIO DA IA:
+   
+   PRIORIDADE: OBSERVAÇÃO
+   TÍTULO: Otimizar o Pagamento de Impostos
+   
+   SITUAÇÃO IDENTIFICADA:
+   A despesa com 'Simples Nacional' foi de R$ 47.889,50, representando um custo fixo significativo.
+   
+   IMPACTO NO NEGÓCIO:
+   Otimizar o pagamento de impostos pode liberar capital para outras áreas do negócio.
+   
+   AÇÕES RECOMENDADAS:
+     1. Consultar um especialista tributário até 31/10/2025 para revisar a estrutura fiscal atual.
+     2. Explorar a possibilidade de parcelamento ou adiamento de pagamentos de impostos até 15/11/2025.
+     3. Implementar um sistema de controle de despesas tributárias para monitorar e planejar melhor os pagamentos até 30/11/2025.
+   
+   COMO A IA CHEGOU NESTE PLANO:
+   
+   1. ANÁLISE DA SITUAÇÃO:
+      A IA identificou esta situação analisando:
+      - Fraquezas do SWOT: O ticket médio das despesas (R$ 4.782,29) é próximo ao das receitas (R$ 5.558,15), indicando que os custos estão quase igualando as receitas., A categoria 'Aplicação Financeira' resultou em um custo de R$ 201.491,18, o que pode impactar negativamente o fluxo de caixa....
+      - Dados financeiros: Receita R$ 1,122,745.70, 
+        Despesa R$ 1,095,144.53
+      - Tendências observadas nos dados do período
+   
+   2. AVALIAÇÃO DE IMPACTO:
+      O impacto foi determinado considerando:
+      - Magnitude do problema/oportunidade identificado
+      - Relação com as fraquezas ou oportunidades do SWOT
+      - Potencial de melhoria nos resultados financeiros
+   
+   3. PRIORIZAÇÃO:
+      A prioridade "OBSERVAÇÃO" foi definida baseada em:
+      - Urgência: Quanto mais crítico para os resultados, maior a prioridade
+      - Impacto financeiro potencial
+      - Viabilidade de implementação
+   
+   4. DEFINIÇÃO DAS AÇÕES:
+      As ações foram formuladas para serem:
+      - Específicas e mensuráveis
+      - Diretamente relacionadas à situação identificada
+      - Baseadas em boas práticas de gestão financeira
+      - Viáveis considerando o contexto da empresa
+   
+   CONEXÃO COM O SWOT:
+   - Endereça as fraquezas: O ticket médio das despesas (R$ 4.782,29) é próximo ao das receitas (R$ 5.558,15), indicando que os 
+   - Aproveita as oportunidades: A 'Entrada de Transferência' gerou R$ 430.248,19, sugerindo potencial para aumentar a captação de re
+   
+
+--------------------------------------------------------------------------------
+
+25. ACTION_PLAN_4
+   Data/Hora: 2025-11-05T15:16:00.042460
+
+   EXPLICAÇÃO DE COMO A IA CHEGOU NESTA CONCLUSÃO:
+   
+   PLANO DE AÇÃO 4 - RACIOCÍNIO DA IA:
+   
+   PRIORIDADE: IMPORTANTE
+   TÍTULO: Melhorar a Liquidez através de Resgates Financeiros
+   
+   SITUAÇÃO IDENTIFICADA:
+   A categoria 'Resgate Aplicação Financeira' trouxe R$ 190.314,95, indicando oportunidades de liquidez.
+   
+   IMPACTO NO NEGÓCIO:
+   Melhorar a liquidez pode ajudar a manter um saldo positivo e financiar operações.
+   
+   AÇÕES RECOMENDADAS:
+     1. Identificar aplicações financeiras que podem ser resgatadas sem penalidades até 15/10/2025.
+     2. Planejar resgates estratégicos para cobrir despesas fixas ou emergenciais até 31/10/2025.
+     3. Monitorar o mercado financeiro para identificar oportunidades de resgate vantajosas até 30/11/2025.
+   
+   COMO A IA CHEGOU NESTE PLANO:
+   
+   1. ANÁLISE DA SITUAÇÃO:
+      A IA identificou esta situação analisando:
+      - Fraquezas do SWOT: O ticket médio das despesas (R$ 4.782,29) é próximo ao das receitas (R$ 5.558,15), indicando que os custos estão quase igualando as receitas., A categoria 'Aplicação Financeira' resultou em um custo de R$ 201.491,18, o que pode impactar negativamente o fluxo de caixa....
+      - Dados financeiros: Receita R$ 1,122,745.70, 
+        Despesa R$ 1,095,144.53
+      - Tendências observadas nos dados do período
+   
+   2. AVALIAÇÃO DE IMPACTO:
+      O impacto foi determinado considerando:
+      - Magnitude do problema/oportunidade identificado
+      - Relação com as fraquezas ou oportunidades do SWOT
+      - Potencial de melhoria nos resultados financeiros
+   
+   3. PRIORIZAÇÃO:
+      A prioridade "IMPORTANTE" foi definida baseada em:
+      - Urgência: Quanto mais crítico para os resultados, maior a prioridade
+      - Impacto financeiro potencial
+      - Viabilidade de implementação
+   
+   4. DEFINIÇÃO DAS AÇÕES:
+      As ações foram formuladas para serem:
+      - Específicas e mensuráveis
+      - Diretamente relacionadas à situação identificada
+      - Baseadas em boas práticas de gestão financeira
+      - Viáveis considerando o contexto da empresa
+   
+   CONEXÃO COM O SWOT:
+   - Endereça as fraquezas: O ticket médio das despesas (R$ 4.782,29) é próximo ao das receitas (R$ 5.558,15), indicando que os 
+   - Aproveita as oportunidades: A 'Entrada de Transferência' gerou R$ 430.248,19, sugerindo potencial para aumentar a captação de re
+   
+
+--------------------------------------------------------------------------------
+
+26. REVENUE_ANALYSIS
+   Data/Hora: 2025-11-05T15:17:06.857632
+
+   EXPLICAÇÃO DE COMO A IA CHEGOU NESTA CONCLUSÃO:
+   
+   ANÁLISE DE RECEITAS - RACIOCÍNIO DA IA:
+   
+   DADOS ANALISADOS:
+   {
+     "totals": {
+       "receita": 1122745.7,
+       "despesa": 1095144.53,
+       "saldo": 27601.169999999925,
+       "margem": 2.458363456658077
+     },
+     "monthly": [
+       {
+         "mes": "2025-08",
+         "receita": 421618.83999999997,
+         "despesa": 394017.6699999999,
+         "saldo": 27601.169999999995
+       },
+       {
+         "mes": "2025-09",
+         "receita": 701126.86,
+         "despesa": 701126.86,
+         "saldo": 4.3655745685100555e-11
+       }
+     ]
+   }
+   
+   ANÁLISE GERADA PELA IA:
+   ### Análise Mensal
+   
+   Em agosto de 2025, a receita foi de R$ 421.618,84, enquanto em setembro de 2025, a receita aumentou significativamente para R$ 701.126,86. Isso representa um aumento de R$ 279.508,02 na receita de um mês para o outro.
+   
+   ### Sazonalidade
+   
+   Durante os meses analisados, não há dados suficientes para identificar um padrão sazonal claro, pois apenas dois meses consecutivos são fornecidos. No entanto, observa-se um aumento substancial na receita de agosto para setembro.
+   
+   ### Diagnóstico
+   
+   A performance financeira entre agosto e setembro de 2025 mostra um crescimento na receita, com um aumento de R$ 279.508,02. Apesar do aumento na receita, o saldo em setembro foi praticamente nulo, indicando que as despesas acompanharam o crescimento da receita nesse mês.
+   
+   METODOLOGIA UTILIZADA:
+   
+   1. ANÁLISE MENSAL (mês a mês):
+      - Comparou receitas de cada mês disponível
+      - Calculou variações percentuais entre períodos consecutivos
+      - Identificou meses de melhor e pior performance
+   
+   2. ANÁLISE DE SAZONALIDADE:
+      - Observou padrões recorrentes nos dados disponíveis
+      - Identificou se há comportamento sazonal visível
+      - Contextualizou com características do segmento
+   
+   3. DIAGNÓSTICO DE PERFORMANCE:
+      - Avaliou se as receitas estão crescendo, estáveis ou em queda
+      - Identificou possíveis causas baseadas nos dados
+      - Relacionou com outras métricas disponíveis
+   
+   PREMISSAS DA ANÁLISE:
+   - Baseada EXCLUSIVAMENTE nos dados reais fornecidos
+   - Não foram feitas extrapolações além do período disponível
+   - Tendências identificadas são observações, não previsões
+   - Contexto limitado ao período de análise (sem dados históricos de anos anteriores)
+   
+   CONCLUSÕES FACTUAIS:
+   A análise acima reflete o que os DADOS MOSTRAM, sem adicionar informações
+   especulativas ou baseadas em suposições. Cada afirmação pode ser rastreada
+   de volta aos números fornecidos.
+   
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+COMPARAÇÕES (3 comparações)
+--------------------------------------------------------------------------------
+
+1. monthly: 2025-08 vs 2025-09
+   Interpretação: Receita variou 66.3%, despesa 77.9%, saldo -100.0%
+
+2. monthly: 2025-08 vs 2025-09
+   Interpretação: Receita variou 66.3%, despesa 77.9%, saldo -100.0%
+
+3. monthly: 2025-08 vs 2025-09
+   Interpretação: Receita variou 66.3%, despesa 77.9%, saldo -100.0%
+
+================================================================================
+FIM DO RELATÓRIO
+================================================================================

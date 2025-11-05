@@ -1,0 +1,2241 @@
+{
+  "metadata": {
+    "session_id": "20251105_105136",
+    "start_time": "2025-11-05T10:51:36.432179",
+    "total_decisions": 131,
+    "decision_types": {
+      "rule": 38,
+      "ai": 93
+    },
+    "end_time": "2025-11-05T10:52:29.483925"
+  },
+  "decisions": [
+    {
+      "timestamp": "2025-11-05T10:51:36.486763",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 01/09 10:59 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "(-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-05T10:51:36.486763",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAR",
+        "valor": 26327.3
+      },
+      "decision": {
+        "classificacao_sugerida": "Resgate Aplicação Financeira",
+        "explicacao": "Resgate de aplicação financeira identificado"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAR = Resgate",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-05T10:51:36.486763",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 02/09 11:35 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "(-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-05T10:51:36.486763",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAR",
+        "valor": 15215.7
+      },
+      "decision": {
+        "classificacao_sugerida": "Resgate Aplicação Financeira",
+        "explicacao": "Resgate de aplicação financeira identificado"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAR = Resgate",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-05T10:51:36.486763",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAP",
+        "valor": -15010.1
+      },
+      "decision": {
+        "classificacao_sugerida": "0.006 - Aplicação Financeira",
+        "explicacao": "Aplicação financeira identificada"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAP = Aplicação",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-05T10:51:36.486763",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAP",
+        "valor": -16581.93
+      },
+      "decision": {
+        "classificacao_sugerida": "0.006 - Aplicação Financeira",
+        "explicacao": "Aplicação financeira identificada"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAP = Aplicação",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-05T10:51:36.486763",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 05/09 09:20 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "(-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-05T10:51:36.486763",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAR",
+        "valor": 9852.39
+      },
+      "decision": {
+        "classificacao_sugerida": "Resgate Aplicação Financeira",
+        "explicacao": "Resgate de aplicação financeira identificado"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAR = Resgate",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-05T10:51:38.635256",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "FCO AMORTIZAÇÃO",
+        "origem": "CAP",
+        "valor": -9525.26
+      },
+      "decision": {
+        "classificacao_sugerida": "Pagamento de Empréstimos",
+        "explicacao": "A descrição 'FCO AMORTIZAÇÃO' indica que se trata de uma amortização de um empréstimo, e como a origem é CAP (saída), a classificação correta é 'Pagamento de Empréstimos'."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'FCO AMORTIZAÇÃO...' e classificou como 'Pagamento de Empréstimos'. Explicação: A descrição 'FCO AMORTIZAÇÃO' indica que se trata de uma amortização de um empréstimo, e como a origem é CAP (saída), a classificação correta é 'Pagamento de Empréstimos'.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:51:39.452387",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "FCO AMORTIZAÇÃO",
+        "origem": "CAP",
+        "valor": -3059.96
+      },
+      "decision": {
+        "classificacao_sugerida": "Pagamento de Empréstimos",
+        "explicacao": "A descrição 'FCO AMORTIZAÇÃO' indica que se trata de uma amortização de um empréstimo, e a origem é CAP, o que confirma que é uma saída de dinheiro."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'FCO AMORTIZAÇÃO...' e classificou como 'Pagamento de Empréstimos'. Explicação: A descrição 'FCO AMORTIZAÇÃO' indica que se trata de uma amortização de um empréstimo, e a origem é CAP, o que confirma que é uma saída de dinheiro.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:51:40.962963",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "FCO AMORTIZAÇÃO",
+        "origem": "CAP",
+        "valor": -26377.03
+      },
+      "decision": {
+        "classificacao_sugerida": "Pagamento de Empréstimos",
+        "explicacao": "A descrição 'FCO AMORTIZAÇÃO' indica que se trata de uma amortização de um empréstimo, e a origem é CAP, o que confirma que é uma saída de dinheiro."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'FCO AMORTIZAÇÃO...' e classificou como 'Pagamento de Empréstimos'. Explicação: A descrição 'FCO AMORTIZAÇÃO' indica que se trata de uma amortização de um empréstimo, e a origem é CAP, o que confirma que é uma saída de dinheiro.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:51:40.966190",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAP",
+        "valor": -61771.94
+      },
+      "decision": {
+        "classificacao_sugerida": "0.006 - Aplicação Financeira",
+        "explicacao": "Aplicação financeira identificada"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAP = Aplicação",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-05T10:51:40.966190",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 09/09 17:11 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "(-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-05T10:51:40.966190",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAR",
+        "valor": 10170.62
+      },
+      "decision": {
+        "classificacao_sugerida": "Resgate Aplicação Financeira",
+        "explicacao": "Resgate de aplicação financeira identificado"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAR = Resgate",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-05T10:51:40.966190",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 10/09 10:28 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "(-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-05T10:51:40.966190",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAR",
+        "valor": 24984.41
+      },
+      "decision": {
+        "classificacao_sugerida": "Resgate Aplicação Financeira",
+        "explicacao": "Resgate de aplicação financeira identificado"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAR = Resgate",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-05T10:51:40.966190",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAP",
+        "valor": -12301.23
+      },
+      "decision": {
+        "classificacao_sugerida": "0.006 - Aplicação Financeira",
+        "explicacao": "Aplicação financeira identificada"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAP = Aplicação",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-05T10:51:40.966190",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 12/09 11:31 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "(-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-05T10:51:40.966190",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAR",
+        "valor": 1740.57
+      },
+      "decision": {
+        "classificacao_sugerida": "Resgate Aplicação Financeira",
+        "explicacao": "Resgate de aplicação financeira identificado"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAR = Resgate",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-05T10:51:40.966190",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 15/09 10:52 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "(-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-05T10:51:40.966190",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAP",
+        "valor": -16941.7
+      },
+      "decision": {
+        "classificacao_sugerida": "0.006 - Aplicação Financeira",
+        "explicacao": "Aplicação financeira identificada"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAP = Aplicação",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-05T10:51:40.966190",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 16/09 10:57 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "(-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-05T10:51:40.966190",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAR",
+        "valor": 13821.72
+      },
+      "decision": {
+        "classificacao_sugerida": "Resgate Aplicação Financeira",
+        "explicacao": "Resgate de aplicação financeira identificado"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAR = Resgate",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-05T10:51:40.966190",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 17/09 10:57 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "(-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-05T10:51:40.966190",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAR",
+        "valor": 15536.14
+      },
+      "decision": {
+        "classificacao_sugerida": "Resgate Aplicação Financeira",
+        "explicacao": "Resgate de aplicação financeira identificado"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAR = Resgate",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-05T10:51:40.966190",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 18/09 09:27 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "(-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-05T10:51:40.966190",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAR",
+        "valor": 8421.27
+      },
+      "decision": {
+        "classificacao_sugerida": "Resgate Aplicação Financeira",
+        "explicacao": "Resgate de aplicação financeira identificado"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAR = Resgate",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-05T10:51:40.966190",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAP",
+        "valor": -16674.84
+      },
+      "decision": {
+        "classificacao_sugerida": "0.006 - Aplicação Financeira",
+        "explicacao": "Aplicação financeira identificada"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAP = Aplicação",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-05T10:51:40.966190",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 22/09 10:41 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "(-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-05T10:51:40.966190",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAP",
+        "valor": -19178.97
+      },
+      "decision": {
+        "classificacao_sugerida": "0.006 - Aplicação Financeira",
+        "explicacao": "Aplicação financeira identificada"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAP = Aplicação",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-05T10:51:40.966190",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 23/09 10:16 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "(-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-05T10:51:40.966190",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAR",
+        "valor": 17714.25
+      },
+      "decision": {
+        "classificacao_sugerida": "Resgate Aplicação Financeira",
+        "explicacao": "Resgate de aplicação financeira identificado"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAR = Resgate",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-05T10:51:40.966190",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 24/09 10:49 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "(-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-05T10:51:40.966190",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAR",
+        "valor": 19052.3
+      },
+      "decision": {
+        "classificacao_sugerida": "Resgate Aplicação Financeira",
+        "explicacao": "Resgate de aplicação financeira identificado"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAR = Resgate",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-05T10:51:40.966190",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAP",
+        "valor": -15303.48
+      },
+      "decision": {
+        "classificacao_sugerida": "0.006 - Aplicação Financeira",
+        "explicacao": "Aplicação financeira identificada"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAP = Aplicação",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-05T10:51:40.966190",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAP",
+        "valor": -13779.83
+      },
+      "decision": {
+        "classificacao_sugerida": "0.006 - Aplicação Financeira",
+        "explicacao": "Aplicação financeira identificada"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAP = Aplicação",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-05T10:51:40.966190",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 29/09 11:41 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "(-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-05T10:51:40.966190",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAP",
+        "valor": -13947.16
+      },
+      "decision": {
+        "classificacao_sugerida": "0.006 - Aplicação Financeira",
+        "explicacao": "Aplicação financeira identificada"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAP = Aplicação",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-05T10:51:40.966190",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 30/09 09:51 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "(-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-05T10:51:40.966190",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAR",
+        "valor": 27460.44
+      },
+      "decision": {
+        "classificacao_sugerida": "Resgate Aplicação Financeira",
+        "explicacao": "Resgate de aplicação financeira identificado"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAR = Resgate",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-05T10:51:42.212540",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTO DE BOLETO EQUATORIAL GOIAS DISTR ENER SA 01.543.032/0001-04",
+        "origem": "CAP",
+        "valor": -117.38
+      },
+      "decision": {
+        "classificacao_sugerida": "(-) Transferencia Entre Contas",
+        "explicacao": "A transação é uma saída (CAP) e a descrição indica um pagamento de boleto, que se encaixa na categoria de despesas."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTO DE BOLETO EQUATORIAL GOIAS DISTR ENER SA...' e classificou como '(-) Transferencia Entre Contas'. Explicação: A transação é uma saída (CAP) e a descrição indica um pagamento de boleto, que se encaixa na categoria de despesas.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:51:42.475659",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTO DE BOLETO FITMASS S A 39.867.600/0001-97",
+        "origem": "CAP",
+        "valor": -776.9
+      },
+      "decision": {
+        "classificacao_sugerida": "Não classificado",
+        "explicacao": "A descrição 'PAGAMENTO DE BOLETO FITMASS S A' não se encaixa em nenhuma das categorias específicas definidas nas regras de classificação. Portanto, a transação é classificada como 'Não classificado'."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTO DE BOLETO FITMASS S A 39.867.600/0001-97...' e classificou como 'Não classificado'. Explicação: A descrição 'PAGAMENTO DE BOLETO FITMASS S A' não se encaixa em nenhuma das categorias específicas definidas nas regras de classificação. Portanto, a transação é classificada como 'Não classificado'.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:51:42.697257",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "RENDIMENTO APLICAÇÃO AUTOMÁTICA REND PAGO APLIC AUT MAIS",
+        "origem": "CAR",
+        "valor": 2.25
+      },
+      "decision": {
+        "classificacao_sugerida": "Resgate Aplicação Financeira",
+        "explicacao": "A descrição contém 'RENDE FÁCIL', e como a origem é CAR, a transação é classificada como Resgate de Aplicação Financeira."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'RENDIMENTO APLICAÇÃO AUTOMÁTICA REND PAGO APLIC AU...' e classificou como 'Resgate Aplicação Financeira'. Explicação: A descrição contém 'RENDE FÁCIL', e como a origem é CAR, a transação é classificada como Resgate de Aplicação Financeira.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:51:43.879629",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTO DE BOLETO TAG BUSINESS SOLUTIONS 26.790.470/0001-90",
+        "origem": "CAP",
+        "valor": -10121.3
+      },
+      "decision": {
+        "classificacao_sugerida": "Não classificado",
+        "explicacao": "A descrição não se encaixa em nenhuma das categorias específicas definidas nas regras de classificação, e a origem é uma saída (CAP). Portanto, a transação é classificada como 'Não classificado'."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTO DE BOLETO TAG BUSINESS SOLUTIONS 26.790....' e classificou como 'Não classificado'. Explicação: A descrição não se encaixa em nenhuma das categorias específicas definidas nas regras de classificação, e a origem é uma saída (CAP). Portanto, a transação é classificada como 'Não classificado'.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:51:44.003922",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTO DE BOLETO LES MILLS BRASIL FITNESS LTDA. 29.006.532/0001-18",
+        "origem": "CAP",
+        "valor": -953.4
+      },
+      "decision": {
+        "classificacao_sugerida": "Não classificado",
+        "explicacao": "A descrição refere-se a um pagamento de boleto, mas não se encaixa em nenhuma das categorias específicas definidas nas regras de classificação."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTO DE BOLETO LES MILLS BRASIL FITNESS LTDA....' e classificou como 'Não classificado'. Explicação: A descrição refere-se a um pagamento de boleto, mas não se encaixa em nenhuma das categorias específicas definidas nas regras de classificação.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:51:44.245518",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTO DE BOLETO LISTENX SOLUC DIG DE MARK 05.736.412/0001-08",
+        "origem": "CAP",
+        "valor": -59.0
+      },
+      "decision": {
+        "classificacao_sugerida": "Não classificado",
+        "explicacao": "A descrição não se encaixa em nenhuma das categorias específicas definidas nas regras de classificação, e não é possível identificar a natureza da transação com certeza."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTO DE BOLETO LISTENX SOLUC DIG DE MARK 05.7...' e classificou como 'Não classificado'. Explicação: A descrição não se encaixa em nenhuma das categorias específicas definidas nas regras de classificação, e não é possível identificar a natureza da transação com certeza.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:51:44.276540",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTO DE BOLETO FITMASS S A 39.867.600/0001-97",
+        "origem": "CAP",
+        "valor": -999.0
+      },
+      "decision": {
+        "classificacao_sugerida": "Não classificado",
+        "explicacao": "A descrição 'PAGAMENTO DE BOLETO FITMASS' não se encaixa em nenhuma das categorias específicas definidas nas regras de classificação. Portanto, a transação é classificada como 'Não classificado'."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTO DE BOLETO FITMASS S A 39.867.600/0001-97...' e classificou como 'Não classificado'. Explicação: A descrição 'PAGAMENTO DE BOLETO FITMASS' não se encaixa em nenhuma das categorias específicas definidas nas regras de classificação. Portanto, a transação é classificada como 'Não classificado'.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:51:44.646427",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTO DE BOLETO VEREDA IMOVEIS E EMPREENDIMENTOS LTDA 02.930.246/0001-98",
+        "origem": "CAP",
+        "valor": -938.19
+      },
+      "decision": {
+        "classificacao_sugerida": "(-) Transferencia Entre Contas",
+        "explicacao": "A transação é uma saída (CAP) e a descrição indica um pagamento de boleto, que não se encaixa em outras categorias específicas. Portanto, foi classificada como uma saída genérica."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTO DE BOLETO VEREDA IMOVEIS E EMPREENDIMENT...' e classificou como '(-) Transferencia Entre Contas'. Explicação: A transação é uma saída (CAP) e a descrição indica um pagamento de boleto, que não se encaixa em outras categorias específicas. Portanto, foi classificada como uma saída genérica.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:51:45.186674",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTO DE BOLETO START INST DE DES H E P LTDA 20.494.981/0001-88",
+        "origem": "CAP",
+        "valor": -217.33
+      },
+      "decision": {
+        "classificacao_sugerida": "Não classificado",
+        "explicacao": "A descrição não se encaixa em nenhuma das categorias específicas definidas nas regras de classificação e não é possível identificar a natureza da transação com certeza."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTO DE BOLETO START INST DE DES H E P LTDA 2...' e classificou como 'Não classificado'. Explicação: A descrição não se encaixa em nenhuma das categorias específicas definidas nas regras de classificação e não é possível identificar a natureza da transação com certeza.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:51:45.319247",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTO DE BOLETO EQUATORIAL GOIAS DISTR ENER SA 01.543.032/0001-04",
+        "origem": "CAP",
+        "valor": -144.16
+      },
+      "decision": {
+        "classificacao_sugerida": "(-) Transferencia Entre Contas",
+        "explicacao": "A transação é uma saída (CAP) e a descrição indica um pagamento de boleto, que não se encaixa em outras categorias específicas. Portanto, foi classificada como uma saída genérica."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTO DE BOLETO EQUATORIAL GOIAS DISTR ENER SA...' e classificou como '(-) Transferencia Entre Contas'. Explicação: A transação é uma saída (CAP) e a descrição indica um pagamento de boleto, que não se encaixa em outras categorias específicas. Portanto, foi classificada como uma saída genérica.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:51:45.776574",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTOS CONCESSIONARIA SANEAGO 01.616.929/0001-02",
+        "origem": "CAP",
+        "valor": -252.91
+      },
+      "decision": {
+        "classificacao_sugerida": "Água e Esgoto",
+        "explicacao": "A descrição menciona 'CONCESSIONARIA SANEAGO', que se refere a serviços de saneamento, portanto, a classificação correta é 'Água e Esgoto'. A origem é CAP, indicando que é uma saída."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTOS CONCESSIONARIA SANEAGO 01.616.929/0001-...' e classificou como 'Água e Esgoto'. Explicação: A descrição menciona 'CONCESSIONARIA SANEAGO', que se refere a serviços de saneamento, portanto, a classificação correta é 'Água e Esgoto'. A origem é CAP, indicando que é uma saída.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:51:46.728209",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "SISPAG  TRANSF CC ITAU",
+        "origem": "CAP",
+        "valor": -400.0
+      },
+      "decision": {
+        "classificacao_sugerida": "Saldo Inicial",
+        "explicacao": "A descrição indica uma transferência, mas não contém informações específicas que a classifiquem como uma transferência entre contas próprias ou um tipo específico de transferência. Portanto, foi classificada como 'Saldo Inicial'."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'SISPAG  TRANSF CC ITAU...' e classificou como 'Saldo Inicial'. Explicação: A descrição indica uma transferência, mas não contém informações específicas que a classifiquem como uma transferência entre contas próprias ou um tipo específico de transferência. Portanto, foi classificada como 'Saldo Inicial'.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:51:47.046039",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTO DE BOLETO MAGAZINE DA LIMPEZA LTDA 04.680.300/0001-10",
+        "origem": "CAP",
+        "valor": -694.37
+      },
+      "decision": {
+        "classificacao_sugerida": "(-) Transferencia Entre Contas",
+        "explicacao": "A descrição refere-se a um pagamento de boleto, que é uma saída de dinheiro (origem CAP). Não se encaixa em outras categorias específicas, portanto, é classificado como uma saída genérica."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTO DE BOLETO MAGAZINE DA LIMPEZA LTDA 04.68...' e classificou como '(-) Transferencia Entre Contas'. Explicação: A descrição refere-se a um pagamento de boleto, que é uma saída de dinheiro (origem CAP). Não se encaixa em outras categorias específicas, portanto, é classificado como uma saída genérica.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:51:47.157867",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTO DE BOLETO COPA ENERGIA S.A. 03.237.583/0001-67",
+        "origem": "CAP",
+        "valor": -539.99
+      },
+      "decision": {
+        "classificacao_sugerida": "Energia Elétrica",
+        "explicacao": "A descrição contém 'ENERGIA', indicando que se trata de uma despesa relacionada ao fornecimento de energia elétrica."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTO DE BOLETO COPA ENERGIA S.A. 03.237.583/0...' e classificou como 'Energia Elétrica'. Explicação: A descrição contém 'ENERGIA', indicando que se trata de uma despesa relacionada ao fornecimento de energia elétrica.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:51:47.186477",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "TAR PLANO ADAPT 3  07/25",
+        "origem": "CAP",
+        "valor": -389.0
+      },
+      "decision": {
+        "classificacao_sugerida": "Não classificado",
+        "explicacao": "A descrição 'TAR PLANO ADAPT 3 07/25' não se encaixa em nenhuma das categorias específicas definidas nas regras de classificação, e não há informações suficientes para determinar uma classificação adequada."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'TAR PLANO ADAPT 3  07/25...' e classificou como 'Não classificado'. Explicação: A descrição 'TAR PLANO ADAPT 3 07/25' não se encaixa em nenhuma das categorias específicas definidas nas regras de classificação, e não há informações suficientes para determinar uma classificação adequada.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:51:48.056228",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTO DE BOLETO ASSOCIACAO DO PESSOAL DA CAIXA ECONOMICA 02.089.118/0001-63",
+        "origem": "CAP",
+        "valor": -180.0
+      },
+      "decision": {
+        "classificacao_sugerida": "Não classificado",
+        "explicacao": "A descrição não se encaixa em nenhuma das categorias específicas definidas nas regras de classificação e não é possível identificar com certeza a natureza da transação."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTO DE BOLETO ASSOCIACAO DO PESSOAL DA CAIXA...' e classificou como 'Não classificado'. Explicação: A descrição não se encaixa em nenhuma das categorias específicas definidas nas regras de classificação e não é possível identificar com certeza a natureza da transação.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:51:48.732051",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "SISPAG  TRANSF CC ITAU",
+        "origem": "CAP",
+        "valor": -364.0
+      },
+      "decision": {
+        "classificacao_sugerida": "Saldo Inicial",
+        "explicacao": "A descrição indica uma transferência, mas não contém informações específicas que a classifiquem como uma transferência entre contas próprias ou um tipo específico de saída. Portanto, foi classificada como 'Saldo Inicial'."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'SISPAG  TRANSF CC ITAU...' e classificou como 'Saldo Inicial'. Explicação: A descrição indica uma transferência, mas não contém informações específicas que a classifiquem como uma transferência entre contas próprias ou um tipo específico de saída. Portanto, foi classificada como 'Saldo Inicial'.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:51:50.356882",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "RENDIMENTO APLICAÇÃO AUTOMÁTICA REND PAGO APLIC AUT MAIS",
+        "origem": "CAR",
+        "valor": 1.92
+      },
+      "decision": {
+        "classificacao_sugerida": "Resgate Aplicação Financeira",
+        "explicacao": "A descrição contém 'RENDE FÁCIL', e como a origem é CAR, a transação é classificada como Resgate de Aplicação Financeira."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'RENDIMENTO APLICAÇÃO AUTOMÁTICA REND PAGO APLIC AU...' e classificou como 'Resgate Aplicação Financeira'. Explicação: A descrição contém 'RENDE FÁCIL', e como a origem é CAR, a transação é classificada como Resgate de Aplicação Financeira.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:51:50.623417",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTO DE BOLETO CONDOMINIO COMERCIAL OFICINA DE PROJETOS 02.042.679/0001-07",
+        "origem": "CAP",
+        "valor": -440.48
+      },
+      "decision": {
+        "classificacao_sugerida": "Condomínios",
+        "explicacao": "A transação refere-se ao pagamento de um boleto de condomínio, que se enquadra na categoria de despesas relacionadas a condomínios."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTO DE BOLETO CONDOMINIO COMERCIAL OFICINA D...' e classificou como 'Condomínios'. Explicação: A transação refere-se ao pagamento de um boleto de condomínio, que se enquadra na categoria de despesas relacionadas a condomínios.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:51:51.240077",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "SISPAG  TRANSF CC ITAU",
+        "origem": "CAP",
+        "valor": -33529.3
+      },
+      "decision": {
+        "classificacao_sugerida": "(-) Transferencia Entre Contas",
+        "explicacao": "A descrição indica uma transferência entre contas (SISPAG TRANSF CC ITAU) e a origem é CAP, o que significa que é uma saída de dinheiro."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'SISPAG  TRANSF CC ITAU...' e classificou como '(-) Transferencia Entre Contas'. Explicação: A descrição indica uma transferência entre contas (SISPAG TRANSF CC ITAU) e a origem é CAP, o que significa que é uma saída de dinheiro.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:51:52.005894",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "SISPAG  TRANSF CC ITAU",
+        "origem": "CAP",
+        "valor": -4098.31
+      },
+      "decision": {
+        "classificacao_sugerida": "(-) Transferencia Entre Contas",
+        "explicacao": "A descrição indica uma transferência entre contas, e como a origem é CAP (saída), a classificação correta é '(-) Transferencia Entre Contas'."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'SISPAG  TRANSF CC ITAU...' e classificou como '(-) Transferencia Entre Contas'. Explicação: A descrição indica uma transferência entre contas, e como a origem é CAP (saída), a classificação correta é '(-) Transferencia Entre Contas'.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:51:52.072880",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTOS TRIB COD BARRAS GOIANIA-TESOURO 01.612.092/0001-23",
+        "origem": "CAP",
+        "valor": -29.2
+      },
+      "decision": {
+        "classificacao_sugerida": "Taxas de Serviços Estaduais",
+        "explicacao": "A descrição menciona 'PAGAMENTOS TRIB', o que indica que se trata de um pagamento de tributos, e a origem é CAP, indicando uma saída."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTOS TRIB COD BARRAS GOIANIA-TESOURO 01.612....' e classificou como 'Taxas de Serviços Estaduais'. Explicação: A descrição menciona 'PAGAMENTOS TRIB', o que indica que se trata de um pagamento de tributos, e a origem é CAP, indicando uma saída.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:51:52.329212",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTO DE BOLETO RADIO IMPRENSA S A 33.389.974/0002-49",
+        "origem": "CAP",
+        "valor": -430.0
+      },
+      "decision": {
+        "classificacao_sugerida": "(-) Transferencia Entre Contas",
+        "explicacao": "A transação é uma saída (CAP) e a descrição indica um pagamento de boleto, que não se encaixa em outras categorias específicas. Portanto, é classificada como uma saída genérica."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTO DE BOLETO RADIO IMPRENSA S A 33.389.974/...' e classificou como '(-) Transferencia Entre Contas'. Explicação: A transação é uma saída (CAP) e a descrição indica um pagamento de boleto, que não se encaixa em outras categorias específicas. Portanto, é classificada como uma saída genérica.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:51:52.433638",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTO DE BOLETO CONDOMINIO COMERCIAL OFICINA DE PROJETOS 02.042.679/0001-07",
+        "origem": "CAP",
+        "valor": -440.48
+      },
+      "decision": {
+        "classificacao_sugerida": "(-) Transferencia Entre Contas",
+        "explicacao": "A transação é uma saída (CAP) e a descrição indica um pagamento de boleto de condomínio, que se classifica como uma despesa relacionada a aluguéis ou condomínios."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTO DE BOLETO CONDOMINIO COMERCIAL OFICINA D...' e classificou como '(-) Transferencia Entre Contas'. Explicação: A transação é uma saída (CAP) e a descrição indica um pagamento de boleto de condomínio, que se classifica como uma despesa relacionada a aluguéis ou condomínios.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:51:52.708941",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "SISPAG  TRANSF CC ITAU",
+        "origem": "CAP",
+        "valor": -200.0
+      },
+      "decision": {
+        "classificacao_sugerida": "(-) Transferencia Entre Contas",
+        "explicacao": "A descrição indica uma transferência entre contas, e como a origem é CAP (saída), a classificação correta é '(-) Transferencia Entre Contas'."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'SISPAG  TRANSF CC ITAU...' e classificou como '(-) Transferencia Entre Contas'. Explicação: A descrição indica uma transferência entre contas, e como a origem é CAP (saída), a classificação correta é '(-) Transferencia Entre Contas'.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:51:53.240984",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTO DE BOLETO TYR ENERGIA S.A. 32.041.086/0001-97",
+        "origem": "CAP",
+        "valor": -10270.15
+      },
+      "decision": {
+        "classificacao_sugerida": "Energia Elétrica",
+        "explicacao": "A descrição contém 'ENERGIA', indicando que se trata de uma despesa relacionada ao fornecimento de energia elétrica."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTO DE BOLETO TYR ENERGIA S.A. 32.041.086/00...' e classificou como 'Energia Elétrica'. Explicação: A descrição contém 'ENERGIA', indicando que se trata de uma despesa relacionada ao fornecimento de energia elétrica.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:51:53.943095",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTO DE BOLETO ADVENCE SYSTEM ELEVADORES LTDA 07.296.500/0001-61",
+        "origem": "CAP",
+        "valor": -414.0
+      },
+      "decision": {
+        "classificacao_sugerida": "Serviços de Terceiros",
+        "explicacao": "A descrição indica um pagamento relacionado a serviços prestados pela empresa ADVENCE SYSTEM ELEVADORES LTDA, o que se encaixa na categoria de 'Serviços de Terceiros'."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTO DE BOLETO ADVENCE SYSTEM ELEVADORES LTDA...' e classificou como 'Serviços de Terceiros'. Explicação: A descrição indica um pagamento relacionado a serviços prestados pela empresa ADVENCE SYSTEM ELEVADORES LTDA, o que se encaixa na categoria de 'Serviços de Terceiros'.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:51:54.099215",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTO DE BOLETO PJBANK PAGAMENTOS S A 1 18.191.228/0001-71",
+        "origem": "CAP",
+        "valor": -100.0
+      },
+      "decision": {
+        "classificacao_sugerida": "Não classificado",
+        "explicacao": "A descrição não se encaixa em nenhuma das categorias específicas definidas nas regras de classificação. Trata-se de um pagamento de boleto, que não possui uma classificação específica na lista."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTO DE BOLETO PJBANK PAGAMENTOS S A 1 18.191...' e classificou como 'Não classificado'. Explicação: A descrição não se encaixa em nenhuma das categorias específicas definidas nas regras de classificação. Trata-se de um pagamento de boleto, que não possui uma classificação específica na lista.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:51:54.241264",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTO DE BOLETO TRICHER CONSULTORIA E EMPREENDIMENTOS 02.770.575/0001-19",
+        "origem": "CAP",
+        "valor": -500.0
+      },
+      "decision": {
+        "classificacao_sugerida": "Serviços de Terceiros",
+        "explicacao": "A descrição menciona 'CONSULTORIA', o que indica que se trata de um pagamento por serviços prestados, classificando-se como 'Serviços de Terceiros'."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTO DE BOLETO TRICHER CONSULTORIA E EMPREEND...' e classificou como 'Serviços de Terceiros'. Explicação: A descrição menciona 'CONSULTORIA', o que indica que se trata de um pagamento por serviços prestados, classificando-se como 'Serviços de Terceiros'.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:51:54.309831",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTO DE BOLETO NEW LINE TECNOLOGIA EM SEGURANCA LTDA 09.411.312/0001-62",
+        "origem": "CAP",
+        "valor": -34.28
+      },
+      "decision": {
+        "classificacao_sugerida": "Seguros",
+        "explicacao": "A descrição contém a palavra 'SEGURANCA', que se relaciona a seguros, portanto a transação é classificada como 'Seguros'."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTO DE BOLETO NEW LINE TECNOLOGIA EM SEGURAN...' e classificou como 'Seguros'. Explicação: A descrição contém a palavra 'SEGURANCA', que se relaciona a seguros, portanto a transação é classificada como 'Seguros'.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:51:55.207095",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTO DE BOLETO NEW LINE TECNOLOGIA EM SEGURANCA LTDA 09.411.312/0001-62",
+        "origem": "CAP",
+        "valor": -294.8
+      },
+      "decision": {
+        "classificacao_sugerida": "Seguros",
+        "explicacao": "A descrição contém a palavra 'SEGURANCA', que se relaciona a seguros, portanto a transação é classificada como 'Seguros'."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTO DE BOLETO NEW LINE TECNOLOGIA EM SEGURAN...' e classificou como 'Seguros'. Explicação: A descrição contém a palavra 'SEGURANCA', que se relaciona a seguros, portanto a transação é classificada como 'Seguros'.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:51:56.375314",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "RENDIMENTO APLICAÇÃO AUTOMÁTICA REND PAGO APLIC AUT MAIS",
+        "origem": "CAR",
+        "valor": 0.15
+      },
+      "decision": {
+        "classificacao_sugerida": "Resgate Aplicação Financeira",
+        "explicacao": "A descrição contém 'RENDE FÁCIL', e a origem é CAR, o que indica um resgate de aplicação financeira."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'RENDIMENTO APLICAÇÃO AUTOMÁTICA REND PAGO APLIC AU...' e classificou como 'Resgate Aplicação Financeira'. Explicação: A descrição contém 'RENDE FÁCIL', e a origem é CAR, o que indica um resgate de aplicação financeira.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:51:56.375314",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX ENVIADO BODY STATION ACADEMIA 00.036.343/0001-06",
+        "origem": "CAP",
+        "valor": -5000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "(-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-05T10:51:56.493349",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTO DE BOLETO M A ASSESSORIA EM SEGURANCA E MEDICINA D 37.666.880/0001-40",
+        "origem": "CAP",
+        "valor": -858.0
+      },
+      "decision": {
+        "classificacao_sugerida": "Seguros",
+        "explicacao": "A descrição contém a palavra 'SEGURO', o que indica que a transação se refere a um pagamento relacionado a seguros."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTO DE BOLETO M A ASSESSORIA EM SEGURANCA E ...' e classificou como 'Seguros'. Explicação: A descrição contém a palavra 'SEGURO', o que indica que a transação se refere a um pagamento relacionado a seguros.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:51:56.587542",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "RENDIMENTO APLICAÇÃO AUTOMÁTICA REND PAGO APLIC AUT MAIS",
+        "origem": "CAR",
+        "valor": 0.05
+      },
+      "decision": {
+        "classificacao_sugerida": "Resgate Aplicação Financeira",
+        "explicacao": "A descrição contém 'RENDE FÁCIL', e como a origem é CAR, a transação é classificada como Resgate de Aplicação Financeira."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'RENDIMENTO APLICAÇÃO AUTOMÁTICA REND PAGO APLIC AU...' e classificou como 'Resgate Aplicação Financeira'. Explicação: A descrição contém 'RENDE FÁCIL', e como a origem é CAR, a transação é classificada como Resgate de Aplicação Financeira.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:51:56.719944",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTO DE BOLETO PJBANK PAGAMENTOS S.A. 18.191.228/0001-71",
+        "origem": "CAP",
+        "valor": -280.0
+      },
+      "decision": {
+        "classificacao_sugerida": "Não classificado",
+        "explicacao": "A descrição não se encaixa em nenhuma das categorias específicas definidas nas regras de classificação, e a origem é uma saída (CAP). Portanto, a transação é classificada como 'Não classificado'."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTO DE BOLETO PJBANK PAGAMENTOS S.A. 18.191....' e classificou como 'Não classificado'. Explicação: A descrição não se encaixa em nenhuma das categorias específicas definidas nas regras de classificação, e a origem é uma saída (CAP). Portanto, a transação é classificada como 'Não classificado'.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:51:57.211755",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "DA  TIM CELU 90305790000",
+        "origem": "CAP",
+        "valor": -107.19
+      },
+      "decision": {
+        "classificacao_sugerida": "Telecomunicações",
+        "explicacao": "A descrição contém 'TIM', que é uma operadora de telefonia, e a origem é CAP, indicando uma saída de dinheiro relacionada a serviços de telecomunicações."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'DA  TIM CELU 90305790000...' e classificou como 'Telecomunicações'. Explicação: A descrição contém 'TIM', que é uma operadora de telefonia, e a origem é CAP, indicando uma saída de dinheiro relacionada a serviços de telecomunicações.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:51:58.107867",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "SISPAG  TRANSF CC ITAU",
+        "origem": "CAP",
+        "valor": -632.4
+      },
+      "decision": {
+        "classificacao_sugerida": "Saldo Inicial",
+        "explicacao": "A descrição indica uma transferência, mas não contém informações específicas que a classifiquem como uma transferência entre contas próprias ou um tipo específico de saída. Portanto, foi classificada como 'Saldo Inicial'."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'SISPAG  TRANSF CC ITAU...' e classificou como 'Saldo Inicial'. Explicação: A descrição indica uma transferência, mas não contém informações específicas que a classifiquem como uma transferência entre contas próprias ou um tipo específico de saída. Portanto, foi classificada como 'Saldo Inicial'.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:51:58.295410",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "SISPAG  TRANSF CC ITAU",
+        "origem": "CAP",
+        "valor": -77.4
+      },
+      "decision": {
+        "classificacao_sugerida": "Saldo Inicial",
+        "explicacao": "A descrição indica uma transferência, mas não contém informações específicas que a classifiquem como uma transferência entre contas próprias ou um recebimento de vendas. Portanto, classifiquei como 'Saldo Inicial' por ser uma saída de transferência genérica."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'SISPAG  TRANSF CC ITAU...' e classificou como 'Saldo Inicial'. Explicação: A descrição indica uma transferência, mas não contém informações específicas que a classifiquem como uma transferência entre contas próprias ou um recebimento de vendas. Portanto, classifiquei como 'Saldo Inicial' por ser uma saída de transferência genérica.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:51:58.835918",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "DA  CLARO RESID 75214841",
+        "origem": "CAP",
+        "valor": -160.77
+      },
+      "decision": {
+        "classificacao_sugerida": "Não classificado",
+        "explicacao": "A descrição 'DA CLARO RESID 75214841' não fornece informações suficientes para classificar a transação de forma precisa, e não se encaixa nas categorias específicas definidas nas regras."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'DA  CLARO RESID 75214841...' e classificou como 'Não classificado'. Explicação: A descrição 'DA CLARO RESID 75214841' não fornece informações suficientes para classificar a transação de forma precisa, e não se encaixa nas categorias específicas definidas nas regras.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:51:59.055213",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTO DE BOLETO 54096785 ELIMAR HENRIQUE DE SOUSA OLIVEIRA 54.096.785/0001-77",
+        "origem": "CAP",
+        "valor": -633.33
+      },
+      "decision": {
+        "classificacao_sugerida": "Não classificado",
+        "explicacao": "A descrição refere-se a um pagamento de boleto, mas não se encaixa em nenhuma das categorias específicas definidas nas regras de classificação."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTO DE BOLETO 54096785 ELIMAR HENRIQUE DE SO...' e classificou como 'Não classificado'. Explicação: A descrição refere-se a um pagamento de boleto, mas não se encaixa em nenhuma das categorias específicas definidas nas regras de classificação.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:51:59.696405",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "ITAU SEG VIDA GLOB",
+        "origem": "CAP",
+        "valor": -505.17
+      },
+      "decision": {
+        "classificacao_sugerida": "Seguros",
+        "explicacao": "A descrição contém a palavra 'SEGURO', portanto a transação é classificada como 'Seguros'."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'ITAU SEG VIDA GLOB...' e classificou como 'Seguros'. Explicação: A descrição contém a palavra 'SEGURO', portanto a transação é classificada como 'Seguros'.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:51:59.928019",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTO DE BOLETO MASSORE FACTORING 09.452.690/0001-94",
+        "origem": "CAP",
+        "valor": -1780.0
+      },
+      "decision": {
+        "classificacao_sugerida": "Não classificado",
+        "explicacao": "A descrição não se encaixa em nenhuma das categorias específicas definidas nas regras de classificação. Trata-se de um pagamento de boleto, que não é claramente identificado como uma despesa específica ou receita."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTO DE BOLETO MASSORE FACTORING 09.452.690/0...' e classificou como 'Não classificado'. Explicação: A descrição não se encaixa em nenhuma das categorias específicas definidas nas regras de classificação. Trata-se de um pagamento de boleto, que não é claramente identificado como uma despesa específica ou receita.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:52:01.050454",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTO DE BOLETO DEPARTAMENTO ESTADUAL DE TRANSITO 02.872.448/0001-20",
+        "origem": "CAP",
+        "valor": -762.74
+      },
+      "decision": {
+        "classificacao_sugerida": "Despesas com Veículos",
+        "explicacao": "A descrição indica um pagamento relacionado ao Departamento Estadual de Trânsito, que geralmente se refere a taxas ou impostos sobre veículos, portanto classificado como 'Despesas com Veículos'."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTO DE BOLETO DEPARTAMENTO ESTADUAL DE TRANS...' e classificou como 'Despesas com Veículos'. Explicação: A descrição indica um pagamento relacionado ao Departamento Estadual de Trânsito, que geralmente se refere a taxas ou impostos sobre veículos, portanto classificado como 'Despesas com Veículos'.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:52:01.117076",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTO DE BOLETO INFOTECHSP TECNOLOGIA 46.467.151/0001-55",
+        "origem": "CAP",
+        "valor": -130.0
+      },
+      "decision": {
+        "classificacao_sugerida": "Não classificado",
+        "explicacao": "A descrição não se encaixa em nenhuma das categorias específicas definidas nas regras de classificação e não é possível identificar a natureza da transação com certeza."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTO DE BOLETO INFOTECHSP TECNOLOGIA 46.467.1...' e classificou como 'Não classificado'. Explicação: A descrição não se encaixa em nenhuma das categorias específicas definidas nas regras de classificação e não é possível identificar a natureza da transação com certeza.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:52:01.233727",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTO DE BOLETO GK PRESTACAO DE SERVICOS E ASSESSORIA LTDA 35.202.386/0001-07",
+        "origem": "CAP",
+        "valor": -550.0
+      },
+      "decision": {
+        "classificacao_sugerida": "Serviços de Terceiros",
+        "explicacao": "A descrição menciona 'PRESTACAO DE SERVIÇOS', indicando que se trata de um pagamento por serviços prestados, o que se classifica como 'Serviços de Terceiros'. Como a origem é CAP, trata-se de uma saída."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTO DE BOLETO GK PRESTACAO DE SERVICOS E ASS...' e classificou como 'Serviços de Terceiros'. Explicação: A descrição menciona 'PRESTACAO DE SERVIÇOS', indicando que se trata de um pagamento por serviços prestados, o que se classifica como 'Serviços de Terceiros'. Como a origem é CAP, trata-se de uma saída.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:52:01.833475",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTO DE BOLETO DEPARTAMENTO ESTADUAL DE TRANSITO 02.872.448/0001-20",
+        "origem": "CAP",
+        "valor": -1138.49
+      },
+      "decision": {
+        "classificacao_sugerida": "Despesas com Veículos",
+        "explicacao": "A descrição indica um pagamento relacionado ao Departamento Estadual de Trânsito, que se refere a despesas com veículos, portanto, classificado como 'Despesas com Veículos'."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTO DE BOLETO DEPARTAMENTO ESTADUAL DE TRANS...' e classificou como 'Despesas com Veículos'. Explicação: A descrição indica um pagamento relacionado ao Departamento Estadual de Trânsito, que se refere a despesas com veículos, portanto, classificado como 'Despesas com Veículos'.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:52:02.083613",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTO DE BOLETO DEPARTAMENTO ESTADUAL DE TRANSITO 02.872.448/0001-20",
+        "origem": "CAP",
+        "valor": -390.98
+      },
+      "decision": {
+        "classificacao_sugerida": "Despesas com Veículos",
+        "explicacao": "A descrição indica um pagamento relacionado ao Departamento Estadual de Trânsito, que geralmente se refere a taxas ou multas de veículos, classificando-se assim como Despesas com Veículos."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTO DE BOLETO DEPARTAMENTO ESTADUAL DE TRANS...' e classificou como 'Despesas com Veículos'. Explicação: A descrição indica um pagamento relacionado ao Departamento Estadual de Trânsito, que geralmente se refere a taxas ou multas de veículos, classificando-se assim como Despesas com Veículos.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:52:02.233166",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "SISPAG  TRANSF CC ITAU",
+        "origem": "CAP",
+        "valor": -621.9
+      },
+      "decision": {
+        "classificacao_sugerida": "Saldo Inicial",
+        "explicacao": "A descrição indica uma transferência, mas não contém informações específicas que a classifiquem como uma transferência entre contas próprias ou um recebimento de vendas. Portanto, foi classificada como 'Saldo Inicial'."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'SISPAG  TRANSF CC ITAU...' e classificou como 'Saldo Inicial'. Explicação: A descrição indica uma transferência, mas não contém informações específicas que a classifiquem como uma transferência entre contas próprias ou um recebimento de vendas. Portanto, foi classificada como 'Saldo Inicial'.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:52:02.452956",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTO DE BOLETO DEPARTAMENTO ESTADUAL DE TRANSITO 02.872.448/0001-20",
+        "origem": "CAP",
+        "valor": -224.06
+      },
+      "decision": {
+        "classificacao_sugerida": "Despesas com Veículos",
+        "explicacao": "A descrição menciona 'DEPARTAMENTO ESTADUAL DE TRANSITO', o que indica que se trata de uma despesa relacionada a veículos, como pagamento de taxas ou multas."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTO DE BOLETO DEPARTAMENTO ESTADUAL DE TRANS...' e classificou como 'Despesas com Veículos'. Explicação: A descrição menciona 'DEPARTAMENTO ESTADUAL DE TRANSITO', o que indica que se trata de uma despesa relacionada a veículos, como pagamento de taxas ou multas.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:52:03.144128",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "RENDIMENTO APLICAÇÃO AUTOMÁTICA REND PAGO APLIC AUT MAIS",
+        "origem": "CAR",
+        "valor": 0.83
+      },
+      "decision": {
+        "classificacao_sugerida": "Resgate Aplicação Financeira",
+        "explicacao": "A descrição contém 'RENDE FÁCIL', e a origem é CAR, o que indica um resgate de aplicação financeira."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'RENDIMENTO APLICAÇÃO AUTOMÁTICA REND PAGO APLIC AU...' e classificou como 'Resgate Aplicação Financeira'. Explicação: A descrição contém 'RENDE FÁCIL', e a origem é CAR, o que indica um resgate de aplicação financeira.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:52:03.533491",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTOS CONCESSIONARIA VIVO-GO 02.558.157/0001-62",
+        "origem": "CAP",
+        "valor": -724.64
+      },
+      "decision": {
+        "classificacao_sugerida": "Telecomunicações",
+        "explicacao": "A descrição menciona 'CONCESSIONARIA VIVO', que se refere a serviços de telecomunicações, e a origem é CAP, indicando uma saída."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTOS CONCESSIONARIA VIVO-GO 02.558.157/0001-...' e classificou como 'Telecomunicações'. Explicação: A descrição menciona 'CONCESSIONARIA VIVO', que se refere a serviços de telecomunicações, e a origem é CAP, indicando uma saída.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:52:03.763946",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "SISPAG  TRANSF CC ITAU",
+        "origem": "CAP",
+        "valor": -1463.07
+      },
+      "decision": {
+        "classificacao_sugerida": "Saldo Inicial",
+        "explicacao": "A descrição indica uma transferência, mas não contém informações específicas que a classifiquem como uma transferência entre contas próprias ou um tipo específico de saída. Portanto, foi classificada como 'Saldo Inicial'."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'SISPAG  TRANSF CC ITAU...' e classificou como 'Saldo Inicial'. Explicação: A descrição indica uma transferência, mas não contém informações específicas que a classifiquem como uma transferência entre contas próprias ou um tipo específico de saída. Portanto, foi classificada como 'Saldo Inicial'.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:52:03.964654",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTO DE BOLETO CAMARA DE DIRIGENTES LOJISTAS DE GOIANIA CDL CAMARA DE DIRIGENTES LOJISTAS DE GOIANIA  CDL 01.643.840/0001-35",
+        "origem": "CAP",
+        "valor": -93.4
+      },
+      "decision": {
+        "classificacao_sugerida": "Serviços de Terceiros",
+        "explicacao": "A descrição menciona um pagamento de boleto para a Câmara de Dirigentes Lojistas, o que se enquadra como uma despesa relacionada a serviços prestados por terceiros."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTO DE BOLETO CAMARA DE DIRIGENTES LOJISTAS ...' e classificou como 'Serviços de Terceiros'. Explicação: A descrição menciona um pagamento de boleto para a Câmara de Dirigentes Lojistas, o que se enquadra como uma despesa relacionada a serviços prestados por terceiros.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:52:05.447707",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTO DE BOLETO DEPARTAMENTO ESTADUAL DE TRANSITO 02.872.448/0001-20",
+        "origem": "CAP",
+        "valor": -220.37
+      },
+      "decision": {
+        "classificacao_sugerida": "Despesas com Veículos",
+        "explicacao": "A descrição indica um pagamento relacionado ao Departamento Estadual de Trânsito, que geralmente se refere a taxas ou multas de veículos, classificando-se assim como Despesas com Veículos."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTO DE BOLETO DEPARTAMENTO ESTADUAL DE TRANS...' e classificou como 'Despesas com Veículos'. Explicação: A descrição indica um pagamento relacionado ao Departamento Estadual de Trânsito, que geralmente se refere a taxas ou multas de veículos, classificando-se assim como Despesas com Veículos.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:52:06.114102",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTO DE BOLETO PARCEIRO DO CONTADOR CONSULTORIA E TREINAMENTO EM 35.565.292/0001-94",
+        "origem": "CAP",
+        "valor": -400.0
+      },
+      "decision": {
+        "classificacao_sugerida": "Serviços de Terceiros",
+        "explicacao": "A descrição menciona 'PAGAMENTO DE BOLETO PARCEIRO DO CONTADOR', indicando que se trata de um pagamento relacionado a serviços prestados por um contador, o que se encaixa na categoria de 'Serviços de Terceiros'."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTO DE BOLETO PARCEIRO DO CONTADOR CONSULTOR...' e classificou como 'Serviços de Terceiros'. Explicação: A descrição menciona 'PAGAMENTO DE BOLETO PARCEIRO DO CONTADOR', indicando que se trata de um pagamento relacionado a serviços prestados por um contador, o que se encaixa na categoria de 'Serviços de Terceiros'.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:52:07.505294",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTO DE BOLETO ADALBERTO FERREIRA DE ALMEIDA JUNIOR 43.845.279/0001-17",
+        "origem": "CAP",
+        "valor": -485.4
+      },
+      "decision": {
+        "classificacao_sugerida": "Não classificado",
+        "explicacao": "A descrição não se encaixa em nenhuma das categorias específicas definidas nas regras de classificação e não é possível identificar a natureza da transação com certeza."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTO DE BOLETO ADALBERTO FERREIRA DE ALMEIDA ...' e classificou como 'Não classificado'. Explicação: A descrição não se encaixa em nenhuma das categorias específicas definidas nas regras de classificação e não é possível identificar a natureza da transação com certeza.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:52:07.523805",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTO DE BOLETO OMIEXPERIENCE LTDA. 18.511.742/0001-47",
+        "origem": "CAP",
+        "valor": -1205.2
+      },
+      "decision": {
+        "classificacao_sugerida": "Não classificado",
+        "explicacao": "A descrição não se encaixa em nenhuma das categorias específicas definidas nas regras de classificação, e a origem é uma saída (CAP). Portanto, a transação é classificada como 'Não classificado'."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTO DE BOLETO OMIEXPERIENCE LTDA. 18.511.742...' e classificou como 'Não classificado'. Explicação: A descrição não se encaixa em nenhuma das categorias específicas definidas nas regras de classificação, e a origem é uma saída (CAP). Portanto, a transação é classificada como 'Não classificado'.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:52:10.123570",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTOS TRIB COD BARRAS GOIANIA-TESOURO 01.612.092/0001-23",
+        "origem": "CAP",
+        "valor": -2916.67
+      },
+      "decision": {
+        "classificacao_sugerida": "Não classificado",
+        "explicacao": "A descrição refere-se a um pagamento de tributos, mas não se encaixa em nenhuma das categorias específicas definidas nas regras de classificação."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTOS TRIB COD BARRAS GOIANIA-TESOURO 01.612....' e classificou como 'Não classificado'. Explicação: A descrição refere-se a um pagamento de tributos, mas não se encaixa em nenhuma das categorias específicas definidas nas regras de classificação.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:52:10.211734",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTOS TRIB COD BARRAS GOIANIA-TESOURO 01.612.092/0001-23",
+        "origem": "CAP",
+        "valor": -113.17
+      },
+      "decision": {
+        "classificacao_sugerida": "Não classificado",
+        "explicacao": "A descrição refere-se a um pagamento de tributos, mas não se encaixa em nenhuma das categorias específicas definidas nas regras de classificação."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTOS TRIB COD BARRAS GOIANIA-TESOURO 01.612....' e classificou como 'Não classificado'. Explicação: A descrição refere-se a um pagamento de tributos, mas não se encaixa em nenhuma das categorias específicas definidas nas regras de classificação.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:52:10.369863",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "RENDIMENTO APLICAÇÃO AUTOMÁTICA REND PAGO APLIC AUT MAIS",
+        "origem": "CAR",
+        "valor": 0.67
+      },
+      "decision": {
+        "classificacao_sugerida": "Resgate Aplicação Financeira",
+        "explicacao": "A descrição contém 'RENDE FÁCIL' e a origem é CAR, o que indica um resgate de aplicação financeira."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'RENDIMENTO APLICAÇÃO AUTOMÁTICA REND PAGO APLIC AU...' e classificou como 'Resgate Aplicação Financeira'. Explicação: A descrição contém 'RENDE FÁCIL' e a origem é CAR, o que indica um resgate de aplicação financeira.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:52:10.578136",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTOS TRIB COD BARRAS GOIANIA-TESOURO 01.612.092/0001-23",
+        "origem": "CAP",
+        "valor": -1664.19
+      },
+      "decision": {
+        "classificacao_sugerida": "(-) Transferencia Entre Contas",
+        "explicacao": "A descrição refere-se a um pagamento de tributos, que é uma saída de recursos. A origem é CAP, indicando que é uma saída, e a classificação correta para pagamentos de tributos não se encaixa em outras categorias específicas."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTOS TRIB COD BARRAS GOIANIA-TESOURO 01.612....' e classificou como '(-) Transferencia Entre Contas'. Explicação: A descrição refere-se a um pagamento de tributos, que é uma saída de recursos. A origem é CAP, indicando que é uma saída, e a classificação correta para pagamentos de tributos não se encaixa em outras categorias específicas.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:52:11.527381",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTOS TRIB COD BARRAS GOIANIA-TESOURO 01.612.092/0001-23",
+        "origem": "CAP",
+        "valor": -1808.34
+      },
+      "decision": {
+        "classificacao_sugerida": "Taxas de Serviços Estaduais",
+        "explicacao": "A descrição menciona 'PAGAMENTOS TRIB', o que indica um pagamento relacionado a tributos, e a origem é CAP, indicando uma saída."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTOS TRIB COD BARRAS GOIANIA-TESOURO 01.612....' e classificou como 'Taxas de Serviços Estaduais'. Explicação: A descrição menciona 'PAGAMENTOS TRIB', o que indica um pagamento relacionado a tributos, e a origem é CAP, indicando uma saída.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:52:11.993965",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTOS TRIB COD BARRAS DARF 00.394.460/0058-87",
+        "origem": "CAP",
+        "valor": -5137.39
+      },
+      "decision": {
+        "classificacao_sugerida": "(-) Transferencia Entre Contas",
+        "explicacao": "A descrição indica um pagamento de tributos, que se classifica como uma saída de recursos. A origem é CAP, indicando que é uma saída."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTOS TRIB COD BARRAS DARF 00.394.460/0058-87...' e classificou como '(-) Transferencia Entre Contas'. Explicação: A descrição indica um pagamento de tributos, que se classifica como uma saída de recursos. A origem é CAP, indicando que é uma saída.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:52:12.194727",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTOS TRIB COD BARRAS GOIANIA-TESOURO 01.612.092/0001-23",
+        "origem": "CAP",
+        "valor": -209.54
+      },
+      "decision": {
+        "classificacao_sugerida": "Taxas de Serviços Estaduais",
+        "explicacao": "A descrição menciona 'PAGAMENTOS TRIB', o que indica que se trata de um pagamento de tributos, e a origem é CAP, indicando que é uma saída."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTOS TRIB COD BARRAS GOIANIA-TESOURO 01.612....' e classificou como 'Taxas de Serviços Estaduais'. Explicação: A descrição menciona 'PAGAMENTOS TRIB', o que indica que se trata de um pagamento de tributos, e a origem é CAP, indicando que é uma saída.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:52:12.763056",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTOS TRIB COD BARRAS SIMPLES NACIONAL 00.394.460/0058-87",
+        "origem": "CAP",
+        "valor": -47889.5
+      },
+      "decision": {
+        "classificacao_sugerida": "Simples Nacional",
+        "explicacao": "A descrição contém 'SIMPLES NACIONAL', o que indica que se trata de um pagamento relacionado ao regime de tributação Simples Nacional."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTOS TRIB COD BARRAS SIMPLES NACIONAL 00.394...' e classificou como 'Simples Nacional'. Explicação: A descrição contém 'SIMPLES NACIONAL', o que indica que se trata de um pagamento relacionado ao regime de tributação Simples Nacional.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:52:13.758859",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "RENDIMENTO APLICAÇÃO AUTOMÁTICA REND PAGO APLIC AUT MAIS",
+        "origem": "CAR",
+        "valor": 0.11
+      },
+      "decision": {
+        "classificacao_sugerida": "Resgate Aplicação Financeira",
+        "explicacao": "A descrição contém 'RENDE FÁCIL', e como a origem é CAR, a transação é classificada como 'Resgate Aplicação Financeira'."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'RENDIMENTO APLICAÇÃO AUTOMÁTICA REND PAGO APLIC AU...' e classificou como 'Resgate Aplicação Financeira'. Explicação: A descrição contém 'RENDE FÁCIL', e como a origem é CAR, a transação é classificada como 'Resgate Aplicação Financeira'.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:52:13.889807",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTO DE BOLETO MAAH VITA 39.310.015/0001-91",
+        "origem": "CAP",
+        "valor": -1100.0
+      },
+      "decision": {
+        "classificacao_sugerida": "Não classificado",
+        "explicacao": "A descrição 'PAGAMENTO DE BOLETO MAAH VITA' não se encaixa em nenhuma das categorias específicas definidas nas regras de classificação. Portanto, a transação é classificada como 'Não classificado'."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTO DE BOLETO MAAH VITA 39.310.015/0001-91...' e classificou como 'Não classificado'. Explicação: A descrição 'PAGAMENTO DE BOLETO MAAH VITA' não se encaixa em nenhuma das categorias específicas definidas nas regras de classificação. Portanto, a transação é classificada como 'Não classificado'.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:52:15.375249",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTO DE BOLETO MAGAZINE DA LIMPEZA LTDA 04.680.300/0001-10",
+        "origem": "CAP",
+        "valor": -999.61
+      },
+      "decision": {
+        "classificacao_sugerida": "(-) Devolução de Vendas de Serviços Prestados",
+        "explicacao": "A descrição indica um pagamento de boleto, que geralmente está relacionado a despesas. Como não há informações específicas sobre a natureza do serviço ou produto, a classificação mais adequada é como uma devolução de vendas de serviços prestados."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTO DE BOLETO MAGAZINE DA LIMPEZA LTDA 04.68...' e classificou como '(-) Devolução de Vendas de Serviços Prestados'. Explicação: A descrição indica um pagamento de boleto, que geralmente está relacionado a despesas. Como não há informações específicas sobre a natureza do serviço ou produto, a classificação mais adequada é como uma devolução de vendas de serviços prestados.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:52:15.392175",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "RENDIMENTO APLICAÇÃO AUTOMÁTICA REND PAGO APLIC AUT MAIS",
+        "origem": "CAR",
+        "valor": 6.03
+      },
+      "decision": {
+        "classificacao_sugerida": "Resgate Aplicação Financeira",
+        "explicacao": "A descrição contém 'RENDE FÁCIL', e a origem é CAR, o que indica um resgate de aplicação financeira."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'RENDIMENTO APLICAÇÃO AUTOMÁTICA REND PAGO APLIC AU...' e classificou como 'Resgate Aplicação Financeira'. Explicação: A descrição contém 'RENDE FÁCIL', e a origem é CAR, o que indica um resgate de aplicação financeira.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:52:15.441925",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTO DE BOLETO PJBANK PAGAMENTOS S A 1 18.191.228/0001-71",
+        "origem": "CAP",
+        "valor": -792.0
+      },
+      "decision": {
+        "classificacao_sugerida": "Não classificado",
+        "explicacao": "A descrição não se encaixa em nenhuma das categorias específicas definidas nas regras de classificação. Trata-se de um pagamento de boleto, que não possui uma classificação específica nas regras fornecidas."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTO DE BOLETO PJBANK PAGAMENTOS S A 1 18.191...' e classificou como 'Não classificado'. Explicação: A descrição não se encaixa em nenhuma das categorias específicas definidas nas regras de classificação. Trata-se de um pagamento de boleto, que não possui uma classificação específica nas regras fornecidas.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:52:17.476408",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTOS TRIB COD BARRAS SEFAZ-GO/SARE-DARE 01.409.655/0001-80",
+        "origem": "CAP",
+        "valor": -135.0
+      },
+      "decision": {
+        "classificacao_sugerida": "Não classificado",
+        "explicacao": "A descrição refere-se a um pagamento de tributos, mas não se encaixa em nenhuma das categorias específicas definidas nas regras de classificação."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTOS TRIB COD BARRAS SEFAZ-GO/SARE-DARE 01.4...' e classificou como 'Não classificado'. Explicação: A descrição refere-se a um pagamento de tributos, mas não se encaixa em nenhuma das categorias específicas definidas nas regras de classificação.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:52:17.630993",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTO DE BOLETO ADALBERTO FERREIRA DE ALMEIDA JUNIOR 43.845.279/0001-17",
+        "origem": "CAP",
+        "valor": -500.0
+      },
+      "decision": {
+        "classificacao_sugerida": "Não classificado",
+        "explicacao": "A descrição não se encaixa em nenhuma das categorias específicas definidas nas regras de classificação, e a origem é uma saída (CAP). Portanto, a transação é classificada como 'Não classificado'."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTO DE BOLETO ADALBERTO FERREIRA DE ALMEIDA ...' e classificou como 'Não classificado'. Explicação: A descrição não se encaixa em nenhuma das categorias específicas definidas nas regras de classificação, e a origem é uma saída (CAP). Portanto, a transação é classificada como 'Não classificado'.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:52:19.140045",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "RENDIMENTOS REND PAGO APLIC AUT MAIS",
+        "origem": "CAR",
+        "valor": 0.6
+      },
+      "decision": {
+        "classificacao_sugerida": "Resgate Aplicação Financeira",
+        "explicacao": "A descrição contém 'RENDE FÁCIL' e a origem é CAR, o que indica um resgate de aplicação financeira."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'RENDIMENTOS REND PAGO APLIC AUT MAIS...' e classificou como 'Resgate Aplicação Financeira'. Explicação: A descrição contém 'RENDE FÁCIL' e a origem é CAR, o que indica um resgate de aplicação financeira.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:52:19.407086",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BUSINESS      4004-3309",
+        "origem": "CAP",
+        "valor": -7942.51
+      },
+      "decision": {
+        "classificacao_sugerida": "Não classificado",
+        "explicacao": "A descrição 'BUSINESS 4004-3309' não fornece informações suficientes para classificar a transação de acordo com as regras estabelecidas. Não se encaixa em nenhuma categoria específica."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'BUSINESS      4004-3309...' e classificou como 'Não classificado'. Explicação: A descrição 'BUSINESS 4004-3309' não fornece informações suficientes para classificar a transação de acordo com as regras estabelecidas. Não se encaixa em nenhuma categoria específica.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:52:19.649141",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "SISPAG  TRANSF CC ITAU",
+        "origem": "CAP",
+        "valor": -275.0
+      },
+      "decision": {
+        "classificacao_sugerida": "Saldo Inicial",
+        "explicacao": "A descrição indica uma transferência, mas não contém informações específicas que a classifiquem como uma transferência entre contas próprias ou um tipo específico de transferência. Portanto, foi classificada como 'Saldo Inicial'."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'SISPAG  TRANSF CC ITAU...' e classificou como 'Saldo Inicial'. Explicação: A descrição indica uma transferência, mas não contém informações específicas que a classifiquem como uma transferência entre contas próprias ou um tipo específico de transferência. Portanto, foi classificada como 'Saldo Inicial'.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:52:19.872900",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "SISPAG  TRANSF CC ITAU",
+        "origem": "CAP",
+        "valor": -1234.1
+      },
+      "decision": {
+        "classificacao_sugerida": "Saldo Inicial",
+        "explicacao": "A descrição indica uma transferência, mas não contém informações específicas que a classifiquem como uma transferência entre contas próprias ou um tipo específico de transferência. Portanto, foi classificada como 'Saldo Inicial'."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'SISPAG  TRANSF CC ITAU...' e classificou como 'Saldo Inicial'. Explicação: A descrição indica uma transferência, mas não contém informações específicas que a classifiquem como uma transferência entre contas próprias ou um tipo específico de transferência. Portanto, foi classificada como 'Saldo Inicial'.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:52:21.155646",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTOS CONCESSIONARIA SANEAGO 01.616.929/0001-02",
+        "origem": "CAP",
+        "valor": -478.36
+      },
+      "decision": {
+        "classificacao_sugerida": "Água e Esgoto",
+        "explicacao": "A descrição menciona 'CONCESSIONARIA SANEAGO', que se refere a serviços de água e esgoto, e a origem é CAP, indicando uma saída."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTOS CONCESSIONARIA SANEAGO 01.616.929/0001-...' e classificou como 'Água e Esgoto'. Explicação: A descrição menciona 'CONCESSIONARIA SANEAGO', que se refere a serviços de água e esgoto, e a origem é CAP, indicando uma saída.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:52:21.556026",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTOS CONCESSIONARIA SANEAGO 01.616.929/0001-02",
+        "origem": "CAP",
+        "valor": -3539.7
+      },
+      "decision": {
+        "classificacao_sugerida": "Água e Esgoto",
+        "explicacao": "A descrição menciona 'CONCESSIONARIA SANEAGO', que se refere a serviços de saneamento, portanto, a classificação correta é 'Água e Esgoto'. A origem é CAP, indicando que é uma saída."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTOS CONCESSIONARIA SANEAGO 01.616.929/0001-...' e classificou como 'Água e Esgoto'. Explicação: A descrição menciona 'CONCESSIONARIA SANEAGO', que se refere a serviços de saneamento, portanto, a classificação correta é 'Água e Esgoto'. A origem é CAP, indicando que é uma saída.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:52:21.655491",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTO DE BOLETO BLUEFIT ACADEMIAS G P S A 24.921.465/0001-43",
+        "origem": "CAP",
+        "valor": -5223.23
+      },
+      "decision": {
+        "classificacao_sugerida": "Não classificado",
+        "explicacao": "A descrição menciona 'PAGAMENTO DE BOLETO BLUEFIT ACADEMIAS', mas não se encaixa nas regras específicas de classificação. Portanto, a transação é classificada como 'Não classificado'."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTO DE BOLETO BLUEFIT ACADEMIAS G P S A 24.9...' e classificou como 'Não classificado'. Explicação: A descrição menciona 'PAGAMENTO DE BOLETO BLUEFIT ACADEMIAS', mas não se encaixa nas regras específicas de classificação. Portanto, a transação é classificada como 'Não classificado'.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:52:21.788391",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTO DE BOLETO BLUEFIT AC DE GIN E PART S A 24.921.465/0001-43",
+        "origem": "CAP",
+        "valor": -41785.83
+      },
+      "decision": {
+        "classificacao_sugerida": "Não classificado",
+        "explicacao": "A descrição menciona um pagamento de boleto relacionado a uma academia (BLUEFIT), mas não se encaixa nas categorias específicas definidas nas regras de classificação. Portanto, a transação é classificada como 'Não classificado'."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTO DE BOLETO BLUEFIT AC DE GIN E PART S A 2...' e classificou como 'Não classificado'. Explicação: A descrição menciona um pagamento de boleto relacionado a uma academia (BLUEFIT), mas não se encaixa nas categorias específicas definidas nas regras de classificação. Portanto, a transação é classificada como 'Não classificado'.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:52:22.762884",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "SISPAG  TRANSF CC ITAU",
+        "origem": "CAP",
+        "valor": -493.34
+      },
+      "decision": {
+        "classificacao_sugerida": "(-) Transferencia Entre Contas",
+        "explicacao": "A descrição indica uma transferência entre contas, e como a origem é CAP (saída), a classificação correta é '(-) Transferencia Entre Contas'."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'SISPAG  TRANSF CC ITAU...' e classificou como '(-) Transferencia Entre Contas'. Explicação: A descrição indica uma transferência entre contas, e como a origem é CAP (saída), a classificação correta é '(-) Transferencia Entre Contas'.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:52:22.982329",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTO DE BOLETO GK PRESTACAO DE SERVICOS E ASSESSORIA LTDA 35.202.386/0001-07",
+        "origem": "CAP",
+        "valor": -825.0
+      },
+      "decision": {
+        "classificacao_sugerida": "Serviços de Terceiros",
+        "explicacao": "A descrição menciona 'PRESTACAO DE SERVIÇOS', indicando que se trata de um pagamento por serviços prestados, o que se encaixa na categoria de 'Serviços de Terceiros'. A origem é CAP, confirmando que é uma saída."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTO DE BOLETO GK PRESTACAO DE SERVICOS E ASS...' e classificou como 'Serviços de Terceiros'. Explicação: A descrição menciona 'PRESTACAO DE SERVIÇOS', indicando que se trata de um pagamento por serviços prestados, o que se encaixa na categoria de 'Serviços de Terceiros'. A origem é CAP, confirmando que é uma saída.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:52:23.026131",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTO DE BOLETO BLUEFIT AC DE GIN E PART S A 24.921.465/0001-43",
+        "origem": "CAP",
+        "valor": -950.0
+      },
+      "decision": {
+        "classificacao_sugerida": "Não classificado",
+        "explicacao": "A descrição menciona 'PAGAMENTO DE BOLETO' e 'BLUEFIT', mas não se encaixa em nenhuma das categorias específicas definidas nas regras de classificação. Portanto, a transação é classificada como 'Não classificado'."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTO DE BOLETO BLUEFIT AC DE GIN E PART S A 2...' e classificou como 'Não classificado'. Explicação: A descrição menciona 'PAGAMENTO DE BOLETO' e 'BLUEFIT', mas não se encaixa em nenhuma das categorias específicas definidas nas regras de classificação. Portanto, a transação é classificada como 'Não classificado'.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:52:23.136953",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTO DE BOLETO PLUXEE BENEFICIOS BRASIL SA 69.034.668/0001-56",
+        "origem": "CAP",
+        "valor": -4079.4
+      },
+      "decision": {
+        "classificacao_sugerida": "Não classificado",
+        "explicacao": "A descrição não se encaixa em nenhuma das categorias específicas definidas nas regras de classificação. Trata-se de um pagamento de boleto, mas não há informações suficientes para classificá-lo em uma categoria específica."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTO DE BOLETO PLUXEE BENEFICIOS BRASIL SA 69...' e classificou como 'Não classificado'. Explicação: A descrição não se encaixa em nenhuma das categorias específicas definidas nas regras de classificação. Trata-se de um pagamento de boleto, mas não há informações suficientes para classificá-lo em uma categoria específica.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:52:23.243350",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTO DE BOLETO PROCOPIO VENDAS E SERVICOS 52.540.183/0001-31",
+        "origem": "CAP",
+        "valor": -180.0
+      },
+      "decision": {
+        "classificacao_sugerida": "(-) Devolução de Vendas de Serviços Prestados",
+        "explicacao": "A descrição menciona 'PAGAMENTO DE BOLETO' e 'VENDAS E SERVIÇOS', o que indica que se trata de um pagamento relacionado a serviços prestados, e como a origem é CAP, classifica-se como uma saída de pagamento."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTO DE BOLETO PROCOPIO VENDAS E SERVICOS 52....' e classificou como '(-) Devolução de Vendas de Serviços Prestados'. Explicação: A descrição menciona 'PAGAMENTO DE BOLETO' e 'VENDAS E SERVIÇOS', o que indica que se trata de um pagamento relacionado a serviços prestados, e como a origem é CAP, classifica-se como uma saída de pagamento.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:52:23.431428",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTO DE BOLETO PLUXEE BENEFICIOS BRASIL SA 69.034.668/0001-56",
+        "origem": "CAP",
+        "valor": -143.48
+      },
+      "decision": {
+        "classificacao_sugerida": "Não classificado",
+        "explicacao": "A descrição não se encaixa em nenhuma das categorias específicas definidas nas regras de classificação. Trata-se de um pagamento de boleto, que não é classificado como uma despesa específica nas regras."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTO DE BOLETO PLUXEE BENEFICIOS BRASIL SA 69...' e classificou como 'Não classificado'. Explicação: A descrição não se encaixa em nenhuma das categorias específicas definidas nas regras de classificação. Trata-se de um pagamento de boleto, que não é classificado como uma despesa específica nas regras.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:52:24.620060",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "RENDIMENTOS REND PAGO APLIC AUT MAIS",
+        "origem": "CAR",
+        "valor": 5.04
+      },
+      "decision": {
+        "classificacao_sugerida": "Resgate Aplicação Financeira",
+        "explicacao": "A descrição contém 'RENDE FÁCIL', e como a origem é CAR (entrada), a classificação correta é 'Resgate Aplicação Financeira'."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'RENDIMENTOS REND PAGO APLIC AUT MAIS...' e classificou como 'Resgate Aplicação Financeira'. Explicação: A descrição contém 'RENDE FÁCIL', e como a origem é CAR (entrada), a classificação correta é 'Resgate Aplicação Financeira'.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:52:26.778341",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PAGAMENTO DE BOLETO 54096785 ELIMAR HENRIQUE DE SOUSA OLIVEIRA 54.096.785/0001-77",
+        "origem": "CAP",
+        "valor": -633.33
+      },
+      "decision": {
+        "classificacao_sugerida": "Não classificado",
+        "explicacao": "A transação refere-se ao pagamento de um boleto, mas não se encaixa em nenhuma das categorias específicas definidas nas regras de classificação."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'PAGAMENTO DE BOLETO 54096785 ELIMAR HENRIQUE DE SO...' e classificou como 'Não classificado'. Explicação: A transação refere-se ao pagamento de um boleto, mas não se encaixa em nenhuma das categorias específicas definidas nas regras de classificação.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:52:27.795550",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "RENDIMENTOS REND PAGO APLIC AUT MAIS",
+        "origem": "CAR",
+        "valor": 0.19
+      },
+      "decision": {
+        "classificacao_sugerida": "Resgate Aplicação Financeira",
+        "explicacao": "A descrição contém 'RENDE FÁCIL' e a origem é CAR, o que indica um resgate de aplicação financeira."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'RENDIMENTOS REND PAGO APLIC AUT MAIS...' e classificou como 'Resgate Aplicação Financeira'. Explicação: A descrição contém 'RENDE FÁCIL' e a origem é CAR, o que indica um resgate de aplicação financeira.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-05T10:52:29.183922",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "TAR CONTR/RENOV CTA GAR",
+        "origem": "CAP",
+        "valor": -165.0
+      },
+      "decision": {
+        "classificacao_sugerida": "(-) Transferencia Entre Contas",
+        "explicacao": "A descrição 'TAR CONTR/RENOV CTA GAR' sugere uma taxa ou tarifa relacionada a uma conta, e como a origem é CAP (saída), a transação é classificada como uma saída de transferência entre contas."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'TAR CONTR/RENOV CTA GAR...' e classificou como '(-) Transferencia Entre Contas'. Explicação: A descrição 'TAR CONTR/RENOV CTA GAR' sugere uma taxa ou tarifa relacionada a uma conta, e como a origem é CAP (saída), a transação é classificada como uma saída de transferência entre contas.",
+      "confidence": null
+    }
+  ]
+}

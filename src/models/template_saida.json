@@ -1,0 +1,214 @@
+{
+  "relatorio": {
+    "sumario_executivo": {
+      "titulo": "Sumário Executivo",
+      "descricao": "Liste os 3 eventos mais relevantes do mês com impacto direto nos resultados financeiros, operacionais ou estratégicos da empresa (máximo. 200 caracteres).",
+      "subsecoes": [
+        {
+          "titulo": "Evento 1 **OBS: no começo do titulo  colocar um infografico marcador pequeno vermelha, verde ou amarela**",
+          "descricao": "Resumo objetivo e direto sobre o principal achado. (máximo: 300 caracteres)"
+        },
+        {
+          "titulo": "Evento 2 **OBS: no titulo  colocar um infografico marcador pequeno vermelha, verde ou amarela**",
+          "descricao": "Segundo evento de destaque, com clareza e brevidade. (máximo: 300 caracteres)"
+        },
+        {
+          "titulo": "Evento 3 **OBS: no titulo  colocar um infografico marcador pequeno vermelha, verde ou amarela**",
+          "descricao": "Terceiro evento relevante com impacto no mês analisado. (máximo: 300 caracteres)"
+        }
+      ]
+    },
+
+    "mapa_receita": {
+      "titulo": "Mapa de receitas",
+      "descricao": "Resumo com pontos de atenção no minimo 60 caracteres para cada subseção.",
+      "subsecoes": [
+        {
+          "titulo": "Mensal (mês vs mês anterior)",
+          "descricao": "Identificação de variações relevantes entre os dois meses consecutivos. (mínimo: 100 caracteres máximo: 200 caracteres) totalizador no nivel dre_n2"
+        },
+        {
+          "titulo": "Anual (mês vs mesmo mês no ano anterior)",
+          "descricao": "Comparação sazonal direta, considerando o ciclo anual. (mínimo: 100 caracteres máximo: 200 caracteres)) totalizador no nivel dre_n2"
+        },
+        {
+          "titulo": "Análise de Sazonalidade",
+          "descricao": "Avaliação de padrões sazonais com base no histórico em relação ao ano anterior e/ou segmento do negócio. (mínimo: 100 caracteres máximo: 200 caracteres) totalizador no nivel dre_n2"
+        },
+        {
+          "titulo": "Diagnóstico",
+          "descricao": "Síntese explicativa/descritiva das 3 análises anteriores, destacando causas principais. (mínimo: 100 caracteres máximo: 200 caracteres) totalizador no nivel dre_n2"
+        }
+      ]
+    },
+
+    "custos_despesas": {
+      "custos": {
+        "titulo": "Mapa de custos",
+        "descricao": "Resumo com ponto de atenção em até 60 caracteres.",
+        "subsecoes": [
+          {
+            "titulo": "Mensal (mês vs mês anterior)",
+            "descricao": "Comparativo entre meses consecutivos. (mínimo: 100 caracteres máximo: 200 caracteres)"
+          },
+          {
+            "titulo": "Anual (mês vs mesmo mês no ano anterior)",
+            "descricao": "Comparação entre o mesmo mês em diferentes anos. (mínimo: 100 caracteres máximo: 200 caracteres)"
+          },
+          {
+          "titulo": "Análise de sazonalidade",
+          "descricao": "Avaliação de padrões sazonais com base no histórico em relação ao ano anterior e/ou segmento do negócio. (mínimo: 100 caracteres máximo: 200 caracteres)"
+          },
+          {
+            "titulo": "Diagnóstico",
+            "descricao": "Resumo com foco em causas principais das variações. (mínimo: 200 caracteres máximo: 400 caracteres)"
+          }
+        ]
+      },
+
+      "despesas": {
+        "titulo": "Mapa de despesas",
+        "descricao": "Resumo com ponto de atenção em até 450 caracteres. (mínimo: 100 caracteres máximo: 200 caracteres))",
+        "subsecoes": [
+          {
+            "titulo": "Mensal (mês vs mês anterior)",
+            "descricao": "Comparativo entre meses consecutivos. (mínimo: 100 caracteres máximo: 200 caracteres)"
+          },
+          {
+            "titulo": "Anual (mês vs mesmo mês no ano anterior)",
+            "descricao": "Comparação entre o mesmo mês em diferentes anos. (mínimo: 100 caracteres máximo: 200 caracteres)"
+          },
+          {
+          "titulo": "Análise de Sazonalidade",
+          "descricao": "Avaliação de padrões sazonais com base no histórico em relação ao ano anterior e/ou segmento do negócio. (mínimo: 100 caracteres máximo: 200 caracteres)"
+          },
+          {
+            "titulo": "Diagnóstico",
+            "descricao": "Resumo com foco em causas principais das variações. (mínimo: 200 caracteres máximo: 400 caracteres)"
+          }
+        ]
+      }
+    },
+
+    "ebitda_ebit": {
+      "titulo": "EBITDA",
+      "descricao": "Resumo com ponto de atenção em até 200 caracteres.",
+      "subsecoes": [
+        {
+          "titulo": "Mensal (mês vs mês anterior)",
+          "descricao": "Comparativo entre meses consecutivos. (mínimo: 100 caracteres máximo: 200 caracteres)"
+        },
+        {
+          "titulo": "Anual (mês vs mesmo mês no ano anterior)",
+          "descricao": "Comparação entre o mesmo mês em anos distintos. (mínimo: 100 caracteres máximo: 200 caracteres)"
+        },
+        {
+          "titulo": "Análise de Sazonalidade",
+          "descricao": "Avaliação de padrões sazonais com base no histórico em relação ao ano anterior e/ou segmento do negócio. (mínimo: 100 caracteres máximo: 200 caracteres)"
+        },
+        {
+          "titulo": "Diagnóstico",
+          "descricao": "Resumo das causas principais das variações no EBITDA/EBIT. (mínimo: 200 caracteres máximo: 400 caracteres)"
+        }
+      ]
+    },
+
+    "depreciacao_amortizacao": {
+      "titulo": "Depreciação & Amortização",
+      "descricao": "Avaliação contábil e financeira dos impactos. (máximo: 200 caracteres)",
+      "subsecoes": [
+        {
+          "titulo": "Controle Contábil **OBS: no começo do titulo  colocar um infografico marcador pequeno**",
+          "descricao": "Verificar registros e atualização do imobilizado. (máximo: 300 caracteres) "
+        },
+        {
+          "titulo": "Impacto no Resultado **OBS: no começo do titulo  colocar um infografico marcador pequeno**",
+          "descricao": "Relação da depreciação com EBITDA e EBIT. (máximo: 300 caracteres)"
+        },
+        {
+          "titulo": "Boas Práticas **OBS: no começo do titulo  colocar um infografico marcador pequeno**",
+          "descricao": "Importância do controle adequado para previsibilidade financeira. (máximo: 400 caracteres)"
+        }
+      ]
+    },
+
+    "tributos": {
+      "titulo": "Tributos",
+      "descricao": "Impacto tributário no mês — até 200 caracteres.",
+      "subsecoes": [
+        {
+          "titulo": "Análise interna **OBS: no começo do titulo  colocar um infografico marcador pequeno**",
+          "descricao": "Relação impostos x receita bruta e picos fora do padrão. (máximo: 400 caracteres)"
+        },
+        {
+          "titulo": "Análise externa **OBS: no começo do titulo  colocar um infografico marcador pequeno**",
+          "descricao": "Análise da função dos tributos no negócio do segmento. (mínimo: 200 caracteres máximo: 400 caracteres)"
+        }
+      ]
+    },
+
+    "fluxo_caixa": {
+      "titulo": "Mapa do fluxo de caixa",
+      "descricao": "Análises do fluxo operacional, de financiamento e movimentação entre contas.",
+      "subsecoes": [
+        {
+          "titulo": "Mensal (mês vs mês anterior)",
+          "descricao": "Comparação entre mês atual e anterior. (mínimo: 50 caracteres máximo: 100 caracteres)"
+        },
+        {
+          "titulo": "Anual (mês vs mesmo mês no ano anterior)",
+          "descricao": "Comparação com o mesmo mês do ano anterior. (mínimo: 50 caracteres máximo: 100 caracteres)"
+        },
+        {
+          "titulo": "Análise de Sazonalidade",
+          "descricao": "Avaliação de padrões sazonais com base no histórico em relação ao ano anterior e/ou segmento do negócio. (mínimo: 50 caracteres máximo: 100 caracteres)"
+        },
+        {
+          "titulo": "Diagnóstico",
+          "descricao": "Resumo das causas principais das variações no fluxo. (mínimo: 200 caracteres máximo: 400 caracteres)"
+        }
+      ]
+    },
+
+    "recomendacoes_executivas": {
+      "titulo": "Parecer da TAG",
+      "descricao": "Análise SWOT, alertas e pontos de atenção considerando números do mês, fundamentos de negócios e segmento.",
+      "subsecoes": [
+        {
+          "titulo": "Análise SWOT",
+          "descricao": "Forças, Fraquezas, Oportunidades e Ameaças com base nos resultados e no contexto do segmento. (máximo: 400 caracteres)",
+          "subitens": [
+            {
+              "titulo": "Forças",
+              "descricao": "Aspectos positivos internos que contribuíram para o bom desempenho no mês. (máximo: 250 caracteres)"
+            },
+            {
+              "titulo": "Fraquezas",
+              "descricao": "Fatores internos que limitaram os resultados ou representaram desafios. (máximo: 250 caracteres)"
+            },
+            {
+              "titulo": "Oportunidades",
+              "descricao": "Fatores externos identificados que podem ser aproveitados para crescimento ou melhoria. (máximo: 250 caracteres)"
+            },
+            {
+              "titulo": "Ameaças",
+              "descricao": "Riscos ou mudanças externas que podem impactar negativamente os resultados. (máximo: 250 caracteres)"
+            }
+          ]
+        },
+        {
+          "titulo": "Título resumindo o tópico",
+          "descricao": "Plano de ação para **questões imediatas**. Insira no texto os números/justificativa em que essa análise se sustenta"
+        },
+        {
+          "titulo": "Título resumindo o tópico",
+          "descricao": "Plano de ação para **questões importantes que precisam de monitoramento contínuo**. Insira no texto os números/justificativa em que essa análise se sustenta"
+        },
+        {
+          "titulo": "Título resumindo o tópico",
+          "descricao": "Plano de ação para **aspectos que merecem observação, mas não indicam urgência**. Insira no texto os números/justificativa em que essa análise se sustenta"
+        }
+      ]
+    }
+  }
+}

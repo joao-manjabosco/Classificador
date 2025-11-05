@@ -1,0 +1,793 @@
+"""
+PDF GENERATOR - Gerador de Relatórios em PDF
+Cria relatórios financeiros formatados em PDF com design moderno
+"""
+
+from reportlab.lib import colors
+from reportlab.lib.pagesizes import A4, landscape
+from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
+from reportlab.lib.units import cm, mm
+from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Paragraph, Spacer, PageBreak, Image, KeepTogether
+from reportlab.platypus.flowables import HRFlowable
+from reportlab.lib.enums import TA_CENTER, TA_RIGHT, TA_LEFT, TA_JUSTIFY
+from reportlab.pdfgen import canvas
+from datetime import datetime
+from typing import Dict, Any
+import io
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+import matplotlib.patches as mpatches
+
+
+class FinancialPDFGenerator:
+    """Gera PDFs de relatórios financeiros com design """
+    
+    # PALETA DE CORES  - Azul #101D43 e Dourado #D6BC71
+    COLOR_PRIMARY = colors.HexColor('#101D43')      # Azul escuro principal
+    COLOR_SECONDARY = colors.HexColor('#1a2d5a')    # Azul médio
+    COLOR_GOLD = colors.HexColor('#D6BC71')         # Dourado principal
+    COLOR_DARK_GOLD = colors.HexColor('#c0a85f')    # Dourado escuro
+    COLOR_LIGHT_GOLD = colors.HexColor('#e8d9a8')   # Dourado claro
+    COLOR_SUCCESS = colors.HexColor('#4caf50')      # Verde receitas
+    COLOR_DANGER = colors.HexColor('#f44336')       # Vermelho despesas
+    COLOR_WARNING = colors.HexColor('#ff9800')      # Laranja avisos
+    COLOR_INFO = colors.HexColor('#2196f3')         # Azul info
+    COLOR_DARK = colors.HexColor('#2c3e50')         # Texto escuro
+    COLOR_LIGHT_BG = colors.HexColor('#faf8f3')     # Fundo claro dourado
+    COLOR_CARD_BG = colors.HexColor('#ffffff')      # Branco puro
+    
+    def __init__(self):
+        self.styles = getSampleStyleSheet()
+        self._setup_custom_styles()
+    
+    def _setup_custom_styles(self):
+        """Configura estilos customizados premium"""
+        # Título principal - Grande e impactante
+        self.styles.add(ParagraphStyle(
+            name='CustomTitle',
+            parent=self.styles['Heading1'],
+            fontSize=32,
+            textColor=self.COLOR_PRIMARY,
+            spaceAfter=10,
+            spaceBefore=20,
+            alignment=TA_CENTER,
+            fontName='Helvetica-Bold',
+            leading=38
+        ))
+        
+        # Subtítulo da capa
+        self.styles.add(ParagraphStyle(
+            name='CoverSubtitle',
+            parent=self.styles['Normal'],
+            fontSize=14,
+            textColor=self.COLOR_DARK,
+            spaceAfter=20,
+            alignment=TA_CENTER,
+            fontName='Helvetica'
+        ))
+        
+        # Título de seção com ícone
+        self.styles.add(ParagraphStyle(
+            name='SectionTitle',
+            parent=self.styles['Heading2'],
+            fontSize=18,
+            textColor=self.COLOR_PRIMARY,
+            spaceAfter=15,
+            spaceBefore=20,
+            fontName='Helvetica-Bold',
+            borderPadding=(10, 10, 10, 10),
+            backColor=self.COLOR_LIGHT_BG,
+            borderWidth=0,
+            borderRadius=5
+        ))
+        
+        # Subtítulo de seção
+        self.styles.add(ParagraphStyle(
+            name='CustomHeading',
+            parent=self.styles['Heading2'],
+            fontSize=16,
+            textColor=self.COLOR_SECONDARY,
+            spaceAfter=12,
+            spaceBefore=15,
+            fontName='Helvetica-Bold'
+        ))
+        
+        # Texto normal melhorado
+        self.styles.add(ParagraphStyle(
+            name='CustomBody',
+            parent=self.styles['Normal'],
+            fontSize=10,
+            spaceAfter=8,
+            textColor=self.COLOR_DARK,
+            leading=14
+        ))
+        
+        # Destaque positivo
+        self.styles.add(ParagraphStyle(
+            name='HighlightPositive',
+            parent=self.styles['Normal'],
+            fontSize=13,
+            textColor=self.COLOR_SUCCESS,
+            fontName='Helvetica-Bold',
+            alignment=TA_CENTER
+        ))
+        
+        # Destaque negativo
+        self.styles.add(ParagraphStyle(
+            name='HighlightNegative',
+            parent=self.styles['Normal'],
+            fontSize=13,
+            textColor=self.COLOR_DANGER,
+            fontName='Helvetica-Bold',
+            alignment=TA_CENTER
+        ))
+        
+        # Texto de rodapé
+        self.styles.add(ParagraphStyle(
+            name='Footer',
+            parent=self.styles['Normal'],
+            fontSize=8,
+            textColor=colors.grey,
+            alignment=TA_CENTER,
+            spaceAfter=5
+        ))
+        
+        # Card de informação
+        self.styles.add(ParagraphStyle(
+            name='InfoCard',
+            parent=self.styles['Normal'],
+            fontSize=11,
+            textColor=self.COLOR_DARK,
+            backColor=self.COLOR_LIGHT_BG,
+            borderPadding=10,
+            leading=16
+        ))
+    
+    def _format_currency(self, value: float) -> str:
+        """Formata valor em moeda"""
+        return f"R$ {value:,.2f}".replace(',', '_').replace('.', ',').replace('_', '.')
+    
+    def _create_chart_image(self, data: list, labels: list, title: str, chart_type: str = 'bar') -> Image:
+        """
+        Cria gráfico moderno e retorna como Image
+        
+        Args:
+            data: Dados para o gráfico
+            labels: Labels do gráfico
+            title: Título do gráfico
+            chart_type: Tipo de gráfico ('bar', 'line', 'pie', 'donut')
+            
+        Returns:
+            Image do gráfico
+        """
+        # Configura estilo moderno
+        plt.style.use('seaborn-v0_8-darkgrid')
+        fig, ax = plt.subplots(figsize=(12, 5), facecolor='white')
+        
+        if chart_type == 'bar':
+            colors_list = ['#00b894' if v >= 0 else '#ff4757' for v in data]
+            bars = ax.bar(labels, data, color=colors_list, alpha=0.85, edgecolor='white', linewidth=2)
+            
+            # Adiciona valores no topo das barras
+            for bar in bars:
+                height = bar.get_height()
+                ax.text(bar.get_x() + bar.get_width()/2., height,
+                       f'R$ {abs(height):,.0f}',
+                       ha='center', va='bottom' if height > 0 else 'top',
+                       fontsize=9, fontweight='bold', color='#2d3436')
+            
+            ax.axhline(y=0, color='#2d3436', linestyle='-', linewidth=1.5, alpha=0.7)
+            plt.xticks(rotation=45, ha='right', fontsize=10)
+            ax.set_ylabel('Valor (R$)', fontsize=11, fontweight='bold', color='#2d3436')
+            ax.grid(axis='y', alpha=0.3, linestyle='--', linewidth=0.7)
+            
+        elif chart_type == 'line':
+            ax.plot(labels, data, marker='o', linewidth=3, color='#667eea', 
+                   markersize=8, markerfacecolor='#764ba2', markeredgecolor='white', 
+                   markeredgewidth=2, label='Saldo')
+            ax.fill_between(range(len(labels)), data, alpha=0.2, color='#667eea')
+            
+            # Adiciona pontos de dados
+            for i, (label, value) in enumerate(zip(labels, data)):
+                ax.text(i, value, f'R$ {value:,.0f}', 
+                       ha='center', va='bottom', fontsize=9, 
+                       fontweight='bold', color='#2d3436')
+            
+            plt.xticks(rotation=45, ha='right', fontsize=10)
+            ax.set_ylabel('Saldo (R$)', fontsize=11, fontweight='bold', color='#2d3436')
+            ax.grid(True, alpha=0.3, linestyle='--', linewidth=0.7)
+            ax.legend(loc='upper left', fontsize=10, framealpha=0.9)
+            
+        elif chart_type == 'pie' or chart_type == 'donut':
+            colors_pie = ['#667eea', '#764ba2', '#00b894', '#00d2a0', 
+                         '#ff4757', '#ff6b7a', '#ffa502', '#ffb142',
+                         '#3c40c6', '#4b4bdb', '#00a8ff', '#4facfe']
+            
+            # Explode para destacar maior fatia
+            explode = [0.05 if i == 0 else 0 for i in range(len(data))]
+            
+            wedges, texts, autotexts = ax.pie(data, labels=labels, autopct='%1.1f%%',
+                                              startangle=90, colors=colors_pie,
+                                              explode=explode,
+                                              shadow=True,
+                                              textprops={'fontsize': 10, 'fontweight': 'bold'})
+            
+            # Melhora o texto
+            for autotext in autotexts:
+                autotext.set_color('white')
+                autotext.set_fontsize(11)
+                autotext.set_fontweight('bold')
+            
+            # Donut (círculo central)
+            if chart_type == 'donut':
+                centre_circle = plt.Circle((0, 0), 0.70, fc='white')
+                ax.add_artist(centre_circle)
+            
+            ax.axis('equal')
+        
+        # Título estilizado
+        ax.set_title(title, fontsize=14, fontweight='bold', pad=20, 
+                    color='#2d3436', loc='left')
+        
+        # Fundo branco limpo
+        ax.set_facecolor('white')
+        fig.patch.set_facecolor('white')
+        
+        plt.tight_layout()
+        
+        # Salva em buffer com alta qualidade
+        img_buffer = io.BytesIO()
+        plt.savefig(img_buffer, format='png', dpi=200, bbox_inches='tight', 
+                   facecolor='white', edgecolor='none')
+        img_buffer.seek(0)
+        plt.close()
+        
+        return Image(img_buffer, width=17*cm, height=8*cm)
+    
+    def generate_pdf(self, report_data: Dict[str, Any], output_path: str = None) -> io.BytesIO:
+        """
+        Gera PDF do relatório financeiro
+        
+        Args:
+            report_data: Dados do relatório
+            output_path: Caminho para salvar (opcional)
+            
+        Returns:
+            BytesIO com PDF gerado
+        """
+        buffer = io.BytesIO()
+        doc = SimpleDocTemplate(
+            buffer if not output_path else output_path,
+            pagesize=A4,
+            rightMargin=2*cm,
+            leftMargin=2*cm,
+            topMargin=2*cm,
+            bottomMargin=2*cm
+        )
+        
+        story = []
+        
+        # ===== CAPA PROFISSIONAL =====
+        story.append(Spacer(1, 1*cm))
+        
+        # Header limpo e profissional
+        header_data = [[Paragraph("<para align=center fontSize=28 textColor=white><b>RELATÓRIO FINANCEIRO</b></para>", self.styles['CustomBody'])]]
+        header_table = Table(header_data, colWidths=[17*cm])
+        header_table.setStyle(TableStyle([
+            ('BACKGROUND', (0, 0), (-1, -1), self.COLOR_PRIMARY),
+            ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
+            ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
+            ('TOPPADDING', (0, 0), (-1, -1), 20),
+            ('BOTTOMPADDING', (0, 0), (-1, -1), 20),
+        ]))
+        story.append(header_table)
+        
+        story.append(Spacer(1, 0.3*cm))
+        
+        # Banner de informações
+        periodo = report_data['sumario']['periodo']
+        totais = report_data['sumario']['totais']
+        
+        info_banner = f"""
+        <para align=center fontSize=12 textColor=#1a1a1a leading=18>
+        <b>Período:</b> {periodo['inicio']} até {periodo['fim']}<br/>
+        <b>Gerado em:</b> {report_data['data_geracao']}
+        </para>
+        """
+        
+        info_data = [[Paragraph(info_banner, self.styles['CustomBody'])]]
+        info_table = Table(info_data, colWidths=[17*cm])
+        info_table.setStyle(TableStyle([
+            ('BACKGROUND', (0, 0), (-1, -1), self.COLOR_LIGHT_BG),
+            ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
+            ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
+            ('TOPPADDING', (0, 0), (-1, -1), 14),
+            ('BOTTOMPADDING', (0, 0), (-1, -1), 14),
+            ('BOX', (0, 0), (-1, -1), 1, self.COLOR_SECONDARY)
+        ]))
+        story.append(info_table)
+        
+        story.append(Spacer(1, 0.7*cm))
+        
+        # Cards de métricas em 3 colunas lado a lado
+        metrics_data = [[
+            Paragraph("<para align=center fontSize=11 textColor=white><b>RECEITA TOTAL</b></para>", self.styles['CustomBody']),
+            Paragraph("<para align=center fontSize=11 textColor=white><b>DESPESA TOTAL</b></para>", self.styles['CustomBody']),
+            Paragraph("<para align=center fontSize=11 textColor=white><b>SALDO LÍQUIDO</b></para>", self.styles['CustomBody'])
+        ], [
+            Paragraph(f"<para align=center fontSize=18 textColor=white><b>{self._format_currency(totais['receita'])}</b></para>", self.styles['CustomBody']),
+            Paragraph(f"<para align=center fontSize=18 textColor=white><b>{self._format_currency(totais['despesa'])}</b></para>", self.styles['CustomBody']),
+            Paragraph(f"<para align=center fontSize=20 textColor=white><b>{self._format_currency(totais['saldo'])}</b></para>", self.styles['CustomBody'])
+        ], [
+            Paragraph("<para align=center fontSize=9 textColor=white> </para>", self.styles['CustomBody']),
+            Paragraph("<para align=center fontSize=9 textColor=white> </para>", self.styles['CustomBody']),
+            Paragraph(f"<para align=center fontSize=9 textColor=white>Margem: {totais['margem']:.1f}%</para>", self.styles['CustomBody'])
+        ]]
+        
+        saldo_cor = self.COLOR_SUCCESS if totais['saldo'] >= 0 else self.COLOR_DANGER
+        
+        metrics_table = Table(metrics_data, colWidths=[5.6*cm, 5.6*cm, 5.8*cm])
+        metrics_table.setStyle(TableStyle([
+            # Headers
+            ('BACKGROUND', (0, 0), (0, 0), self.COLOR_SUCCESS),
+            ('BACKGROUND', (1, 0), (1, 0), self.COLOR_DANGER),
+            ('BACKGROUND', (2, 0), (2, 0), saldo_cor),
+            ('TOPPADDING', (0, 0), (-1, 0), 10),
+            ('BOTTOMPADDING', (0, 0), (-1, 0), 10),
+            # Valores
+            ('BACKGROUND', (0, 1), (0, -1), self.COLOR_SUCCESS),
+            ('BACKGROUND', (1, 1), (1, -1), self.COLOR_DANGER),
+            ('BACKGROUND', (2, 1), (2, -1), saldo_cor),
+            ('TOPPADDING', (0, 1), (-1, 1), 15),
+            ('BOTTOMPADDING', (0, 1), (-1, 1), 15),
+            ('TOPPADDING', (0, 2), (-1, 2), 8),
+            ('BOTTOMPADDING', (0, 2), (-1, 2), 10),
+            # Geral
+            ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
+            ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
+            ('GRID', (0, 0), (-1, -1), 1, colors.white),
+        ]))
+        story.append(metrics_table)
+        
+        story.append(Spacer(1, 0.8*cm))
+        
+        # ===== SUMÁRIO EXECUTIVO =====
+        # Título da seção
+        section_title = [[Paragraph("<para align=center fontSize=14 textColor=white><b>SUMÁRIO EXECUTIVO</b></para>", self.styles['CustomBody'])]]
+        section_table = Table(section_title, colWidths=[17*cm])
+        section_table.setStyle(TableStyle([
+            ('BACKGROUND', (0, 0), (-1, -1), self.COLOR_PRIMARY),
+            ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
+            ('TOPPADDING', (0, 0), (-1, -1), 12),
+            ('BOTTOMPADDING', (0, 0), (-1, -1), 12),
+        ]))
+        story.append(section_table)
+        
+        story.append(Spacer(1, 0.5*cm))
+        
+        totais = report_data['sumario']['totais']
+        transacoes = report_data['sumario']['transacoes']
+        
+        # Tabela de totais - fontes legíveis
+        data_totais = [
+            [
+                Paragraph('<para align=center fontSize=11 textColor=white><b>INDICADOR</b></para>', self.styles['CustomBody']),
+                Paragraph('<para align=center fontSize=11 textColor=white><b>VALOR</b></para>', self.styles['CustomBody'])
+            ],
+            [
+                Paragraph('<para fontSize=11 textColor=#1a1a1a><b>Receita Total</b></para>', self.styles['CustomBody']),
+                Paragraph(f'<para align=right fontSize=12 textColor=#00b894><b>{self._format_currency(totais["receita"])}</b></para>', self.styles['CustomBody'])
+            ],
+            [
+                Paragraph('<para fontSize=11 textColor=#1a1a1a><b>Despesa Total</b></para>', self.styles['CustomBody']),
+                Paragraph(f'<para align=right fontSize=12 textColor=#ff4757><b>{self._format_currency(totais["despesa"])}</b></para>', self.styles['CustomBody'])
+            ],
+            [
+                Paragraph('<para fontSize=11 textColor=#1a1a1a><b>Saldo Líquido</b></para>', self.styles['CustomBody']),
+                Paragraph(f'<para align=right fontSize=13 textColor={"#00b894" if totais["saldo"] >= 0 else "#ff4757"}><b>{self._format_currency(totais["saldo"])}</b></para>', self.styles['CustomBody'])
+            ],
+            [
+                Paragraph('<para fontSize=11 textColor=#1a1a1a><b>Margem Líquida</b></para>', self.styles['CustomBody']),
+                Paragraph(f'<para align=right fontSize=12 textColor=#1a1a1a><b>{totais["margem"]:.1f}%</b></para>', self.styles['CustomBody'])
+            ]
+        ]
+        
+        table_financeiros = Table(data_totais, colWidths=[10*cm, 7*cm])
+        table_financeiros.setStyle(TableStyle([
+            ('BACKGROUND', (0, 0), (-1, 0), self.COLOR_PRIMARY),
+            ('TEXTCOLOR', (0, 0), (-1, 0), colors.white),
+            ('ALIGN', (0, 0), (0, -1), 'LEFT'),
+            ('ALIGN', (1, 0), (1, -1), 'RIGHT'),
+            ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+            ('FONTSIZE', (0, 0), (-1, 0), 11),
+            ('TOPPADDING', (0, 0), (-1, -1), 10),
+            ('BOTTOMPADDING', (0, 0), (-1, -1), 10),
+            ('LEFTPADDING', (0, 0), (-1, -1), 12),
+            ('RIGHTPADDING', (0, 0), (-1, -1), 12),
+            ('GRID', (0, 0), (-1, -1), 1, colors.lightgrey),
+            ('ROWBACKGROUNDS', (0, 1), (-1, -1), [colors.white, colors.HexColor('#f8f9fa')]),
+        ]))
+        
+        story.append(table_financeiros)
+        story.append(Spacer(1, 0.5*cm))
+        
+        # Tabela de transações
+        data_trans = [
+            [
+                Paragraph('<para align=center fontSize=11 textColor=white><b>TRANSAÇÃO</b></para>', self.styles['CustomBody']),
+                Paragraph('<para align=center fontSize=11 textColor=white><b>QUANTIDADE</b></para>', self.styles['CustomBody'])
+            ],
+            [
+                Paragraph('<para fontSize=11 textColor=#1a1a1a><b>Total de Transações</b></para>', self.styles['CustomBody']),
+                Paragraph(f'<para align=right fontSize=12 textColor=#1a1a1a><b>{transacoes["total"]}</b></para>', self.styles['CustomBody'])
+            ],
+            [
+                Paragraph('<para fontSize=11 textColor=#1a1a1a><b>Entradas (Receitas)</b></para>', self.styles['CustomBody']),
+                Paragraph(f'<para align=right fontSize=12 textColor=#00b894><b>{transacoes["receitas"]}</b></para>', self.styles['CustomBody'])
+            ],
+            [
+                Paragraph('<para fontSize=11 textColor=#1a1a1a><b>Saídas (Despesas)</b></para>', self.styles['CustomBody']),
+                Paragraph(f'<para align=right fontSize=12 textColor=#ff4757><b>{transacoes["despesas"]}</b></para>', self.styles['CustomBody'])
+            ],
+            [
+                Paragraph('<para fontSize=11 textColor=#1a1a1a><b>Ticket Médio (Receita)</b></para>', self.styles['CustomBody']),
+                Paragraph(f'<para align=right fontSize=11 textColor=#1a1a1a><b>{self._format_currency(transacoes["ticket_medio_receita"])}</b></para>', self.styles['CustomBody'])
+            ],
+            [
+                Paragraph('<para fontSize=11 textColor=#1a1a1a><b>Ticket Médio (Despesa)</b></para>', self.styles['CustomBody']),
+                Paragraph(f'<para align=right fontSize=11 textColor=#1a1a1a><b>{self._format_currency(transacoes["ticket_medio_despesa"])}</b></para>', self.styles['CustomBody'])
+            ]
+        ]
+        
+        table_trans = Table(data_trans, colWidths=[10*cm, 7*cm])
+        table_trans.setStyle(TableStyle([
+            ('BACKGROUND', (0, 0), (-1, 0), self.COLOR_PRIMARY),
+            ('TEXTCOLOR', (0, 0), (-1, 0), colors.white),
+            ('ALIGN', (0, 0), (0, -1), 'LEFT'),
+            ('ALIGN', (1, 0), (1, -1), 'RIGHT'),
+            ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+            ('FONTSIZE', (0, 0), (-1, 0), 11),
+            ('TOPPADDING', (0, 0), (-1, -1), 10),
+            ('BOTTOMPADDING', (0, 0), (-1, -1), 10),
+            ('LEFTPADDING', (0, 0), (-1, -1), 12),
+            ('RIGHTPADDING', (0, 0), (-1, -1), 12),
+            ('GRID', (0, 0), (-1, -1), 1, colors.lightgrey),
+            ('ROWBACKGROUNDS', (0, 1), (-1, -1), [colors.white, colors.HexColor('#f8f9fa')]),
+        ]))
+        
+        story.append(table_trans)
+        story.append(Spacer(1, 0.6*cm))
+        
+        # ===== DRE =====
+        section_title_dre = [[Paragraph('<para alignment=center fontSize=14 textColor=white><b>DRE - DEMONSTRAÇÃO DO RESULTADO</b></para>', self.styles['SectionTitle'])]]
+        section_table_dre = Table(section_title_dre, colWidths=[17*cm])
+        section_table_dre.setStyle(TableStyle([
+            ('BACKGROUND', (0, 0), (-1, -1), self.COLOR_PRIMARY),
+            ('TOPPADDING', (0, 0), (-1, -1), 12),
+            ('BOTTOMPADDING', (0, 0), (-1, -1), 12),
+        ]))
+        story.append(section_table_dre)
+        story.append(Spacer(1, 0.5*cm))
+        
+        dre = report_data['dre']
+        
+        # DRE - fontes legíveis
+        data_dre = [
+            [
+                Paragraph('<para alignment=center fontSize=11 textColor=white><b>DESCRIÇÃO</b></para>', self.styles['CustomBody']),
+                Paragraph('<para alignment=center fontSize=11 textColor=white><b>VALOR (R$)</b></para>', self.styles['CustomBody'])
+            ],
+            [
+                Paragraph('<para fontSize=11><b>Receita Bruta</b></para>', self.styles['CustomBody']),
+                Paragraph(f'<para align=right fontSize=12 textColor=#00b894><b>{self._format_currency(dre["receita_bruta"])}</b></para>', self.styles['CustomBody'])
+            ],
+            [
+                Paragraph('<para fontSize=11>(-) Deduções</para>', self.styles['CustomBody']),
+                Paragraph(f'<para align=right fontSize=11 textColor=#ff4757>{self._format_currency(-dre["deducoes"])}</para>', self.styles['CustomBody'])
+            ],
+            [
+                Paragraph('<para fontSize=11><b>(=) Receita Líquida</b></para>', self.styles['CustomBody']),
+                Paragraph(f'<para align=right fontSize=12><b>{self._format_currency(dre["receita_liquida"])}</b></para>', self.styles['CustomBody'])
+            ],
+            [
+                Paragraph('<para fontSize=11>(-) Custos</para>', self.styles['CustomBody']),
+                Paragraph(f'<para align=right fontSize=11 textColor=#ff4757>{self._format_currency(-dre["custos"])}</para>', self.styles['CustomBody'])
+            ],
+            [
+                Paragraph('<para fontSize=11><b>(=) Lucro Bruto</b></para>', self.styles['CustomBody']),
+                Paragraph(f'<para align=right fontSize=12><b>{self._format_currency(dre["lucro_bruto"])}</b></para>', self.styles['CustomBody'])
+            ],
+            [
+                Paragraph('<para fontSize=11>(-) Despesas Operacionais</para>', self.styles['CustomBody']),
+                Paragraph(f'<para align=right fontSize=11 textColor=#ff4757>{self._format_currency(-dre["despesas_operacionais"])}</para>', self.styles['CustomBody'])
+            ],
+            [
+                Paragraph('<para fontSize=11><b>(=) Resultado Operacional</b></para>', self.styles['CustomBody']),
+                Paragraph(f'<para align=right fontSize=12><b>{self._format_currency(dre["resultado_operacional"])}</b></para>', self.styles['CustomBody'])
+            ],
+            [
+                Paragraph('<para fontSize=11>(+) Outras Receitas</para>', self.styles['CustomBody']),
+                Paragraph(f'<para align=right fontSize=11 textColor=#00b894>{self._format_currency(dre["outras_receitas"])}</para>', self.styles['CustomBody'])
+            ],
+            [
+                Paragraph('<para fontSize=11>(-) Outras Despesas</para>', self.styles['CustomBody']),
+                Paragraph(f'<para align=right fontSize=11 textColor=#ff4757>{self._format_currency(-dre["outras_despesas"])}</para>', self.styles['CustomBody'])
+            ]
+        ]
+        
+        table_dre = Table(data_dre, colWidths=[11*cm, 6*cm])
+        table_dre.setStyle(TableStyle([
+            ('BACKGROUND', (0, 0), (-1, 0), self.COLOR_PRIMARY),
+            ('TEXTCOLOR', (0, 0), (-1, 0), colors.white),
+            ('ALIGN', (0, 0), (0, -1), 'LEFT'),
+            ('ALIGN', (1, 0), (1, -1), 'RIGHT'),
+            ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+            ('FONTSIZE', (0, 0), (-1, 0), 11),
+            ('TOPPADDING', (0, 0), (-1, -1), 10),
+            ('BOTTOMPADDING', (0, 0), (-1, -1), 10),
+            ('LEFTPADDING', (0, 0), (-1, -1), 12),
+            ('RIGHTPADDING', (0, 0), (-1, -1), 12),
+            ('GRID', (0, 0), (-1, -1), 1, colors.lightgrey),
+            ('ROWBACKGROUNDS', (0, 1), (-1, -1), [colors.white, colors.HexColor('#f8f9fa')]),
+            # Destaque sutil para linhas de resultado
+            ('BACKGROUND', (0, 3), (-1, 3), colors.HexColor('#e8f4f8')),
+            ('BACKGROUND', (0, 5), (-1, 5), colors.HexColor('#e8f4f8')),
+            ('BACKGROUND', (0, 7), (-1, 7), colors.HexColor('#e8f4f8')),
+        ]))
+        
+        story.append(table_dre)
+        story.append(Spacer(1, 0.4*cm))
+        
+        # Resultado final
+        resultado_cor = self.COLOR_SUCCESS if dre['resultado_liquido'] >= 0 else self.COLOR_DANGER
+        resultado_text = 'LUCRO' if dre['resultado_liquido'] >= 0 else 'PREJUÍZO'
+        
+        resultado_data = [[
+            Paragraph(f'<para fontSize=12 textColor=white><b>RESULTADO LÍQUIDO: {resultado_text}</b></para>', self.styles['CustomBody']),
+            Paragraph(f'<para align=right fontSize=16 textColor=white><b>{self._format_currency(dre["resultado_liquido"])}</b></para>', self.styles['CustomBody'])
+        ]]
+        
+        resultado_table = Table(resultado_data, colWidths=[11*cm, 6*cm])
+        resultado_table.setStyle(TableStyle([
+            ('BACKGROUND', (0, 0), (-1, -1), resultado_cor),
+            ('TEXTCOLOR', (0, 0), (-1, -1), colors.white),
+            ('ALIGN', (0, 0), (0, 0), 'LEFT'),
+            ('ALIGN', (1, 0), (1, 0), 'RIGHT'),
+            ('FONTNAME', (0, 0), (-1, -1), 'Helvetica-Bold'),
+            ('TOPPADDING', (0, 0), (-1, -1), 12),
+            ('BOTTOMPADDING', (0, 0), (-1, -1), 12),
+            ('LEFTPADDING', (0, 0), (-1, -1), 12),
+            ('RIGHTPADDING', (0, 0), (-1, -1), 12),
+        ]))
+        
+        story.append(resultado_table)
+        story.append(PageBreak())
+        
+        # ===== ANÁLISE POR CATEGORIA =====
+        section_title_cat = [[Paragraph('<para alignment=center fontSize=14 textColor=white><b>ANÁLISE POR CATEGORIA</b></para>', self.styles['SectionTitle'])]]
+        section_table_cat = Table(section_title_cat, colWidths=[17*cm])
+        section_table_cat.setStyle(TableStyle([
+            ('BACKGROUND', (0, 0), (-1, -1), self.COLOR_PRIMARY),
+            ('TOPPADDING', (0, 0), (-1, -1), 12),
+            ('BOTTOMPADDING', (0, 0), (-1, -1), 12),
+        ]))
+        story.append(section_table_cat)
+        story.append(Spacer(1, 0.5*cm))
+        
+        categorias = report_data['analise_categorias'][:10]  # Top 10
+        
+        data_cat = [[
+            Paragraph('<para alignment=center fontSize=11 textColor=white><b>CATEGORIA</b></para>', self.styles['CustomBody']),
+            Paragraph('<para alignment=center fontSize=11 textColor=white><b>TOTAL</b></para>', self.styles['CustomBody']),
+            Paragraph('<para alignment=center fontSize=11 textColor=white><b>QTD</b></para>', self.styles['CustomBody']),
+            Paragraph('<para alignment=center fontSize=11 textColor=white><b>MÉDIA</b></para>', self.styles['CustomBody'])
+        ]]
+        for cat in categorias:
+            categoria_nome = cat['categoria'] or 'Não classificado'
+            if ' - ' in categoria_nome:
+                categoria_nome = categoria_nome.split(' - ', 1)[1]
+            data_cat.append([
+                Paragraph(f'<para fontSize=10>{categoria_nome[:40]}</para>', self.styles['CustomBody']),
+                Paragraph(f'<para align=right fontSize=11><b>{self._format_currency(cat["total"])}</b></para>', self.styles['CustomBody']),
+                Paragraph(f'<para align=right fontSize=10>{str(cat["quantidade"])}</para>', self.styles['CustomBody']),
+                Paragraph(f'<para align=right fontSize=10>{self._format_currency(cat["media"])}</para>', self.styles['CustomBody'])
+            ])
+        
+        table_cat = Table(data_cat, colWidths=[7*cm, 4*cm, 2.5*cm, 3.5*cm])
+        table_cat.setStyle(TableStyle([
+            ('BACKGROUND', (0, 0), (-1, 0), self.COLOR_PRIMARY),
+            ('TEXTCOLOR', (0, 0), (-1, 0), colors.white),
+            ('ALIGN', (0, 0), (0, -1), 'LEFT'),
+            ('ALIGN', (1, 0), (-1, -1), 'RIGHT'),
+            ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+            ('FONTSIZE', (0, 0), (-1, 0), 11),
+            ('TOPPADDING', (0, 0), (-1, -1), 9),
+            ('BOTTOMPADDING', (0, 0), (-1, -1), 9),
+            ('LEFTPADDING', (0, 0), (-1, -1), 10),
+            ('RIGHTPADDING', (0, 0), (-1, -1), 10),
+            ('GRID', (0, 0), (-1, -1), 1, colors.lightgrey),
+            ('ROWBACKGROUNDS', (0, 1), (-1, -1), [colors.white, colors.HexColor('#f8f9fa')]),
+        ]))
+        
+        story.append(table_cat)
+        story.append(Spacer(1, 0.6*cm))
+        
+        # Gráfico de categorias
+        if len(categorias) > 0:
+            labels_cat = [(c['categoria'].split(' - ', 1)[1] if c['categoria'] and ' - ' in c['categoria'] else (c['categoria'] or 'Não classificado'))[:20] for c in categorias[:8]]
+            values_cat = [c['total'] for c in categorias[:8]]
+            chart_cat = self._create_chart_image(values_cat, labels_cat, 'Top Categorias por Valor', 'bar')
+            story.append(chart_cat)
+        
+        story.append(PageBreak())
+        
+        # ===== TENDÊNCIA MENSAL =====
+        section_title_mensal = [[Paragraph('<para alignment=center fontSize=14 textColor=white><b>EVOLUÇÃO MENSAL</b></para>', self.styles['SectionTitle'])]]
+        section_table_mensal = Table(section_title_mensal, colWidths=[17*cm])
+        section_table_mensal.setStyle(TableStyle([
+            ('BACKGROUND', (0, 0), (-1, -1), self.COLOR_PRIMARY),
+            ('TOPPADDING', (0, 0), (-1, -1), 12),
+            ('BOTTOMPADDING', (0, 0), (-1, -1), 12),
+        ]))
+        story.append(section_table_mensal)
+        story.append(Spacer(1, 0.5*cm))
+        
+        mensal = report_data['tendencia_mensal']
+        
+        data_mensal = [[
+            Paragraph('<para alignment=center fontSize=11 textColor=white><b>MÊS</b></para>', self.styles['CustomBody']),
+            Paragraph('<para alignment=center fontSize=11 textColor=white><b>RECEITAS</b></para>', self.styles['CustomBody']),
+            Paragraph('<para alignment=center fontSize=11 textColor=white><b>DESPESAS</b></para>', self.styles['CustomBody']),
+            Paragraph('<para alignment=center fontSize=11 textColor=white><b>SALDO</b></para>', self.styles['CustomBody'])
+        ]]
+        for mes in mensal:
+            saldo_cor = '#00b894' if mes['saldo'] >= 0 else '#ff4757'
+            data_mensal.append([
+                Paragraph(f'<para alignment=center fontSize=10><b>{mes["mes"]}</b></para>', self.styles['CustomBody']),
+                Paragraph(f'<para align=right fontSize=11 textColor=#00b894>{self._format_currency(mes["receita"])}</para>', self.styles['CustomBody']),
+                Paragraph(f'<para align=right fontSize=11 textColor=#ff4757>{self._format_currency(mes["despesa"])}</para>', self.styles['CustomBody']),
+                Paragraph(f'<para align=right fontSize=11 textColor={saldo_cor}><b>{self._format_currency(mes["saldo"])}</b></para>', self.styles['CustomBody'])
+            ])
+        
+        table_mensal = Table(data_mensal, colWidths=[4*cm, 4.5*cm, 4.5*cm, 4*cm])
+        table_mensal.setStyle(TableStyle([
+            ('BACKGROUND', (0, 0), (-1, 0), self.COLOR_PRIMARY),
+            ('TEXTCOLOR', (0, 0), (-1, 0), colors.white),
+            ('ALIGN', (0, 0), (0, -1), 'CENTER'),
+            ('ALIGN', (1, 0), (-1, -1), 'RIGHT'),
+            ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+            ('FONTSIZE', (0, 0), (-1, 0), 11),
+            ('TOPPADDING', (0, 0), (-1, -1), 9),
+            ('BOTTOMPADDING', (0, 0), (-1, -1), 9),
+            ('LEFTPADDING', (0, 0), (-1, -1), 10),
+            ('RIGHTPADDING', (0, 0), (-1, -1), 10),
+            ('GRID', (0, 0), (-1, -1), 1, colors.lightgrey),
+            ('ROWBACKGROUNDS', (0, 1), (-1, -1), [colors.white, colors.HexColor('#f8f9fa')]),
+        ]))
+        
+        story.append(table_mensal)
+        story.append(Spacer(1, 0.6*cm))
+        
+        # Gráfico de evolução
+        if len(mensal) > 0:
+            labels_mes = [m['mes'] for m in mensal]
+            saldos = [m['saldo'] for m in mensal]
+            chart_mes = self._create_chart_image(saldos, labels_mes, 'Evolução do Saldo Mensal', 'line')
+            story.append(chart_mes)
+        
+        # ===== TOP TRANSAÇÕES =====
+        story.append(PageBreak())
+        
+        section_title_rec = [[Paragraph('<para alignment=center fontSize=14 textColor=white><b>TOP 5 RECEITAS</b></para>', self.styles['SectionTitle'])]]
+        section_table_rec = Table(section_title_rec, colWidths=[17*cm])
+        section_table_rec.setStyle(TableStyle([
+            ('BACKGROUND', (0, 0), (-1, -1), self.COLOR_PRIMARY),
+            ('TOPPADDING', (0, 0), (-1, -1), 12),
+            ('BOTTOMPADDING', (0, 0), (-1, -1), 12),
+        ]))
+        story.append(section_table_rec)
+        story.append(Spacer(1, 0.5*cm))
+        
+        top_rec = report_data['sumario']['top_receitas']
+        data_rec = [[
+            Paragraph('<para alignment=center fontSize=10 textColor=white><b>DATA</b></para>', self.styles['CustomBody']),
+            Paragraph('<para alignment=center fontSize=10 textColor=white><b>DESCRIÇÃO</b></para>', self.styles['CustomBody']),
+            Paragraph('<para alignment=center fontSize=10 textColor=white><b>VALOR</b></para>', self.styles['CustomBody']),
+            Paragraph('<para alignment=center fontSize=10 textColor=white><b>CATEGORIA</b></para>', self.styles['CustomBody'])
+        ]]
+        for rec in top_rec:
+            data_rec.append([
+                Paragraph(f'<para alignment=center fontSize=9>{rec["data"]}</para>', self.styles['CustomBody']),
+                Paragraph(f'<para fontSize=10>{rec["descricao"][:35]}</para>', self.styles['CustomBody']),
+                Paragraph(f'<para align=right fontSize=11 textColor=#00b894><b>{self._format_currency(rec["valor"])}</b></para>', self.styles['CustomBody']),
+                Paragraph(f'<para fontSize=9>{(rec["categoria"].split(" - ", 1)[1] if rec["categoria"] and " - " in rec["categoria"] else (rec["categoria"] or "N/A"))[:30]}</para>', self.styles['CustomBody'])
+            ])
+        
+        table_rec = Table(data_rec, colWidths=[2.5*cm, 6*cm, 3.5*cm, 4.5*cm])
+        table_rec.setStyle(TableStyle([
+            ('BACKGROUND', (0, 0), (-1, 0), self.COLOR_PRIMARY),
+            ('TEXTCOLOR', (0, 0), (-1, 0), colors.white),
+            ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+            ('FONTSIZE', (0, 0), (-1, 0), 10),
+            ('ALIGN', (0, 0), (0, -1), 'CENTER'),
+            ('ALIGN', (2, 0), (2, -1), 'RIGHT'),
+            ('TOPPADDING', (0, 0), (-1, -1), 8),
+            ('BOTTOMPADDING', (0, 0), (-1, -1), 8),
+            ('LEFTPADDING', (0, 0), (-1, -1), 8),
+            ('RIGHTPADDING', (0, 0), (-1, -1), 8),
+            ('GRID', (0, 0), (-1, -1), 1, colors.lightgrey),
+            ('ROWBACKGROUNDS', (0, 1), (-1, -1), [colors.white, colors.HexColor('#f8f9fa')]),
+        ]))
+        
+        story.append(table_rec)
+        story.append(Spacer(1, 0.6*cm))
+        
+        section_title_desp = [[Paragraph('<para alignment=center fontSize=14 textColor=white><b>TOP 5 DESPESAS</b></para>', self.styles['SectionTitle'])]]
+        section_table_desp = Table(section_title_desp, colWidths=[17*cm])
+        section_table_desp.setStyle(TableStyle([
+            ('BACKGROUND', (0, 0), (-1, -1), self.COLOR_PRIMARY),
+            ('TOPPADDING', (0, 0), (-1, -1), 12),
+            ('BOTTOMPADDING', (0, 0), (-1, -1), 12),
+        ]))
+        story.append(section_table_desp)
+        story.append(Spacer(1, 0.5*cm))
+        
+        top_desp = report_data['sumario']['top_despesas']
+        data_desp = [[
+            Paragraph('<para alignment=center fontSize=10 textColor=white><b>DATA</b></para>', self.styles['CustomBody']),
+            Paragraph('<para alignment=center fontSize=10 textColor=white><b>DESCRIÇÃO</b></para>', self.styles['CustomBody']),
+            Paragraph('<para alignment=center fontSize=10 textColor=white><b>VALOR</b></para>', self.styles['CustomBody']),
+            Paragraph('<para alignment=center fontSize=10 textColor=white><b>CATEGORIA</b></para>', self.styles['CustomBody'])
+        ]]
+        for desp in top_desp:
+            data_desp.append([
+                Paragraph(f'<para alignment=center fontSize=9>{desp["data"]}</para>', self.styles['CustomBody']),
+                Paragraph(f'<para fontSize=10>{desp["descricao"][:35]}</para>', self.styles['CustomBody']),
+                Paragraph(f'<para align=right fontSize=11 textColor=#ff4757><b>{self._format_currency(desp["valor"])}</b></para>', self.styles['CustomBody']),
+                Paragraph(f'<para fontSize=9>{(desp["categoria"].split(" - ", 1)[1] if desp["categoria"] and " - " in desp["categoria"] else (desp["categoria"] or "N/A"))[:30]}</para>', self.styles['CustomBody'])
+            ])
+        
+        table_desp = Table(data_desp, colWidths=[2.5*cm, 6*cm, 3.5*cm, 4.5*cm])
+        table_desp.setStyle(TableStyle([
+            ('BACKGROUND', (0, 0), (-1, 0), self.COLOR_PRIMARY),
+            ('TEXTCOLOR', (0, 0), (-1, 0), colors.white),
+            ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+            ('FONTSIZE', (0, 0), (-1, 0), 10),
+            ('ALIGN', (0, 0), (0, -1), 'CENTER'),
+            ('ALIGN', (2, 0), (2, -1), 'RIGHT'),
+            ('TOPPADDING', (0, 0), (-1, -1), 8),
+            ('BOTTOMPADDING', (0, 0), (-1, -1), 8),
+            ('LEFTPADDING', (0, 0), (-1, -1), 8),
+            ('RIGHTPADDING', (0, 0), (-1, -1), 8),
+            ('GRID', (0, 0), (-1, -1), 1, colors.lightgrey),
+            ('ROWBACKGROUNDS', (0, 1), (-1, -1), [colors.white, colors.HexColor('#f8f9fa')]),
+        ]))
+        
+        story.append(table_desp)
+        
+        # ===== RODAPÉ =====
+        story.append(Spacer(1, 1*cm))
+        story.append(HRFlowable(width="100%", thickness=1, color=colors.lightgrey, spaceBefore=5, spaceAfter=10))
+        
+        story.append(Paragraph(
+            '<para align=center fontSize=9 textColor=#636e72><b>Relatório Gerado Automaticamente</b></para>',
+            self.styles['Footer']
+        ))
+        story.append(Paragraph(
+            f'<para align=center fontSize=8 textColor=#636e72>Gerado em {datetime.now().strftime("%d/%m/%Y às %H:%M")}</para>',
+            self.styles['Footer']
+        ))
+        story.append(Paragraph(
+            '<para align=center fontSize=8 textColor=#636e72>Sistema de Classificação Financeira com IA</para>',
+            self.styles['Footer']
+        ))
+        
+        # Gera PDF
+        doc.build(story)
+        
+        if not output_path:
+            buffer.seek(0)
+            return buffer
+        
+        return None

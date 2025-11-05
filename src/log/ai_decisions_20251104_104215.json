@@ -1,0 +1,2105 @@
+{
+  "metadata": {
+    "session_id": "20251104_104215",
+    "start_time": "2025-11-04T10:42:15.565781",
+    "total_decisions": 123,
+    "decision_types": {
+      "rule": 114,
+      "ai": 9
+    },
+    "end_time": "2025-11-04T10:42:24.021456"
+  },
+  "decisions": [
+    {
+      "timestamp": "2025-11-04T10:42:15.614668",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 01/09 10:59 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "0.002 - (-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:15.614668",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAR",
+        "valor": 26327.3
+      },
+      "decision": {
+        "classificacao_sugerida": "0.007 - Resgate Aplicação Financeira",
+        "explicacao": "Resgate de aplicação financeira identificado"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAR = Resgate",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:15.614668",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 02/09 11:35 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "0.002 - (-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:15.614668",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAR",
+        "valor": 15215.7
+      },
+      "decision": {
+        "classificacao_sugerida": "0.007 - Resgate Aplicação Financeira",
+        "explicacao": "Resgate de aplicação financeira identificado"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAR = Resgate",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:15.614668",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAP",
+        "valor": -15010.1
+      },
+      "decision": {
+        "classificacao_sugerida": "0.006 - Aplicação Financeira",
+        "explicacao": "Aplicação financeira identificada"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAP = Aplicação",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:15.614668",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAP",
+        "valor": -16581.93
+      },
+      "decision": {
+        "classificacao_sugerida": "0.006 - Aplicação Financeira",
+        "explicacao": "Aplicação financeira identificada"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAP = Aplicação",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:15.615665",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 05/09 09:20 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "0.002 - (-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:15.615665",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAR",
+        "valor": 9852.39
+      },
+      "decision": {
+        "classificacao_sugerida": "0.007 - Resgate Aplicação Financeira",
+        "explicacao": "Resgate de aplicação financeira identificado"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAR = Resgate",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:18.380343",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "FCO AMORTIZAÇÃO",
+        "origem": "CAP",
+        "valor": -9525.26
+      },
+      "decision": {
+        "classificacao_sugerida": "Não classificado",
+        "explicacao": "A descrição 'FCO AMORTIZAÇÃO' sugere que se trata de uma amortização de um empréstimo, mas não se encaixa em uma categoria específica definida nas regras. Portanto, a transação é classificada como 'Não classificado'."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'FCO AMORTIZAÇÃO...' e classificou como 'Não classificado'. Explicação: A descrição 'FCO AMORTIZAÇÃO' sugere que se trata de uma amortização de um empréstimo, mas não se encaixa em uma categoria específica definida nas regras. Portanto, a transação é classificada como 'Não classificado'.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-04T10:42:18.527929",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "FCO AMORTIZAÇÃO",
+        "origem": "CAP",
+        "valor": -3059.96
+      },
+      "decision": {
+        "classificacao_sugerida": "Não classificado",
+        "explicacao": "A descrição 'FCO AMORTIZAÇÃO' sugere que se trata de uma amortização de empréstimo, mas não se encaixa em uma categoria específica definida nas regras. Portanto, a transação é classificada como 'Não classificado'."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'FCO AMORTIZAÇÃO...' e classificou como 'Não classificado'. Explicação: A descrição 'FCO AMORTIZAÇÃO' sugere que se trata de uma amortização de empréstimo, mas não se encaixa em uma categoria específica definida nas regras. Portanto, a transação é classificada como 'Não classificado'.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-04T10:42:18.786007",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "FCO AMORTIZAÇÃO",
+        "origem": "CAP",
+        "valor": -26377.03
+      },
+      "decision": {
+        "classificacao_sugerida": "Não classificado",
+        "explicacao": "A descrição 'FCO AMORTIZAÇÃO' sugere que se trata de uma amortização de um empréstimo, mas não se encaixa em uma categoria específica definida nas regras. Portanto, a transação é classificada como 'Não classificado'."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'FCO AMORTIZAÇÃO...' e classificou como 'Não classificado'. Explicação: A descrição 'FCO AMORTIZAÇÃO' sugere que se trata de uma amortização de um empréstimo, mas não se encaixa em uma categoria específica definida nas regras. Portanto, a transação é classificada como 'Não classificado'.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-04T10:42:18.787003",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAP",
+        "valor": -61771.94
+      },
+      "decision": {
+        "classificacao_sugerida": "0.006 - Aplicação Financeira",
+        "explicacao": "Aplicação financeira identificada"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAP = Aplicação",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:18.787003",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 09/09 17:11 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "0.002 - (-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:18.787003",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAR",
+        "valor": 10170.62
+      },
+      "decision": {
+        "classificacao_sugerida": "0.007 - Resgate Aplicação Financeira",
+        "explicacao": "Resgate de aplicação financeira identificado"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAR = Resgate",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:18.787003",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 10/09 10:28 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "0.002 - (-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:18.787003",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAR",
+        "valor": 24984.41
+      },
+      "decision": {
+        "classificacao_sugerida": "0.007 - Resgate Aplicação Financeira",
+        "explicacao": "Resgate de aplicação financeira identificado"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAR = Resgate",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:18.787003",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAP",
+        "valor": -12301.23
+      },
+      "decision": {
+        "classificacao_sugerida": "0.006 - Aplicação Financeira",
+        "explicacao": "Aplicação financeira identificada"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAP = Aplicação",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:18.787003",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 12/09 11:31 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "0.002 - (-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:18.787003",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAR",
+        "valor": 1740.57
+      },
+      "decision": {
+        "classificacao_sugerida": "0.007 - Resgate Aplicação Financeira",
+        "explicacao": "Resgate de aplicação financeira identificado"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAR = Resgate",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:18.788002",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 15/09 10:52 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "0.002 - (-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:18.788002",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAP",
+        "valor": -16941.7
+      },
+      "decision": {
+        "classificacao_sugerida": "0.006 - Aplicação Financeira",
+        "explicacao": "Aplicação financeira identificada"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAP = Aplicação",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:18.788002",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 16/09 10:57 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "0.002 - (-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:18.788002",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAR",
+        "valor": 13821.72
+      },
+      "decision": {
+        "classificacao_sugerida": "0.007 - Resgate Aplicação Financeira",
+        "explicacao": "Resgate de aplicação financeira identificado"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAR = Resgate",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:18.788002",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 17/09 10:57 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "0.002 - (-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:18.788002",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAR",
+        "valor": 15536.14
+      },
+      "decision": {
+        "classificacao_sugerida": "0.007 - Resgate Aplicação Financeira",
+        "explicacao": "Resgate de aplicação financeira identificado"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAR = Resgate",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:18.788002",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 18/09 09:27 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "0.002 - (-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:18.788002",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAR",
+        "valor": 8421.27
+      },
+      "decision": {
+        "classificacao_sugerida": "0.007 - Resgate Aplicação Financeira",
+        "explicacao": "Resgate de aplicação financeira identificado"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAR = Resgate",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:18.788002",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAP",
+        "valor": -16674.84
+      },
+      "decision": {
+        "classificacao_sugerida": "0.006 - Aplicação Financeira",
+        "explicacao": "Aplicação financeira identificada"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAP = Aplicação",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:18.788002",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 22/09 10:41 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "0.002 - (-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:18.788002",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAP",
+        "valor": -19178.97
+      },
+      "decision": {
+        "classificacao_sugerida": "0.006 - Aplicação Financeira",
+        "explicacao": "Aplicação financeira identificada"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAP = Aplicação",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:18.789001",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 23/09 10:16 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "0.002 - (-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:18.789001",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAR",
+        "valor": 17714.25
+      },
+      "decision": {
+        "classificacao_sugerida": "0.007 - Resgate Aplicação Financeira",
+        "explicacao": "Resgate de aplicação financeira identificado"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAR = Resgate",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:18.789001",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 24/09 10:49 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "0.002 - (-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:18.789001",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAR",
+        "valor": 19052.3
+      },
+      "decision": {
+        "classificacao_sugerida": "0.007 - Resgate Aplicação Financeira",
+        "explicacao": "Resgate de aplicação financeira identificado"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAR = Resgate",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:18.789001",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAP",
+        "valor": -15303.48
+      },
+      "decision": {
+        "classificacao_sugerida": "0.006 - Aplicação Financeira",
+        "explicacao": "Aplicação financeira identificada"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAP = Aplicação",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:18.789001",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAP",
+        "valor": -13779.83
+      },
+      "decision": {
+        "classificacao_sugerida": "0.006 - Aplicação Financeira",
+        "explicacao": "Aplicação financeira identificada"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAP = Aplicação",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:18.789001",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 29/09 11:41 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "0.002 - (-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:18.789001",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAP",
+        "valor": -13947.16
+      },
+      "decision": {
+        "classificacao_sugerida": "0.006 - Aplicação Financeira",
+        "explicacao": "Aplicação financeira identificada"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAP = Aplicação",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:18.789001",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 30/09 09:51 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "0.002 - (-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:18.789001",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAR",
+        "valor": 27460.44
+      },
+      "decision": {
+        "classificacao_sugerida": "0.007 - Resgate Aplicação Financeira",
+        "explicacao": "Resgate de aplicação financeira identificado"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAR = Resgate",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:18.790007",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAR",
+        "valor": 19627.02
+      },
+      "decision": {
+        "classificacao_sugerida": "0.007 - Resgate Aplicação Financeira",
+        "explicacao": "Resgate de aplicação financeira identificado"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAR = Resgate",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:18.790007",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 04/08 12:17 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "0.002 - (-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:18.790007",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAP",
+        "valor": -20029.64
+      },
+      "decision": {
+        "classificacao_sugerida": "0.006 - Aplicação Financeira",
+        "explicacao": "Aplicação financeira identificada"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAP = Aplicação",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:18.790007",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 05/08 10:19 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "0.002 - (-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:18.790007",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "TED - 341 4308 000036343000106 J E MADEIRA A",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "0.002 - (-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:18.790007",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAR",
+        "valor": 40748.61
+      },
+      "decision": {
+        "classificacao_sugerida": "0.007 - Resgate Aplicação Financeira",
+        "explicacao": "Resgate de aplicação financeira identificado"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAR = Resgate",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:18.790007",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 06/08 09:57 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "0.002 - (-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:18.790007",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAR",
+        "valor": 12136.92
+      },
+      "decision": {
+        "classificacao_sugerida": "0.007 - Resgate Aplicação Financeira",
+        "explicacao": "Resgate de aplicação financeira identificado"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAR = Resgate",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:20.973808",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "FCO AMORTIZAÇÃO",
+        "origem": "CAP",
+        "valor": -27751.98
+      },
+      "decision": {
+        "classificacao_sugerida": "Não classificado",
+        "explicacao": "A descrição 'FCO AMORTIZAÇÃO' sugere que se trata de uma amortização de um empréstimo, mas não se encaixa em uma categoria específica definida nas regras. Portanto, a transação não pode ser classificada com certeza e é considerada 'Não classificado'."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'FCO AMORTIZAÇÃO...' e classificou como 'Não classificado'. Explicação: A descrição 'FCO AMORTIZAÇÃO' sugere que se trata de uma amortização de um empréstimo, mas não se encaixa em uma categoria específica definida nas regras. Portanto, a transação não pode ser classificada com certeza e é considerada 'Não classificado'.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-04T10:42:20.974805",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "FCO AMORTIZAÇÃO",
+        "origem": "CAP",
+        "valor": -9683.83
+      },
+      "decision": {
+        "classificacao_sugerida": "Não classificado",
+        "explicacao": "A descrição 'FCO AMORTIZAÇÃO' sugere que se trata de uma amortização de empréstimo, mas não se encaixa em uma categoria específica das regras fornecidas. Portanto, a transação é classificada como 'Não classificado'."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'FCO AMORTIZAÇÃO...' e classificou como 'Não classificado'. Explicação: A descrição 'FCO AMORTIZAÇÃO' sugere que se trata de uma amortização de empréstimo, mas não se encaixa em uma categoria específica das regras fornecidas. Portanto, a transação é classificada como 'Não classificado'.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-04T10:42:21.143258",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "FCO AMORTIZAÇÃO",
+        "origem": "CAP",
+        "valor": -3096.03
+      },
+      "decision": {
+        "classificacao_sugerida": "Não classificado",
+        "explicacao": "A descrição 'FCO AMORTIZAÇÃO' sugere que se trata de uma amortização de um empréstimo, mas não se encaixa em uma categoria específica definida nas regras. Portanto, a transação é classificada como 'Não classificado'."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'FCO AMORTIZAÇÃO...' e classificou como 'Não classificado'. Explicação: A descrição 'FCO AMORTIZAÇÃO' sugere que se trata de uma amortização de um empréstimo, mas não se encaixa em uma categoria específica definida nas regras. Portanto, a transação é classificada como 'Não classificado'.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-04T10:42:21.143258",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 07/08 09:18 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "0.002 - (-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:21.143258",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAR",
+        "valor": 12657.52
+      },
+      "decision": {
+        "classificacao_sugerida": "0.007 - Resgate Aplicação Financeira",
+        "explicacao": "Resgate de aplicação financeira identificado"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAR = Resgate",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:21.143258",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 08/08 09:43 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "0.002 - (-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:21.143258",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAR",
+        "valor": 8719.8
+      },
+      "decision": {
+        "classificacao_sugerida": "0.007 - Resgate Aplicação Financeira",
+        "explicacao": "Resgate de aplicação financeira identificado"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAR = Resgate",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:21.143258",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 11/08 11:20 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "0.002 - (-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:21.144259",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAP",
+        "valor": -16050.05
+      },
+      "decision": {
+        "classificacao_sugerida": "0.006 - Aplicação Financeira",
+        "explicacao": "Aplicação financeira identificada"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAP = Aplicação",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:21.144259",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAP",
+        "valor": -19959.38
+      },
+      "decision": {
+        "classificacao_sugerida": "0.006 - Aplicação Financeira",
+        "explicacao": "Aplicação financeira identificada"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAP = Aplicação",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:21.144259",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 13/08 10:17 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "0.002 - (-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:21.144259",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAR",
+        "valor": 16890.51
+      },
+      "decision": {
+        "classificacao_sugerida": "0.007 - Resgate Aplicação Financeira",
+        "explicacao": "Resgate de aplicação financeira identificado"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAR = Resgate",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:21.144259",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 14/08 09:26 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "0.002 - (-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:21.144259",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAR",
+        "valor": 10290.95
+      },
+      "decision": {
+        "classificacao_sugerida": "0.007 - Resgate Aplicação Financeira",
+        "explicacao": "Resgate de aplicação financeira identificado"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAR = Resgate",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:21.144259",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAP",
+        "valor": -18737.12
+      },
+      "decision": {
+        "classificacao_sugerida": "0.006 - Aplicação Financeira",
+        "explicacao": "Aplicação financeira identificada"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAP = Aplicação",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:21.144259",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 18/08 11:41 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "0.002 - (-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:21.144259",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAP",
+        "valor": -20603.24
+      },
+      "decision": {
+        "classificacao_sugerida": "0.006 - Aplicação Financeira",
+        "explicacao": "Aplicação financeira identificada"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAP = Aplicação",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:21.144259",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAP",
+        "valor": -13997.19
+      },
+      "decision": {
+        "classificacao_sugerida": "0.006 - Aplicação Financeira",
+        "explicacao": "Aplicação financeira identificada"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAP = Aplicação",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:21.144259",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAP",
+        "valor": -11994.15
+      },
+      "decision": {
+        "classificacao_sugerida": "0.006 - Aplicação Financeira",
+        "explicacao": "Aplicação financeira identificada"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAP = Aplicação",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:21.145280",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAP",
+        "valor": -28570.82
+      },
+      "decision": {
+        "classificacao_sugerida": "0.006 - Aplicação Financeira",
+        "explicacao": "Aplicação financeira identificada"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAP = Aplicação",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:21.145280",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 22/08 10:43 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "0.002 - (-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:21.145280",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "TED - 341 4308 000036343000106 J E MADEIRA A",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "0.002 - (-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:21.145280",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAR",
+        "valor": 44933.53
+      },
+      "decision": {
+        "classificacao_sugerida": "0.007 - Resgate Aplicação Financeira",
+        "explicacao": "Resgate de aplicação financeira identificado"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAR = Resgate",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:21.145280",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 25/08 10:04 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "0.002 - (-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:21.145280",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAP",
+        "valor": -9571.4
+      },
+      "decision": {
+        "classificacao_sugerida": "0.006 - Aplicação Financeira",
+        "explicacao": "Aplicação financeira identificada"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAP = Aplicação",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:21.145280",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 26/08 11:07 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "0.002 - (-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:21.145280",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAR",
+        "valor": 16731.14
+      },
+      "decision": {
+        "classificacao_sugerida": "0.007 - Resgate Aplicação Financeira",
+        "explicacao": "Resgate de aplicação financeira identificado"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAR = Resgate",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:21.145280",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAP",
+        "valor": -29628.23
+      },
+      "decision": {
+        "classificacao_sugerida": "0.006 - Aplicação Financeira",
+        "explicacao": "Aplicação financeira identificada"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAP = Aplicação",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:21.145280",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAP",
+        "valor": -7835.7
+      },
+      "decision": {
+        "classificacao_sugerida": "0.006 - Aplicação Financeira",
+        "explicacao": "Aplicação financeira identificada"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAP = Aplicação",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:21.146280",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAP",
+        "valor": -6901.47
+      },
+      "decision": {
+        "classificacao_sugerida": "0.006 - Aplicação Financeira",
+        "explicacao": "Aplicação financeira identificada"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAP = Aplicação",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:21.146280",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 01/07 11:28 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "0.002 - (-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:21.146280",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAR",
+        "valor": 47946.42
+      },
+      "decision": {
+        "classificacao_sugerida": "0.007 - Resgate Aplicação Financeira",
+        "explicacao": "Resgate de aplicação financeira identificado"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAR = Resgate",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:21.146280",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 02/07 14:47 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "0.002 - (-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:21.146280",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAR",
+        "valor": 11130.81
+      },
+      "decision": {
+        "classificacao_sugerida": "0.007 - Resgate Aplicação Financeira",
+        "explicacao": "Resgate de aplicação financeira identificado"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAR = Resgate",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:21.146280",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAP",
+        "valor": -18518.13
+      },
+      "decision": {
+        "classificacao_sugerida": "0.006 - Aplicação Financeira",
+        "explicacao": "Aplicação financeira identificada"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAP = Aplicação",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:21.146280",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 04/07 15:13 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "0.002 - (-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:21.146280",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAR",
+        "valor": 11847.66
+      },
+      "decision": {
+        "classificacao_sugerida": "0.007 - Resgate Aplicação Financeira",
+        "explicacao": "Resgate de aplicação financeira identificado"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAR = Resgate",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:23.332533",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "FCO AMORTIZAÇÃO",
+        "origem": "CAP",
+        "valor": -25958.07
+      },
+      "decision": {
+        "classificacao_sugerida": "Não classificado",
+        "explicacao": "A descrição 'FCO AMORTIZAÇÃO' sugere que se trata de uma amortização de um empréstimo, mas não se encaixa em uma categoria específica definida nas regras. Portanto, a transação não pode ser classificada com certeza."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'FCO AMORTIZAÇÃO...' e classificou como 'Não classificado'. Explicação: A descrição 'FCO AMORTIZAÇÃO' sugere que se trata de uma amortização de um empréstimo, mas não se encaixa em uma categoria específica definida nas regras. Portanto, a transação não pode ser classificada com certeza.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-04T10:42:23.618103",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "FCO AMORTIZAÇÃO",
+        "origem": "CAP",
+        "valor": -9824.75
+      },
+      "decision": {
+        "classificacao_sugerida": "Não classificado",
+        "explicacao": "A descrição 'FCO AMORTIZAÇÃO' não se encaixa em nenhuma das categorias específicas definidas nas regras de classificação. Embora se refira a uma amortização, não há uma categoria específica para isso, e a transação é uma saída (CAP), portanto não foi possível classificar de forma precisa."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'FCO AMORTIZAÇÃO...' e classificou como 'Não classificado'. Explicação: A descrição 'FCO AMORTIZAÇÃO' não se encaixa em nenhuma das categorias específicas definidas nas regras de classificação. Embora se refira a uma amortização, não há uma categoria específica para isso, e a transação é uma saída (CAP), portanto não foi possível classificar de forma precisa.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-04T10:42:23.732785",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "FCO AMORTIZAÇÃO",
+        "origem": "CAP",
+        "valor": -3134.55
+      },
+      "decision": {
+        "classificacao_sugerida": "Não classificado",
+        "explicacao": "A descrição 'FCO AMORTIZAÇÃO' sugere que se trata de uma amortização de empréstimo, mas não se encaixa em uma categoria específica definida nas regras. Portanto, a transação é classificada como 'Não classificado'."
+      },
+      "method": "ai",
+      "reasoning": "IA (GPT-4o-mini) analisou a descrição 'FCO AMORTIZAÇÃO...' e classificou como 'Não classificado'. Explicação: A descrição 'FCO AMORTIZAÇÃO' sugere que se trata de uma amortização de empréstimo, mas não se encaixa em uma categoria específica definida nas regras. Portanto, a transação é classificada como 'Não classificado'.",
+      "confidence": null
+    },
+    {
+      "timestamp": "2025-11-04T10:42:23.732785",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 07/07 15:55 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "0.002 - (-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:23.732785",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAP",
+        "valor": -25790.8
+      },
+      "decision": {
+        "classificacao_sugerida": "0.006 - Aplicação Financeira",
+        "explicacao": "Aplicação financeira identificada"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAP = Aplicação",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:23.732785",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 08/07 15:41 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "0.002 - (-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:23.732785",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAR",
+        "valor": 11504.01
+      },
+      "decision": {
+        "classificacao_sugerida": "0.007 - Resgate Aplicação Financeira",
+        "explicacao": "Resgate de aplicação financeira identificado"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAR = Resgate",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:23.732785",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 09/07 10:45 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "0.002 - (-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:23.732785",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAR",
+        "valor": 13935.29
+      },
+      "decision": {
+        "classificacao_sugerida": "0.007 - Resgate Aplicação Financeira",
+        "explicacao": "Resgate de aplicação financeira identificado"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAR = Resgate",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:23.732785",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 10/07 11:10 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "0.002 - (-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:23.732785",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAR",
+        "valor": 12452.24
+      },
+      "decision": {
+        "classificacao_sugerida": "0.007 - Resgate Aplicação Financeira",
+        "explicacao": "Resgate de aplicação financeira identificado"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAR = Resgate",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:23.732785",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAP",
+        "valor": -19134.64
+      },
+      "decision": {
+        "classificacao_sugerida": "0.006 - Aplicação Financeira",
+        "explicacao": "Aplicação financeira identificada"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAP = Aplicação",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:23.732785",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 14/07 15:55 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "0.002 - (-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:23.732785",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAP",
+        "valor": -21725.98
+      },
+      "decision": {
+        "classificacao_sugerida": "0.006 - Aplicação Financeira",
+        "explicacao": "Aplicação financeira identificada"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAP = Aplicação",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:23.732785",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 15/07 10:20 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "0.002 - (-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:23.732785",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAR",
+        "valor": 14356.63
+      },
+      "decision": {
+        "classificacao_sugerida": "0.007 - Resgate Aplicação Financeira",
+        "explicacao": "Resgate de aplicação financeira identificado"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAR = Resgate",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:23.732785",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 16/07 15:36 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "0.002 - (-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:23.732785",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAR",
+        "valor": 17183.36
+      },
+      "decision": {
+        "classificacao_sugerida": "0.007 - Resgate Aplicação Financeira",
+        "explicacao": "Resgate de aplicação financeira identificado"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAR = Resgate",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:23.732785",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAP",
+        "valor": -22559.86
+      },
+      "decision": {
+        "classificacao_sugerida": "0.006 - Aplicação Financeira",
+        "explicacao": "Aplicação financeira identificada"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAP = Aplicação",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:23.732785",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAP",
+        "valor": -30382.21
+      },
+      "decision": {
+        "classificacao_sugerida": "0.006 - Aplicação Financeira",
+        "explicacao": "Aplicação financeira identificada"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAP = Aplicação",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:23.732785",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 21/07 10:49 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "0.002 - (-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:23.732785",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "TED - 341 4308 000036343000106 J E MADEIRA A",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "0.002 - (-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:23.732785",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAR",
+        "valor": 15496.76
+      },
+      "decision": {
+        "classificacao_sugerida": "0.007 - Resgate Aplicação Financeira",
+        "explicacao": "Resgate de aplicação financeira identificado"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAR = Resgate",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:23.732785",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 22/07 11:35 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "0.002 - (-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:23.732785",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "TED - 341 4308 000036343000106 J E MADEIRA A",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "0.002 - (-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:23.732785",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAR",
+        "valor": 46010.95
+      },
+      "decision": {
+        "classificacao_sugerida": "0.007 - Resgate Aplicação Financeira",
+        "explicacao": "Resgate de aplicação financeira identificado"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAR = Resgate",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:23.732785",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAR",
+        "valor": 18276.47
+      },
+      "decision": {
+        "classificacao_sugerida": "0.007 - Resgate Aplicação Financeira",
+        "explicacao": "Resgate de aplicação financeira identificado"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAR = Resgate",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:23.732785",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 24/07 12:02 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "0.002 - (-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:23.732785",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "TED - 756 5004 000036343000106 J E MADEIRA A",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "0.002 - (-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:23.732785",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAR",
+        "valor": 43945.55
+      },
+      "decision": {
+        "classificacao_sugerida": "0.007 - Resgate Aplicação Financeira",
+        "explicacao": "Resgate de aplicação financeira identificado"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAR = Resgate",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:23.732785",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 25/07 11:13 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "0.002 - (-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:23.732785",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "TED - 756 5004 000036343000106 J E MADEIRA A",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "0.002 - (-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:23.732785",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAR",
+        "valor": 45088.49
+      },
+      "decision": {
+        "classificacao_sugerida": "0.007 - Resgate Aplicação Financeira",
+        "explicacao": "Resgate de aplicação financeira identificado"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAR = Resgate",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:23.732785",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "PIX - ENVIADO - 28/07 15:09 BODY STATION ACADEMIA",
+        "origem": "CAP",
+        "valor": -30000.0
+      },
+      "decision": {
+        "classificacao_sugerida": "0.002 - (-) Transferencia Entre Contas",
+        "explicacao": "Transferência entre contas próprias identificada (saída)"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:23.732785",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAP",
+        "valor": -30543.07
+      },
+      "decision": {
+        "classificacao_sugerida": "0.006 - Aplicação Financeira",
+        "explicacao": "Aplicação financeira identificada"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAP = Aplicação",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:23.732785",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAP",
+        "valor": -4764.96
+      },
+      "decision": {
+        "classificacao_sugerida": "0.006 - Aplicação Financeira",
+        "explicacao": "Aplicação financeira identificada"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAP = Aplicação",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:23.732785",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAP",
+        "valor": -4838.79
+      },
+      "decision": {
+        "classificacao_sugerida": "0.006 - Aplicação Financeira",
+        "explicacao": "Aplicação financeira identificada"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAP = Aplicação",
+      "confidence": 1.0
+    },
+    {
+      "timestamp": "2025-11-04T10:42:23.732785",
+      "type": "classification",
+      "transaction_id": -1,
+      "input": {
+        "descricao": "BB RENDE FÁCIL - RENDE FACIL",
+        "origem": "CAP",
+        "valor": -21338.42
+      },
+      "decision": {
+        "classificacao_sugerida": "0.006 - Aplicação Financeira",
+        "explicacao": "Aplicação financeira identificada"
+      },
+      "method": "rule",
+      "reasoning": "Regra: Rende Fácil detectado + origem CAP = Aplicação",
+      "confidence": 1.0
+    }
+  ]
+}

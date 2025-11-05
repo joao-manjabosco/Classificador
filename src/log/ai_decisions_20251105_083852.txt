@@ -1,0 +1,58 @@
+================================================================================
+RELATÓRIO DE DECISÕES DA IA
+================================================================================
+
+Sessão: 20251105_083852
+Início: 2025-11-05T08:38:52.886763
+Fim: 2025-11-05T08:40:12.005443
+Total de decisões: 281
+
+--------------------------------------------------------------------------------
+TIPOS DE DECISÕES
+--------------------------------------------------------------------------------
+  rule: 78 decisões
+  error: 203 decisões
+
+--------------------------------------------------------------------------------
+CLASSIFICAÇÕES (281 transações)
+--------------------------------------------------------------------------------
+
+Métodos usados:
+  - rule: 78 transações
+  - error: 203 transações
+
+Exemplos de classificações:
+
+1. Transação ID -1
+   Entrada: BB RENDE FÁCIL - RENDE FACIL
+   Decisão: Resgate Aplicação Financeira
+   Método: rule
+   Raciocínio: Regra: Rende Fácil detectado + origem CAR = Resgate...
+
+2. Transação ID -1
+   Entrada: PIX - ENVIADO - 04/08 12:17 BODY STATION ACADEMIA
+   Decisão: (-) Transferencia Entre Contas
+   Método: rule
+   Raciocínio: Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)...
+
+3. Transação ID -1
+   Entrada: BB RENDE FÁCIL - RENDE FACIL
+   Decisão: 0.006 - Aplicação Financeira
+   Método: rule
+   Raciocínio: Regra: Rende Fácil detectado + origem CAP = Aplicação...
+
+4. Transação ID -1
+   Entrada: PIX - ENVIADO - 05/08 10:19 BODY STATION ACADEMIA
+   Decisão: (-) Transferencia Entre Contas
+   Método: rule
+   Raciocínio: Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)...
+
+5. Transação ID -1
+   Entrada: TED - 341 4308 000036343000106 J E MADEIRA A
+   Decisão: (-) Transferencia Entre Contas
+   Método: rule
+   Raciocínio: Regra: Transferência entre contas próprias (BODY STATION/J E MADEIRA) - Saída (CAP)...
+
+================================================================================
+FIM DO RELATÓRIO
+================================================================================
